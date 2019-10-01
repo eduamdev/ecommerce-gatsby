@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Ecommerce`,
-    description: ` A JAMstack Ecommerce Site built with Gatsby and Netlify Functions`,
+    title: `Ecommerce Site`,
+    description: `A JAMstack Ecommerce Site built with Gatsby and Netlify Functions`,
     author: `@edroamz`,
   },
   plugins: [
@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `ecommerce-gatsby`,
+        short_name: `ecommerce`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
