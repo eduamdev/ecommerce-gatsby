@@ -8,10 +8,6 @@ const Container = styled.div`
   align-items: center;
   grid-template-columns: 1fr;
 
-  @media ${viewport[7]} {
-    grid-template-columns: auto;
-  }
-
   ${props =>
     props.placement === "left" &&
     css`
@@ -32,6 +28,14 @@ const Container = styled.div`
       justify-content: end;
       text-align: right;
     `}
+
+  @media ${viewport[7]} {
+    grid-template-columns: auto;
+  }
+
+  &.header {
+    display: unset;
+  }
 `
 
 const StyledTitle = styled.h2`
@@ -44,6 +48,10 @@ const StyledTitle = styled.h2`
   @media ${viewport[7]} {
     font-size: 1.75em;
     letter-spacing: -0.4px;
+  }
+
+  &.header {
+    margin-bottom: 0;
   }
 `
 

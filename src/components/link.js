@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import { viewport } from "./breakpoints"
 
 const GatsbyLink = styled(Link)`
   margin: 0;
@@ -11,6 +12,23 @@ const GatsbyLink = styled(Link)`
   color: inherit;
   font-weight: 700;
   outline: none;
+
+  &.nav {
+    letter-spacing: -0.8px;
+    font-size: 0.95em;
+
+    @media ${viewport[4]} {
+      font-size: 0.9em;
+    }
+
+    @media ${viewport[7]} {
+      font-size: 0.8;
+    }
+
+    @media ${viewport[9]} {
+      font-size: 0.9em;
+    }
+  }
 `
 
 const AnchorLink = styled.a`
@@ -56,7 +74,7 @@ LinkUp.propTypes = {
   ariaLabel: PropTypes.string.isRequired,
 }
 
-Header.defaultProps = {
+LinkUp.defaultProps = {
   target: `_blank`,
 }
 

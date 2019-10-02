@@ -26,6 +26,10 @@ const StyledWrapper = styled.div`
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  &.type {
+    position: relative;
+  }
 `
 
 const Wrapper = ({ className, children }) => {
