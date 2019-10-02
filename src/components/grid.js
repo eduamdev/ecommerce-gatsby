@@ -21,6 +21,7 @@ const Grid = styled.div`
 
     & svg {
       grid-area: svg;
+      padding-left: 2em;
     }
   }
 
