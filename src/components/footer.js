@@ -3,7 +3,7 @@ import Wrapper from "./wrapper"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ backgroundColor: `#fff` }}>
       <Wrapper>© {new Date().getFullYear()}</Wrapper>
     </footer>
   )

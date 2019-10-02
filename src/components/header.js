@@ -11,6 +11,7 @@ const StyledHeader = styled.header`
   height: 80px;
   display: grid;
   align-items: center;
+  background-color: #fff;
 `
 
 const Header = ({ siteTitle }) => (
