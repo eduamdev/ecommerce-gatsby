@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ecommerce Site`,
+    title: `Shoecase`,
     description: `A JAMstack Ecommerce Site built with Gatsby and Netlify Functions`,
     author: `@edroamz`,
   },

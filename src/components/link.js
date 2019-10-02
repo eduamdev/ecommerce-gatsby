@@ -10,11 +10,11 @@ const GatsbyLink = styled(Link)`
   text-decoration: none;
   background: transparent;
   color: inherit;
-  font-weight: 700;
   outline: none;
 
   &.nav {
-    letter-spacing: -0.8px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
     font-size: 0.95em;
 
     @media ${viewport[4]} {
@@ -26,7 +26,23 @@ const GatsbyLink = styled(Link)`
     }
 
     @media ${viewport[9]} {
-      font-size: 0.9em;
+      font-size: 0.92em;
+    }
+  }
+
+  &.category-img {
+    position: relative;
+  }
+
+  &.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .svg {
+      fill: #fff;
+      width: 27px;
+      height: 27px;
     }
   }
 `
@@ -41,10 +57,23 @@ const AnchorLink = styled.a`
   outline: none;
 `
 
-const LinkUp = ({ className, type, url, target, ariaLabel, children }) => {
+const LinkUp = ({
+  className,
+  style,
+  type,
+  url,
+  target,
+  ariaLabel,
+  children,
+}) => {
   if (type.toLowerCase() === "internal") {
     return (
-      <GatsbyLink className={className} to={url} aria-label={ariaLabel}>
+      <GatsbyLink
+        className={className}
+        style={style}
+        to={url}
+        aria-label={ariaLabel}
+      >
         {children}
       </GatsbyLink>
     )
@@ -52,6 +81,7 @@ const LinkUp = ({ className, type, url, target, ariaLabel, children }) => {
     return (
       <AnchorLink
         className={className}
+        style={style}
         href={url}
         target={target}
         aria-label={ariaLabel}
@@ -67,6 +97,7 @@ const LinkUp = ({ className, type, url, target, ariaLabel, children }) => {
 
 LinkUp.propTypes = {
   className: PropTypes.string.isRequired,
+  style: PropTypes.object,
   type: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   target: PropTypes.string,

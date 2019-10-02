@@ -27,7 +27,11 @@ const StyledWrapper = styled.div`
     padding-right: 3rem;
   }
 
-  &.type {
+  &.header {
+    padding: 1.45rem 0;
+  }
+
+  &.category {
     position: relative;
   }
 `

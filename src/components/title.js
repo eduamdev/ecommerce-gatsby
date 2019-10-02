@@ -52,6 +52,8 @@ const StyledTitle = styled.h2`
 
   &.header {
     margin-bottom: 0;
+    font-family: serif;
+    font-style: italic;
   }
 `
 

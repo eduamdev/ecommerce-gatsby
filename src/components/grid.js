@@ -25,14 +25,10 @@ const Grid = styled.div`
     }
   }
 
-  &.type {
+  &.category {
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
-
-    & image {
-      margin: 0;
-    }
   }
 `
 

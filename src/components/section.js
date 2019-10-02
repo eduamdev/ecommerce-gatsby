@@ -13,6 +13,7 @@ const StyledSection = styled.section`
   }
 
   &.banner {
+    position: relative;
     padding: 0;
     /* max-height: 550px; */
     /* background-image: url("https://images.unsplash.com/photo-1489345745021-740d36bbda21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"); */
@@ -22,7 +23,7 @@ const StyledSection = styled.section`
     height: 550px; */
 
     & div {
-      max-height: 500px;
+      max-height: 700px;
     }
   }
 `
