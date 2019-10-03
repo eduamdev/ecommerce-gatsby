@@ -36,6 +36,32 @@ const StyledWrapper = styled.div`
   &.category {
     position: relative;
   }
+
+  &.cartProcess {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    @media ${viewport[7]} {
+      padding: 0 1rem;
+      max-width: 90%;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    @media ${viewport[9]} {
+      max-width: 85%;
+      width: 85%;
+    }
+
+    @media ${viewport[12]} {
+      max-width: 1420px;
+      width: 90%;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
 `
 
 const Wrapper = ({ className, children }) => {

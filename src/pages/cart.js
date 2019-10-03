@@ -13,7 +13,7 @@ const Cart = () => (
   <Layout>
     <SEO title="Cart" />
     <Section>
-      <Wrapper>
+      <Wrapper className="cartProcess">
         <Grid className="cartProcess">
           <article className="active">
             <P style={{ margin: 0, letterSpacing: `-0.5px` }}>Shopping Cart</P>

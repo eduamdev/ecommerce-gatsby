@@ -36,10 +36,19 @@ const StyledParagraph = styled.p`
 
   &.banner {
     position: absolute;
-    right: 10%;
+    left: 10%;
     bottom: 2%;
-    max-width: 80%;
-    text-align: right;
+    max-width: 60%;
+    text-align: left;
+    font-size: 0.625em;
+
+    @media ${viewport[7]} {
+      font-size: 0.8em;
+      letter-spacing: 0.5px;
+      text-align: right;
+      right: 10%;
+      left: unset;
+    }
   }
 
   &.card-description {
