@@ -154,10 +154,14 @@ const Grid = styled.div`
 
     & article{
       padding: 2.5em 0.5em;
-      border-bottom: 5px solid transparent;
+      border-bottom: 1px solid transparent;
 
       &.active{
         border-bottom-color: rgb(187,120,120);
+
+        & p{
+          font-weight: 700;
+        }
       }
     }
   }

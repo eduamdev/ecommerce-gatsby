@@ -16,23 +16,13 @@ const Cart = () => (
       <Wrapper>
         <Grid className="cartProcess">
           <article className="active">
-            <P
-              style={{ margin: 0, fontWeight: `700`, letterSpacing: `-0.5px` }}
-            >
-              Shopping Cart
-            </P>
+            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>Shopping Cart</P>
           </article>
           <article>
-            <P
-              style={{ margin: 0, fontWeight: `700`, letterSpacing: `-0.5px` }}
-            >
-              Check out
-            </P>
+            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>Check out</P>
           </article>
           <article>
-            <P
-              style={{ margin: 0, fontWeight: `700`, letterSpacing: `-0.5px` }}
-            >
+            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
               Order Completed
             </P>
           </article>
