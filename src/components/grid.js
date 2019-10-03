@@ -153,7 +153,7 @@ const Grid = styled.div`
     align-items: stretch;
 
     & article{
-      padding: 2.5em 0.5em;
+      padding: 2em 0.5em;
       border-bottom: 1px solid transparent;
 
       &.active{
