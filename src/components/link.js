@@ -45,8 +45,8 @@ const GatsbyLink = styled(Link)`
 
     & .svg {
       fill: #fff;
-      width: 27px;
-      height: 27px;
+      width: 23px;
+      height: 23px;
     }
   }
 
