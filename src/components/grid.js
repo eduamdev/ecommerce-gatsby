@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
+import { viewport } from "./breakpoints"
 
 const Grid = styled.div`
   display: grid;
@@ -8,7 +9,7 @@ const Grid = styled.div`
   justify-content: center;
 
   &.header {
-    grid-template-columns: max-content 2.5em max-content 1fr 1.35em;
+    grid-template-columns: max-content 2.5em max-content 1fr 1.5em;
     grid-template-areas: "title . nav . svg";
 
     & .header {
@@ -19,9 +20,13 @@ const Grid = styled.div`
       grid-area: nav;
     }
 
-    & svg {
+    & .svg {
       grid-area: svg;
-      padding-left: 2em;
+
+      &:hover{
+        fill: rgb(187,120,120);
+      }
+      /* padding-left: 2em; */
     }
   }
 
@@ -29,6 +34,103 @@ const Grid = styled.div`
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
+  }
+
+  &.featured {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+
+    /* @media ${viewport[4]} {
+      grid-template-columns: 1fr 1fr;
+    } */
+
+    @media ${viewport[7]} {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media ${viewport[12]} {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &.card {
+    justify-content: stretch;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+
+    &:hover {
+      border-color: rgb(187, 120, 120);
+    }
+  }
+
+  &.footer {
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "newsletter newsletter"
+      "store orders"
+      "social .";
+    grid-row-gap: 3em;
+    grid-column-gap: 1em;
+
+    @media ${viewport[7]} {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "newsletter newsletter newsletter"
+        "store orders social";
+    }
+
+    @media ${viewport[9]} {
+      grid-column-gap: 3em;
+      grid-template-columns: 1.7fr 1fr 1fr 0.7fr;
+      grid-template-areas: "newsletter store orders social";
+    }
+
+    & .newsletter {
+      grid-area: newsletter;
+    }
+
+    & .store {
+      grid-area: store;
+    }
+
+    & .order {
+      grid-area: orders;
+    }
+
+    & .social {
+      grid-area: social;
+    }
+  }
+
+  &.payment {
+    grid-template-columns: 1fr max-content 2em max-content 1fr;
+    grid-template-areas: ". paypal . visa .";
+
+    & .paypal {
+      grid-area: paypal;
+    }
+
+    & .visa {
+      grid-area: visa;
+
+      & svg {
+        width: 54px;
+
+        @media ${viewport[7]} {
+          width: 65px;
+        }
+      }
+    }
+
+    & span svg {
+      max-height: 32px;
+
+      @media ${viewport[7]} {
+        max-height: 48px;
+      }
+    }
   }
 `
 

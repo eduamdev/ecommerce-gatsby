@@ -6,6 +6,7 @@ import Wrapper from "./wrapper"
 import Nav from "./nav"
 import Grid from "./grid"
 import { Cart } from "./svg"
+import LinkUp from "./link"
 
 const StyledHeader = styled.header`
   height: 80px;
@@ -20,7 +21,9 @@ const Header = ({ siteTitle }) => (
       <Grid className="header">
         <Title text={siteTitle} className="header"></Title>
         <Nav></Nav>
-        {Cart}
+        <LinkUp className="svg" type="internal" url="/page-2" ariaLabel="cart">
+          {Cart}
+        </LinkUp>
       </Grid>
     </Wrapper>
   </StyledHeader>

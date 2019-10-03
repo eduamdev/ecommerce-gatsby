@@ -74,13 +74,14 @@ const Category = () => {
             className="category"
             style={{
               position: `absolute`,
-              bottom: `1.2em`,
-              left: `5em`,
+              bottom: `5%`,
+              left: `7.5%`,
               color: `#fff`,
               textDecoration: `none`,
               margin: 0,
             }}
             url="/page-2"
+            ariaLabel="Shop women"
           >
             <span>Shop women</span>
             <span className="svg">{ArrowRight}</span>
@@ -92,13 +93,14 @@ const Category = () => {
             className="category"
             style={{
               position: `absolute`,
-              bottom: `1.2em`,
-              right: `5em`,
+              bottom: `5%`,
+              right: `7.5%`,
               color: `#fff`,
               textDecoration: `none`,
               margin: 0,
             }}
             url="/page-2"
+            ariaLabel="Shop men"
           >
             <span>Shop men</span>
             <span className="svg">{ArrowRight}</span>

@@ -26,11 +26,15 @@ const StyledSection = styled.section`
       max-height: 700px;
     }
   }
+
+  &.payment {
+    background: rgb(245, 245, 245);
+  }
 `
 
-const Section = ({ id, className, children }) => {
+const Section = ({ id, className, style, children }) => {
   return (
-    <StyledSection id={id} className={className}>
+    <StyledSection id={id} className={className} style={style}>
       {children}
     </StyledSection>
   )
@@ -39,6 +43,7 @@ const Section = ({ id, className, children }) => {
 Section.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
+  style: PropTypes.object,
   children: PropTypes.node.isRequired,
 }
 

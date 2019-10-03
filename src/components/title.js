@@ -36,17 +36,82 @@ const Container = styled.div`
   &.header {
     display: unset;
   }
+
+  &.card-title{
+    margin-top: 1em;
+  }
 `
 
-const StyledTitle = styled.h2`
+const StyledH1 = styled.h1`
   display: inline;
-  font-size: 1.2em;
+  font-weight: 900;
+  padding: 0;
+  letter-spacing: -0.5px;
+  font-size: 2.75em;
+
+  @media ${viewport[4]} {
+    font-size: 2.8em;
+  }
+
+  @media ${viewport[7]} {
+    font-size: 3.2em;
+  }
+
+  @media ${viewport[9]} {
+    font-size: 3.9em;
+  }
+
+  &.banner {
+    position: absolute;
+    top: 10%;
+    left: 0.5em;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin: 0;
+
+    @media ${viewport[7]} {
+      left: 1.3em;
+    }
+
+    @media ${viewport[9]} {
+      left: 2em;
+    }
+
+    @media ${viewport[12]} {
+      left: 3em;
+    }
+
+    & .banner-span {
+      color: #bb7878;
+      font-size: 0.8em;
+      line-height: 1.4;
+      display: block;
+      letter-spacing: 2px;
+      font-weight: 200;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    }
+  }
+`
+
+const StyledH2 = styled.h2`
+  display: inline;
+  font-size: 1.55em;
   font-weight: 900;
   padding: 0;
   letter-spacing: -0.5px;
 
-  @media ${viewport[7]} {
+  @media ${viewport[4]} {
     font-size: 1.75em;
+  }
+
+  @media ${viewport[7]} {
+    font-size: 2em;
+    letter-spacing: -0.4px;
+  }
+
+  @media ${viewport[9]} {
+    font-size: 2.5em;
     letter-spacing: -0.4px;
   }
 
@@ -57,20 +122,59 @@ const StyledTitle = styled.h2`
   }
 `
 
+const StyledH3 = styled.h3`
+  display: inline;
+  font-weight: 900;
+  padding: 0;
+  letter-spacing: -0.5px;
+  font-size: 1.2em;
+
+  &.card-title {
+    margin-bottom: 0.2em;
+  }
+
+  @media ${viewport[4]} {
+    font-size: 1.35em;
+  }
+
+  @media ${viewport[7]} {
+    font-size: 1.5em;
+    letter-spacing: -0.4px;
+  }
+
+  @media ${viewport[9]} {
+    font-size: 1.75em;
+    letter-spacing: -0.4px;
+  }
+`
+
+const StyledH4 = styled.h4`
+  display: inline;
+  font-weight: 900;
+  padding: 0;
+  letter-spacing: -0.3px;
+`
+
 Title.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  type: PropTypes.string.isRequired,
   className: PropTypes.string,
   placement: PropTypes.string,
+  children: PropTypes.node,
 }
 
 Title.defaultProps = {
   placement: `left`,
+  type: `h2`,
 }
 
-export default function Title({ text, className, placement }) {
+export default function Title({ type, text, className, placement, children }) {
   return (
     <Container className={className} placement={placement}>
-      <StyledTitle className={className}>{text}</StyledTitle>
+      {type === "h1" && <StyledH1 className={className}>{children}</StyledH1>}
+      {type === "h2" && <StyledH2 className={className}>{text}</StyledH2>}
+      {type === "h3" && <StyledH3 className={className}>{text}</StyledH3>}
+      {type === "h4" && <StyledH4 className={className}>{text}</StyledH4>}
     </Container>
   )
 }

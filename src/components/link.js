@@ -13,8 +13,8 @@ const GatsbyLink = styled(Link)`
   outline: none;
 
   &.nav {
-    font-weight: 400;
-    letter-spacing: -0.2px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
     font-size: 0.95em;
 
     @media ${viewport[4]} {
@@ -27,6 +27,10 @@ const GatsbyLink = styled(Link)`
 
     @media ${viewport[9]} {
       font-size: 0.92em;
+    }
+
+    &:hover {
+      color: rgb(187, 120, 120);
     }
   }
 
@@ -44,6 +48,22 @@ const GatsbyLink = styled(Link)`
       width: 27px;
       height: 27px;
     }
+  }
+
+  &.featured {
+    margin-top: 1.75em;
+    border: 1px solid;
+    background: rgb(187, 120, 120);
+    color: #fff;
+    padding: 0.5em 1em;
+
+    &:hover {
+      background: transparent;
+      color: rgb(187, 120, 120);
+    }
+  }
+
+  &.card-image {
   }
 `
 

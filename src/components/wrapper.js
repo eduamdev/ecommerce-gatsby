@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 const StyledWrapper = styled.div`
   margin: 0 auto;
   max-width: 90%;
+  width: 90%;
   padding: 0;
 
   @media ${viewport[4]} {
@@ -18,6 +19,7 @@ const StyledWrapper = styled.div`
 
   @media ${viewport[9]} {
     max-width: 85%;
+    width: 85%;
   }
 
   @media ${viewport[12]} {
