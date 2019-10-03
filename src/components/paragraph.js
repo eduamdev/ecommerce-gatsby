@@ -47,10 +47,10 @@ const StyledParagraph = styled.p`
   }
 
   &.card-label {
-    font-weight: 500;
+    font-weight: 900;
     font-size: 0.9em;
     color: rgb(187, 120, 120);
-    letter-spacing: 2.5px;
+    letter-spacing: -0.2px;
     margin-bottom: 0.2em;
 
     @media ${viewport[7]} {
