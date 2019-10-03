@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Banner from "../components/banner"
 import Category from "../components/category"
 import Featured from "../components/featured"
+import Shoemaking from "../components/shoemaking"
 
 const IndexPage = () => {
   return (
@@ -12,6 +13,7 @@ const IndexPage = () => {
       <Banner></Banner>
       <Category></Category>
       <Featured></Featured>
+      <Shoemaking></Shoemaking>
     </Layout>
   )
 }

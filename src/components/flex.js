@@ -4,6 +4,10 @@ import PropTypes from "prop-types"
 
 const Flex = styled.div`
   display: flex;
+
+  &.shoemaker {
+    justify-content: flex-end;
+  }
 `
 
 const FlexContainer = ({ className, children }) => {

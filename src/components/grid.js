@@ -64,6 +64,19 @@ const Grid = styled.div`
     }
   }
 
+  &.shoemaking{
+    grid-template-columns: 1fr 1.7fr;
+
+    @media ${viewport[7]}{
+      grid-template-columns: 1fr 1.2fr;
+    }
+
+    & .text{
+      justify-self: end;
+      text-align: right;
+    }
+  }
+
   &.footer {
     align-items: start;
     grid-template-columns: 1fr 1fr;

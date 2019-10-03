@@ -120,6 +120,11 @@ const StyledH2 = styled.h2`
     font-family: serif;
     font-style: italic;
   }
+
+  &.shoemaking {
+    /* margin: 0; */
+    text-align: right;
+  }
 `
 
 const StyledH3 = styled.h3`
