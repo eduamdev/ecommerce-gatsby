@@ -158,11 +158,6 @@ const StyledH4 = styled.h4`
   font-weight: 900;
   padding: 0;
   letter-spacing: -0.3px;
-
-  &.cartProcess {
-    margin: 0;
-    line-height: 1.45;
-  }
 `
 
 Title.propTypes = {

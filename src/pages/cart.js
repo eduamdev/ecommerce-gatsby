@@ -16,28 +16,25 @@ const Cart = () => (
       <Wrapper>
         <Grid className="cartProcess">
           <article className="active">
-            <Title
-              className="cartProcess"
-              type="h4"
-              text="Shopping Cart"
-              placement="center"
-            ></Title>
+            <P
+              style={{ margin: 0, fontWeight: `700`, letterSpacing: `-0.5px` }}
+            >
+              Shopping Cart
+            </P>
           </article>
           <article>
-            <Title
-              className="cartProcess"
-              type="h4"
-              text="Check out"
-              placement="center"
-            ></Title>
+            <P
+              style={{ margin: 0, fontWeight: `700`, letterSpacing: `-0.5px` }}
+            >
+              Check out
+            </P>
           </article>
           <article>
-            <Title
-              className="cartProcess"
-              type="h4"
-              text="Order Completed"
-              placement="center"
-            ></Title>
+            <P
+              style={{ margin: 0, fontWeight: `700`, letterSpacing: `-0.5px` }}
+            >
+              Order Completed
+            </P>
           </article>
         </Grid>
       </Wrapper>
