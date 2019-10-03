@@ -36,6 +36,11 @@ const GatsbyLink = styled(Link)`
 
   &.category-img {
     position: relative;
+    border: 1px solid #ddd;
+
+    &:hover {
+      border-color: rgb(187, 120, 120);
+    }
   }
 
   &.category {
