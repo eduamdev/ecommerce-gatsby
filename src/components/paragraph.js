@@ -34,11 +34,24 @@ const StyledParagraph = styled.p`
     font-weight: 400;
   }
 
+  &.banner {
+    position: absolute;
+    right: 10%;
+    bottom: 2%;
+    max-width: 80%;
+    text-align: right;
+  }
+
+  &.card-description {
+    margin-bottom: 1em;
+  }
+
   &.card-label {
     font-weight: 500;
-    font-size: 1.05em;
+    font-size: 0.9em;
     color: rgb(187, 120, 120);
-    letter-spacing: 1.5px;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.2em;
 
     @media ${viewport[7]} {
       font-size: 1em;

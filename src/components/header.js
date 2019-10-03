@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Wrapper>
       <Grid className="header">
-        <Title text={siteTitle} className="header"></Title>
+        <Title type="h3" text={siteTitle} className="header"></Title>
         <Nav></Nav>
         <LinkUp className="svg" type="internal" url="/page-2" ariaLabel="cart">
           {Cart}

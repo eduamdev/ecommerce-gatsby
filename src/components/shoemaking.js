@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import Title from "./title"
 import P from "./paragraph"
-import { ArrowRight } from "./svg"
 import Flex from "./flex"
 
 const Shoemaking = () => {
@@ -36,15 +35,11 @@ const Shoemaking = () => {
               <P
                 style={{
                   margin: 0,
-                  borderBottom: `1px solid`,
                   display: `inline`,
                 }}
               >
                 Learn more about our shoemaking process
               </P>
-              <span style={{ width: `20px`, borderBottom: `1px solid` }}>
-                {ArrowRight}
-              </span>
             </Flex>
           </div>
           <div>

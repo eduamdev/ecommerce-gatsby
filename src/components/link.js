@@ -52,10 +52,11 @@ const GatsbyLink = styled(Link)`
 
   &.featured {
     margin-top: 1.75em;
+    margin-bottom: 3em;
     border: 1px solid;
     background: rgb(187, 120, 120);
     color: #fff;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.2em;
 
     &:hover {
       background: transparent;
@@ -64,6 +65,7 @@ const GatsbyLink = styled(Link)`
   }
 
   &.card-image {
+    padding: 0.25em;
   }
 `
 

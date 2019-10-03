@@ -66,7 +66,7 @@ const StyledH1 = styled.h1`
     top: 10%;
     left: 0.5em;
     font-weight: 900;
-    letter-spacing: -1px;
+    letter-spacing: -3px;
     margin: 0;
 
     @media ${viewport[7]} {
@@ -75,19 +75,21 @@ const StyledH1 = styled.h1`
 
     @media ${viewport[9]} {
       left: 2em;
+      letter-spacing: -2px;
     }
 
     @media ${viewport[12]} {
       left: 3em;
+      letter-spacing: -1.5px;
     }
 
     & .banner-span {
       color: #bb7878;
-      font-size: 0.8em;
-      line-height: 1.4;
+      font-size: 0.4em;
+      line-height: 1.7;
       display: block;
-      letter-spacing: 2px;
-      font-weight: 200;
+      letter-spacing: -0.2px;
+      font-weight: 500;
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     }
@@ -115,12 +117,6 @@ const StyledH2 = styled.h2`
     letter-spacing: -0.4px;
   }
 
-  &.header {
-    margin-bottom: 0;
-    font-family: serif;
-    font-style: italic;
-  }
-
   &.shoemaking {
     /* margin: 0; */
     text-align: right;
@@ -136,6 +132,13 @@ const StyledH3 = styled.h3`
 
   &.card-title {
     margin-bottom: 0.2em;
+  }
+
+  &.header {
+    margin-bottom: 0;
+    font-family: serif;
+    font-style: italic;
+    letter-spacing: -2px;
   }
 
   @media ${viewport[4]} {

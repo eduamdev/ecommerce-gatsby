@@ -38,7 +38,7 @@ const Grid = styled.div`
 
   &.featured {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: 0.5em;
 
     /* @media ${viewport[4]} {
       grid-template-columns: 1fr 1fr;
@@ -65,7 +65,7 @@ const Grid = styled.div`
   }
 
   &.shoemaking{
-    grid-template-columns: 1fr 1.7fr;
+    grid-template-columns: 1.2fr 1fr;
 
     @media ${viewport[7]}{
       grid-template-columns: 1fr 1.2fr;
