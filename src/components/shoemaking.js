@@ -42,7 +42,9 @@ const Shoemaking = () => {
               >
                 Learn more about our shoemaking process
               </P>
-              <span style={{ width: `24px` }}>{ArrowRight}</span>
+              <span style={{ width: `24px`, borderBottom: `1px solid` }}>
+                {ArrowRight}
+              </span>
             </Flex>
           </div>
           <div>
