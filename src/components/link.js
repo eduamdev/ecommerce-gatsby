@@ -55,7 +55,8 @@ const GatsbyLink = styled(Link)`
     }
   }
 
-  &.featured {
+  &.featured,
+  &.cart {
     margin-top: 1.75em;
     margin-bottom: 3em;
     border: 1px solid;

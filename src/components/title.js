@@ -114,11 +114,9 @@ const StyledH2 = styled.h2`
 
   @media ${viewport[9]} {
     font-size: 2.5em;
-    letter-spacing: -0.4px;
   }
 
   &.shoemaking {
-    /* margin: 0; */
     text-align: right;
   }
 `
@@ -151,8 +149,7 @@ const StyledH3 = styled.h3`
   }
 
   @media ${viewport[9]} {
-    font-size: 1.75em;
-    letter-spacing: -0.4px;
+    font-size: 1.7em;
   }
 `
 
@@ -161,6 +158,11 @@ const StyledH4 = styled.h4`
   font-weight: 900;
   padding: 0;
   letter-spacing: -0.3px;
+
+  &.cartProcess {
+    margin: 0;
+    line-height: 1.45;
+  }
 `
 
 Title.propTypes = {

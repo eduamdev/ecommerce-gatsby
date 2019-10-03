@@ -145,6 +145,26 @@ const Grid = styled.div`
       }
     }
   }
+
+  &.cartProcess{
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    background: rgb(245,245,245);
+    align-items: stretch;
+
+    & article{
+      padding: 2.5em 0.5em;
+      border-bottom: 5px solid transparent;
+
+      &.active{
+        border-bottom-color: rgb(187,120,120);
+      }
+    }
+  }
+
+  &.cartInfo{
+    text-align: center;
+  }
 `
 
 const GridContainer = ({ className, children }) => {

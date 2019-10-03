@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
       <Grid className="header">
         <Title type="h3" text={siteTitle} className="header"></Title>
         <Nav></Nav>
-        <LinkUp className="svg" type="internal" url="/page-2" ariaLabel="cart">
+        <LinkUp className="svg" type="internal" url="/cart" ariaLabel="cart">
           {Cart}
         </LinkUp>
       </Grid>
