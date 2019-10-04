@@ -45,12 +45,12 @@ const Grid = styled.div`
     } */
 
     @media ${viewport[7]} {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @media ${viewport[12]} {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    /* @media ${viewport[12]} {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    } */
   }
 
   &.card {
