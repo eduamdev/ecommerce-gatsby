@@ -13,15 +13,15 @@ const Featured = () => {
       <Wrapper>
         <Title text="Featured" placement="center"></Title>
         <Grid className="featured">
-          <Card item={{ url: "/page-2" }}></Card>
-          <Card item={{ url: "/page-2" }}></Card>
-          <Card item={{ url: "/page-2" }}></Card>
-          <Card item={{ url: "/page-2" }}></Card>
+          <Card item={{ url: "/product" }}></Card>
+          <Card item={{ url: "/product" }}></Card>
+          <Card item={{ url: "/product" }}></Card>
+          <Card item={{ url: "/product" }}></Card>
         </Grid>
         <Grid>
           <LinkUp
             type="internal"
-            url="/page-2"
+            url="/products"
             className="featured"
             ariaLabel="Discover more"
           >

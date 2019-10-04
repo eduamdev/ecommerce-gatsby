@@ -158,6 +158,7 @@ const Grid = styled.div`
 
       &.active{
         border-bottom-color: rgb(187,120,120);
+        background-color: #fff;
 
         & p{
           font-weight: 700;

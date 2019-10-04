@@ -49,6 +49,10 @@ const StyledParagraph = styled.p`
       right: 10%;
       left: unset;
     }
+
+    @media ${viewport[9]} {
+      font-size: 0.9em;
+    }
   }
 
   &.card-description {

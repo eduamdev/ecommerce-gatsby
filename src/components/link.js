@@ -50,8 +50,13 @@ const GatsbyLink = styled(Link)`
 
     & .svg {
       fill: #fff;
-      width: 23px;
-      height: 23px;
+      width: 0.85em;
+      height: auto;
+      margin-left: 4px;
+
+      @media ${viewport[7]} {
+        width: 1em;
+      }
     }
   }
 
