@@ -12,7 +12,7 @@ import Grid from "../components/grid"
 const Cart = () => (
   <Layout>
     <SEO title="Cart" />
-    <Section>
+    <Section className="cartProcess">
       <Wrapper className="cartProcess">
         <Grid className="cartProcess">
           <article className="active">

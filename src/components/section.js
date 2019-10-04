@@ -15,12 +15,6 @@ const StyledSection = styled.section`
   &.banner {
     position: relative;
     padding: 0;
-    /* max-height: 550px; */
-    /* background-image: url("https://images.unsplash.com/photo-1489345745021-740d36bbda21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80"); */
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 550px; */
 
     & div {
       max-height: 700px;
@@ -29,6 +23,10 @@ const StyledSection = styled.section`
 
   &.payment {
     background: rgb(245, 245, 245);
+  }
+
+  &.cartProcess {
+    padding: 0;
   }
 `
 
