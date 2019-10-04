@@ -33,7 +33,7 @@ const Grid = styled.div`
   &.category {
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: 0.5em;
   }
 
   &.featured {
