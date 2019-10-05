@@ -185,6 +185,14 @@ const Grid = styled.div`
 
     @media ${viewport[7]} {
       grid-column-gap: 1em;
+      grid-row-gap: 1em;
+      
+    }
+
+    @media ${viewport[12]} {
+      grid-template-areas: "image info"
+    ". details"
+    "reviews reviews";
     }
 
     & .product-image{
