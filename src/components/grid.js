@@ -153,8 +153,20 @@ const Grid = styled.div`
     align-items: stretch;
 
     & article{
-      padding: 2em 0.5em;
+      padding: 0.75em 0.1em;
       border-bottom: 1px solid transparent;
+
+      & p{
+        font-size: 0.875em;
+
+        @media ${viewport[4]}{
+          font-size: 0.9em;
+        }
+
+        @media ${viewport[7]}{
+          font-size: 1em;
+        }
+      }
 
       &.active{
         border-bottom-color: rgb(187,120,120);
@@ -164,6 +176,11 @@ const Grid = styled.div`
           font-weight: 700;
         }
       }
+      
+      @media ${viewport[7]}{
+        padding: 2em 0.5em;
+      }
+
     }
   }
 
