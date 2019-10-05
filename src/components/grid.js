@@ -170,6 +170,39 @@ const Grid = styled.div`
   &.cartInfo{
     text-align: center;
   }
+
+  &.product{
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas: "image info"
+    "details details"
+    "reviews reviews";
+    grid-row-gap: 3em;
+    grid-column-gap: 0.5em;
+
+    @media ${viewport[4]} {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media ${viewport[7]} {
+      grid-column-gap: 1em;
+    }
+
+    & .product-image{
+      grid-area: image;
+    }
+
+    & .product-info{
+      grid-area: info;
+    }
+
+    & .product-details{
+      grid-area: details;
+    }
+
+    & .product-reviews{
+      grid-area: reviews;
+    }
+  }
 `
 
 const GridContainer = ({ className, children }) => {

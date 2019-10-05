@@ -6,7 +6,6 @@ import PropTypes from "prop-types"
 const Container = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr;
 
   ${props =>
     props.placement === "left" &&
@@ -139,6 +138,11 @@ const StyledH3 = styled.h3`
     letter-spacing: -2px;
   }
 
+  &.product-details__title,
+  &.product-reviews {
+    margin: 0;
+  }
+
   @media ${viewport[4]} {
     font-size: 1.35em;
   }
@@ -158,6 +162,10 @@ const StyledH4 = styled.h4`
   font-weight: 900;
   padding: 0;
   letter-spacing: -0.3px;
+
+  &.title-review {
+    margin: 1em 0;
+  }
 `
 
 Title.propTypes = {
