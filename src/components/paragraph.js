@@ -64,6 +64,9 @@ const StyledParagraph = styled.p`
     font-weight: 900;
     font-size: 0.9em;
     color: rgb(187, 120, 120);
+  }
+
+  &.card-label {
     letter-spacing: -0.2px;
     margin-bottom: 0.2em;
 
@@ -73,6 +76,20 @@ const StyledParagraph = styled.p`
 
     @media ${viewport[12]} {
       font-size: 1.1em;
+    }
+  }
+
+  &.product-info__price {
+    margin: 0.5em 0;
+    font-size: 1.1em;
+    letter-spacing: -0.5px;
+
+    @media ${viewport[7]} {
+      font-size: 1.2em;
+    }
+
+    @media ${viewport[12]} {
+      font-size: 1.35em;
     }
   }
 

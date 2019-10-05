@@ -184,12 +184,13 @@ const Grid = styled.div`
     }
 
     @media ${viewport[7]} {
-      grid-column-gap: 1em;
+      grid-column-gap: 2.75em;
       grid-row-gap: 1em;
-      
     }
 
     @media ${viewport[12]} {
+      grid-column-gap: 3em;
+      grid-row-gap: 0;
       grid-template-areas: "image info"
     ". details"
     "reviews reviews";
@@ -205,6 +206,12 @@ const Grid = styled.div`
 
     & .product-details{
       grid-area: details;
+      border-top: 1px solid #ddd;
+      padding-top: 2em;
+
+      @media ${viewport[7]} {
+        padding-top: 2.2em;
+      }
     }
 
     & .product-reviews{
