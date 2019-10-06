@@ -14,7 +14,6 @@ const StyledSection = styled.section`
 
   &.banner {
     position: relative;
-    padding: 0;
 
     & div {
       max-height: 700px;
@@ -25,6 +24,9 @@ const StyledSection = styled.section`
     background: rgb(245, 245, 245);
   }
 
+  &.products,
+  &.filter,
+  &.banner,
   &.cartProcess {
     padding: 0;
   }

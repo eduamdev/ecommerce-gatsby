@@ -14,6 +14,13 @@ const Flex = styled.div`
       height: 22px;
     }
   }
+
+  &.filter {
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0.5em 1em;
+    cursor: pointer;
+  }
 `
 
 const FlexContainer = ({ className, children }) => {

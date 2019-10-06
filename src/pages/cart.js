@@ -37,7 +37,7 @@ const Cart = () => (
           <LinkUp
             className="cart"
             type="internal"
-            url="/"
+            url="/products"
             ariaLabel="Go to shop"
           >
             Continue shopping

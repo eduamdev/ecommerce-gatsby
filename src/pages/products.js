@@ -10,9 +10,9 @@ import ProductContainer from "../components/productContainer"
 const Products = () => (
   <Layout>
     <SEO title="Products" />
-    <Section>
+    <Section style={{padding: `1em 0 3em 0`}}>
       <Wrapper>
-        <Grid>
+        <Grid className="productContainer">
           <ProductContainer></ProductContainer>
         </Grid>
       </Wrapper>

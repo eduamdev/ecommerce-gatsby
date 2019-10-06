@@ -97,8 +97,24 @@ const Footer = () => {
         <Wrapper>
           <Grid>
             <P style={{ margin: 0 }}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-              pariatur quae sint?
+              Design & built by Eduardo Rodriguez,{" "}
+              <a
+                href="https://twitter.com/edroamz"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label="twitter account"
+              >
+                twitter
+              </a>{" "}
+              &{" "}
+              <a
+                href="https://github.com/edroamz"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label="github account"
+              >
+                github
+              </a>
             </P>
           </Grid>
         </Wrapper>
