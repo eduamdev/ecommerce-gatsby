@@ -11,6 +11,7 @@ import Title from "../components/title"
 import P from "../components/paragraph"
 import { star, halfStar, outlineStar } from "../components/svg"
 import styled from "styled-components"
+import LinkUp from "../components/link"
 
 const ProductList = styled.ul`
   margin-bottom: 1em;
@@ -51,7 +52,7 @@ const Product = () => (
             />
           </div>
           <div className="product-info">
-            <Title type="h2" text="Mascarpone Ela"></Title>
+            <Title className="product-name" type="h2" text="Mascarpone Ela"></Title>
             <P className="product-info__price">$ 220</P>
             <P>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
@@ -69,6 +70,17 @@ const Product = () => (
               <input type="number" value="1" />
               <button className="update-num">+</button>
             </P>
+            
+            <LinkUp
+            type="internal"
+            url="/products"
+            className="addToCart"
+            ariaLabel="Add to cart"
+          >
+            Add to cart
+          </LinkUp>
+            
+            
           </div>
           <div className="product-details">
             <Title

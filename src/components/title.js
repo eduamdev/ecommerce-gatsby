@@ -118,6 +118,10 @@ const StyledH2 = styled.h2`
   &.shoemaking {
     text-align: right;
   }
+
+  &.product-name{
+    margin: 0;
+  }
 `
 
 const StyledH3 = styled.h3`

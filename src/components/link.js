@@ -60,7 +60,26 @@ const GatsbyLink = styled(Link)`
     }
   }
 
-  &.featured,
+  &.featured{
+    border-bottom: 1px solid;
+    color: rgb(187, 120, 120);
+    margin-top: 1.75em;
+    margin-bottom: 3em;
+  }
+
+  &.addToCart{
+    display: inline-block;
+    border: 1px solid;
+    background: rgb(187, 120, 120);
+    color: #fff;
+    padding: 0.75em 1.2em;
+
+    &:hover {
+      background: transparent;
+      color: rgb(187, 120, 120);
+    }
+  }
+
   &.cart,
   &.error {
     margin-top: 1.75em;

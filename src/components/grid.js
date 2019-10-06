@@ -226,6 +226,7 @@ const Grid = styled.div`
 
     & .product-info{
       grid-area: info;
+      align-self: start;
     }
 
     & .product-details{

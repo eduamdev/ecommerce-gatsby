@@ -94,8 +94,8 @@ const StyledParagraph = styled.p`
   }
 
   &.quantity {
-    margin-top: 1.5em;
-    margin-bottom: 0;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
     display: grid;
     grid-template-columns: max-content max-content max-content;
 
