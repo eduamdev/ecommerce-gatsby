@@ -20,13 +20,20 @@ const Grid = styled.div`
       grid-area: nav;
     }
 
-    & .svg {
+    & .header-cart {
       grid-area: svg;
+      position: relative;
 
-      &:hover{
-        fill: rgb(187,120,120);
+      &.badge:after{
+        content: '';
+        position: absolute;
+        top: -4px;
+        right: -6px;
+        height: 10px;
+        width: 10px;
+        background: tomato;
+        border-radius: 100%;
       }
-      /* padding-left: 2em; */
     }
   }
 
