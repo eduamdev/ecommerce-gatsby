@@ -161,7 +161,7 @@ const Grid = styled.div`
 
     & article{
       padding: 0.75em 0.1em;
-      border-bottom: 1px solid transparent;
+      border-bottom: 3px solid transparent;
 
       & p{
         font-size: 0.875em;
@@ -176,7 +176,7 @@ const Grid = styled.div`
       }
 
       &.active{
-        border-bottom-color: rgb(187,120,120);
+        border-bottom-color: #000;
         background-color: #fff;
 
         & p{
