@@ -19,9 +19,16 @@ const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Wrapper>
       <Grid className="header">
-        <Title type="h3" text={siteTitle} className="header"></Title>
+        <LinkUp type="internal" url="/" ariaLabel="Shoecase">
+          <Title type="h3" text={siteTitle} className="header"></Title>
+        </LinkUp>
         <Nav></Nav>
-        <LinkUp className="header-cart badge" type="internal" url="/cart" ariaLabel="cart">
+        <LinkUp
+          className="header-cart badge"
+          type="internal"
+          url="/cart"
+          ariaLabel="cart"
+        >
           {Cart}
         </LinkUp>
       </Grid>
