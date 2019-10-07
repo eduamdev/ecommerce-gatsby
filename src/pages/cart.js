@@ -51,7 +51,7 @@ const Cart = () => (
             <th>Total</th>
           </tr>
           <tr>
-            <td style={{ padding: 0 }}>
+            <td style={{ paddingTop: 0, paddingBottom: 0 }}>
               <img
                 style={{ float: `left`, width: `70px`, marginRight: `25px` }}
                 src="https://clarks.scene7.com/is/image/Pangaea2Build/26135409_W_1"
