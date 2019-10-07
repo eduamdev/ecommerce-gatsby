@@ -195,6 +195,10 @@ const Grid = styled.div`
     text-align: center;
   }
 
+  &.cartInfo{
+    display: none;
+  }
+
   &.payment-details{
     margin: 3em 0 0 0;
     grid-template-columns: 1fr;

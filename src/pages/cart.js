@@ -15,10 +15,10 @@ const Cart = () => (
     <Section className="cartProcess">
       <Wrapper className="cartProcess">
         <Grid className="cartProcess">
-          <article className="active">
+          <article>
             <P style={{ margin: 0, letterSpacing: `-0.5px` }}>Shopping Cart</P>
           </article>
-          <article>
+          <article className="active">
             <P style={{ margin: 0, letterSpacing: `-0.5px` }}>Check out</P>
           </article>
           <article>
