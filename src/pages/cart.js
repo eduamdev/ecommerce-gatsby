@@ -51,7 +51,7 @@ const Cart = () => (
             <th>Total</th>
           </tr>
           <tr>
-            <td>
+            <td style={{ padding: 0 }}>
               <img
                 style={{ float: `left`, width: `70px`, marginRight: `25px` }}
                 src="https://clarks.scene7.com/is/image/Pangaea2Build/26135409_W_1"
@@ -90,7 +90,7 @@ const Cart = () => (
           <div className="amount">
             <div className="subtotal">
               <h4>Subtotal</h4>
-              <P>$172</P>
+              <P>$344</P>
               <h4>Shipping</h4>
               <P>Free</P>
             </div>
