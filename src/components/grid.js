@@ -232,7 +232,9 @@ const Grid = styled.div`
 
       & .creditCard-note{
         font-size: 0.7em;
+        line-height: 1.25;
         margin-top: 0.5em;
+        margin-bottom: 0.5em;
         display: block;
         letter-spacing: 0.5px;
         font-style: italic;
