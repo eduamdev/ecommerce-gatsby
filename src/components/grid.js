@@ -185,7 +185,7 @@ const Grid = styled.div`
       }
       
       @media ${viewport[7]}{
-        padding: 2em 0.5em;
+        padding: 1.25em 0.5em;
       }
 
     }
@@ -297,7 +297,7 @@ const Grid = styled.div`
         padding: 1em 0 1em 0;
         align-self: stretch;
         background: #f5f5f5;
-        border-top: 1px solid;
+        /* border-top: 1px solid; */
 
         @media ${viewport[7]}{
           width: 80%;
@@ -313,6 +313,7 @@ const Grid = styled.div`
           margin: 0;
           color: rgb(187,120,120);
           font-weight: 700;
+          font-size: 1.1em;
         }
       }
     }
