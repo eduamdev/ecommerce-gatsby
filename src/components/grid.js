@@ -195,6 +195,123 @@ const Grid = styled.div`
     text-align: center;
   }
 
+  &.payment-details{
+    margin: 3em 0 0 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "details" 
+    "amount";
+    grid-column-gap: 3em;
+    grid-row-gap: 3em;
+
+    @media ${viewport[7]}{
+      margin: 5em 0 0 0;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "details amount";
+    }
+
+    & .details{
+      grid-area: details;
+
+      & .email-label{
+        font-weight: 700;
+        display: block;
+        margin-bottom: 0.5em;
+      }
+
+      & .email-input{
+        width: 100%; 
+        padding: 0.25em 1em;
+      }
+
+      & .creditCard-label{
+        font-weight: 700;
+        display: block;
+        margin-bottom: 0.5em;
+        margin-top: 2em;
+      }
+
+      & .creditCard-note{
+        font-size: 0.7em;
+        margin-top: 0.5em;
+        display: block;
+        letter-spacing: 0.5px;
+        font-style: italic;
+      }
+
+      & .creditCard-input{
+        width: 100%;
+        padding: 0.25em 1em;
+      }
+    }
+
+    & .amount {
+      grid-area: amount;
+      align-self: start;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      grid-template-areas: "subtotal"
+      "total";
+
+      & .subtotal{
+        grid-area: subtotal;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3em;
+        grid-row-gap: 0.3em;
+        padding: 0.5em 0 0.5em 0;
+        align-self: stretch;
+
+        @media ${viewport[7]}{
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        & h4{
+          justify-self: end;
+          margin: 0;
+          font-size: 0.9em;
+        }
+
+        & p{
+          margin: 0;
+        }
+      }
+
+      & .total{
+        grid-area: total;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3em;
+        padding: 1em 0 1em 0;
+        align-self: stretch;
+        background: #f5f5f5;
+        border-top: 1px solid;
+
+        @media ${viewport[7]}{
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        & h4{
+          justify-self: end;
+          margin: 0;
+        }
+
+        & p{
+          margin: 0;
+          color: rgb(187,120,120);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
   &.product{
     grid-template-columns: 1.2fr 1fr;
     grid-template-areas: "image info"
