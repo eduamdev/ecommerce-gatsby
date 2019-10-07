@@ -200,12 +200,12 @@ const Grid = styled.div`
   }
 
   &.payment-details{
-    margin: 3em 0 0 0;
+    margin: 5em 0 0 0;
     grid-template-columns: 1fr;
     grid-template-areas: "details" 
     "amount";
     grid-column-gap: 3em;
-    grid-row-gap: 3em;
+    grid-row-gap: 5em;
 
     @media ${viewport[7]}{
       margin: 5em 0 0 0;
@@ -231,7 +231,7 @@ const Grid = styled.div`
         font-weight: 700;
         display: block;
         margin-bottom: 0.5em;
-        margin-top: 2em;
+        margin-top: 1em;
       }
 
       & .creditCard-note{
@@ -252,7 +252,7 @@ const Grid = styled.div`
 
     & .amount {
       grid-area: amount;
-      align-self: start;
+      align-self: end;
       display: grid;
       align-items: center;
       justify-content: center;
