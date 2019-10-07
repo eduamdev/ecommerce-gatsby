@@ -60,14 +60,17 @@ const GatsbyLink = styled(Link)`
     }
   }
 
-  &.featured{
+  &.featured {
     border-bottom: 1px solid;
     color: rgb(187, 120, 120);
     margin-top: 1.75em;
     margin-bottom: 3em;
   }
 
-  &.addToCart{
+  &.cart,
+  &.error,
+  &.addToCart,
+  &.pay {
     display: inline-block;
     border: 1px solid;
     background: rgb(187, 120, 120);
@@ -80,19 +83,20 @@ const GatsbyLink = styled(Link)`
     }
   }
 
+  &.pay {
+    width: 100%;
+    margin: 2em auto;
+    text-align: center;
+
+    @media ${viewport[7]} {
+      width: 80%;
+    }
+  }
+
   &.cart,
   &.error {
     margin-top: 1.75em;
     margin-bottom: 3em;
-    border: 1px solid;
-    background: rgb(187, 120, 120);
-    color: #fff;
-    padding: 0.75em 1.2em;
-
-    &:hover {
-      background: transparent;
-      color: rgb(187, 120, 120);
-    }
   }
 
   &.card-image {

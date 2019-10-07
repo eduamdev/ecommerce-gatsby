@@ -98,6 +98,14 @@ const Cart = () => (
               <h4>Total</h4>
               <P>$344</P>
             </div>
+            <LinkUp
+              type="internal"
+              url="/"
+              className="pay"
+              ariaLabel="Pay with credit card"
+            >
+              Pay with credit card
+            </LinkUp>
           </div>
         </Grid>
       </Wrapper>

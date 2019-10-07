@@ -296,8 +296,8 @@ const Grid = styled.div`
         grid-column-gap: 3em;
         padding: 1em 0 1em 0;
         align-self: stretch;
-        background: #f5f5f5;
-        /* border-top: 1px solid; */
+        /* background: #f5f5f5; */
+        border-top: 1px solid #ddd;
 
         @media ${viewport[7]}{
           width: 80%;
