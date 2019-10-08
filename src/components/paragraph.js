@@ -41,10 +41,11 @@ const StyledParagraph = styled.p`
     max-width: 60%;
     text-align: left;
     font-size: 0.625em;
+    line-height: 1.3;
 
     @media ${viewport[7]} {
       font-size: 0.8em;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.3px;
       text-align: right;
       right: 10%;
       left: unset;

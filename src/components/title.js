@@ -46,18 +46,18 @@ const StyledH1 = styled.h1`
   font-weight: 900;
   padding: 0;
   letter-spacing: -0.5px;
-  font-size: 2.75em;
+  font-size: 2.5em;
 
   @media ${viewport[4]} {
-    font-size: 2.8em;
+    font-size: 2.55em;
   }
 
   @media ${viewport[7]} {
-    font-size: 3.2em;
+    font-size: 2.9em;
   }
 
   @media ${viewport[9]} {
-    font-size: 3.9em;
+    font-size: 3.6em;
   }
 
   &.banner {

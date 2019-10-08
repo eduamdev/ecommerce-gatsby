@@ -74,7 +74,7 @@ const Category = () => {
             className="category"
             style={{
               position: `absolute`,
-              bottom: `5%`,
+              bottom: `10%`,
               left: `7.5%`,
               color: `#fff`,
               textDecoration: `none`,
@@ -83,7 +83,7 @@ const Category = () => {
             url="/products"
             ariaLabel="Shop women"
           >
-            <span>Shop women</span>
+            <span style={{ borderBottom: `1px solid #ddd` }}>Shop women</span>
             <span className="svg">{ArrowRight}</span>
           </LinkUp>
         </P>
@@ -93,7 +93,7 @@ const Category = () => {
             className="category"
             style={{
               position: `absolute`,
-              bottom: `5%`,
+              bottom: `10%`,
               right: `7.5%`,
               color: `#fff`,
               textDecoration: `none`,
@@ -102,7 +102,7 @@ const Category = () => {
             url="/products"
             ariaLabel="Shop men"
           >
-            <span>Shop men</span>
+            <span style={{ borderBottom: `1px solid #ddd` }}>Shop men</span>
             <span className="svg">{ArrowRight}</span>
           </LinkUp>
         </P>
