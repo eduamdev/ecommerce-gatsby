@@ -26,9 +26,9 @@ const Cart = () => (
             </P>
           </article>
           <article>
-            <span style={{ margin: 0, letterSpacing: `-0.5px` }}>
+            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
               <span>3.</span> Order Completed
-            </span>
+            </P>
           </article>
         </Grid>
       </Wrapper>
