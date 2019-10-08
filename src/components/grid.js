@@ -88,7 +88,8 @@ const Grid = styled.div`
     box-shadow: 1px 3px 30px 5px #f5f5f5;
 
     &:hover {
-      border-color: rgb(187, 120, 120);
+      /* border-color: rgb(187, 120, 120); */
+      border-color: rgb(228, 206, 206);
       /* border: transparent; */
       transform:translate(1px, -1%);
       box-shadow: none;
