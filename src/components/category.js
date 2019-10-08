@@ -39,6 +39,13 @@ const Category = () => {
           }
         }
       }
+      rack: file(relativePath: { eq: "shoe-rack.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1800, maxHeight: 350) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -47,7 +54,7 @@ const Category = () => {
       <Wrapper className="category">
         <Grid className="category">
           <LinkUp
-            className="category-img"
+            className="women category-img"
             type="internal"
             url="/products"
             ariaLabel="Shop women"
@@ -59,7 +66,7 @@ const Category = () => {
             <ImgLayer></ImgLayer>
           </LinkUp>
           <LinkUp
-            className="category-img"
+            className="men category-img"
             type="internal"
             url="/products"
             ariaLabel="Shop men"
@@ -67,6 +74,11 @@ const Category = () => {
             <Img fluid={data.men.childImageSharp.fluid} alt="shop men"></Img>
             <ImgLayer></ImgLayer>
           </LinkUp>
+          <Img
+            className="rack"
+            fluid={data.rack.childImageSharp.fluid}
+            alt="shoe rack"
+          ></Img>
         </Grid>
         <P style={{ margin: 0 }}>
           <LinkUp
@@ -74,7 +86,7 @@ const Category = () => {
             className="category"
             style={{
               position: `absolute`,
-              bottom: `10%`,
+              bottom: `7%`,
               left: `10%`,
               color: `#fff`,
               textDecoration: `none`,
@@ -93,7 +105,7 @@ const Category = () => {
             className="category"
             style={{
               position: `absolute`,
-              bottom: `10%`,
+              bottom: `7%`,
               right: `10%`,
               color: `#fff`,
               textDecoration: `none`,

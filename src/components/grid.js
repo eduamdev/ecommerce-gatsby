@@ -41,9 +41,24 @@ const Grid = styled.div`
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
+    grid-template-areas: "rack rack"
+    "women men";
+    margin-bottom: 1em;
 
     @media ${viewport[9]} {
       grid-gap: 1em;
+    }
+
+    & .women{
+      grid-area: women;
+    }
+
+    & .men{
+      grid-area: men;
+    }
+
+    & .rack {
+      grid-area: rack;
     }
   }
 
