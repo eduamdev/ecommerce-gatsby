@@ -14,7 +14,7 @@ const ImgLayer = styled.div`
     rgba(230, 100, 101, 0.5),
     rgba(145, 152, 229, 0.9)
   ); */
-  background: linear-gradient(transparent 50%, rgba(25, 25, 25, 0.7) 100%);
+  background: linear-gradient(transparent 30%, rgba(25, 25, 25, 0.7) 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -95,7 +95,15 @@ const Category = () => {
             url="/products"
             ariaLabel="Shop women"
           >
-            <span style={{ borderBottom: `1px solid #ddd` }}>Shop women</span>
+            <span
+              style={{
+                borderBottom: `1px solid #fff`,
+                fontWeight: 700,
+                letterSpacing: `0.8px`,
+              }}
+            >
+              Shop women
+            </span>
             <span className="svg">{ArrowRight}</span>
           </LinkUp>
         </P>
@@ -114,7 +122,15 @@ const Category = () => {
             url="/products"
             ariaLabel="Shop men"
           >
-            <span style={{ borderBottom: `1px solid #ddd` }}>Shop men</span>
+            <span
+              style={{
+                borderBottom: `1px solid #fff`,
+                fontWeight: 700,
+                letterSpacing: `0.8px`,
+              }}
+            >
+              Shop men
+            </span>
             <span className="svg">{ArrowRight}</span>
           </LinkUp>
         </P>
