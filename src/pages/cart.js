@@ -33,7 +33,7 @@ const Cart = () => (
         </Grid>
       </Wrapper>
     </Section>
-    <Section style={{ padding: `4em 0 1.5em 0` }}>
+    <Section style={{ padding: `1.5em 0` }}>
       <Wrapper>
         <Title type="h2" text="Cart" placement="center"></Title>
         <Grid className="cartInfo">
