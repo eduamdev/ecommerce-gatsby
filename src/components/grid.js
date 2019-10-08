@@ -185,7 +185,7 @@ const Grid = styled.div`
       }
       
       @media ${viewport[7]}{
-        padding: 1em 0.5em;
+        padding: 0.5em;
       }
 
     }

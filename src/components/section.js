@@ -26,9 +26,12 @@ const StyledSection = styled.section`
 
   &.products,
   &.filter,
-  &.banner,
-  &.cartProcess {
+  &.banner {
     padding: 0;
+  }
+
+  &.cartProcess {
+    padding: 1em 0;
   }
 `
 

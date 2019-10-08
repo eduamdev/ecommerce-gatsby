@@ -17,23 +17,23 @@ const Cart = () => (
         <Grid className="cartProcess">
           <article>
             <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
-              <span style={{ fontWeight: 700 }}>1.</span> Shopping
+              <span>1.</span> Shopping
             </P>
           </article>
           <article className="active">
             <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
-              <span style={{ fontWeight: 700 }}>2.</span> Check out
+              <span>2.</span> Check out
             </P>
           </article>
           <article>
-            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
-              <span style={{ fontWeight: 700 }}>3.</span> Order Completed
-            </P>
+            <span style={{ margin: 0, letterSpacing: `-0.5px` }}>
+              <span>3.</span> Order Completed
+            </span>
           </article>
         </Grid>
       </Wrapper>
     </Section>
-    <Section style={{ padding: `4em 0` }}>
+    <Section style={{ padding: `4em 0 1.5em 0` }}>
       <Wrapper>
         <Title type="h2" text="Cart" placement="center"></Title>
         <Grid className="cartInfo">
