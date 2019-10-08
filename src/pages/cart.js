@@ -49,10 +49,10 @@ const Cart = () => (
         </Grid>
         <table className="checkout">
           <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
+            <th style={{ fontWeight: 500 }}>Product</th>
+            <th style={{ fontWeight: 500 }}>Price</th>
+            <th style={{ fontWeight: 500 }}>Quantity</th>
+            <th style={{ fontWeight: 500 }}>Total</th>
           </tr>
           <tr>
             <td style={{ paddingTop: 0, paddingBottom: 0 }}>
