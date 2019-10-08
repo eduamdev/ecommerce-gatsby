@@ -61,9 +61,15 @@ const Cart = () => (
                 Lorem, ipsum dolor.
               </h4>
             </td>
-            <td>$172</td>
-            <td>2</td>
-            <td>$344</td>
+            <td>
+              <P style={{ margin: 0 }}>$172</P>
+            </td>
+            <td>
+              <P style={{ margin: 0 }}>2</P>
+            </td>
+            <td>
+              <P style={{ margin: 0 }}>$344</P>
+            </td>
           </tr>
         </table>
         <Grid className="payment-details">

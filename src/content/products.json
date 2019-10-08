@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Batcombe Lord",
+    "slug": "batcombe-lord",
+    "price": "150",
+    "description": "Mens Boots Black Warmlined Leather",
+    "stars": "5",
+    "details": [
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit vel saepe necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur.",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Lorem ipsum dolor sit."
+    ],
+    "reviews": [
+      {
+        "stars": "4",
+        "title": "Lorem, ipsum dolor.",
+        "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit vel saepe necessitatibus."
+      },
+      {
+        "stars": "3",
+        "title": "Lorem, ipsum dolor.",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
+      }
+    ],
+    "featured": false,
+    "image": [
+      {
+        "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26146501_W_1"
+      }
+    ]
+  },
+  {
+    "name": "Mila Myth",
+    "slug": "mila-myth",
+    "price": "120",
+    "description": "Womens Boots Dark Brown Suede",
+    "stars": "3",
+    "details": [
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit vel saepe necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur.",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Lorem ipsum dolor sit."
+    ],
+    "reviews": [
+      {
+        "stars": "4",
+        "title": "review1",
+        "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit vel saepe necessitatibus."
+      },
+      {
+        "stars": "2.5",
+        "title": "review2",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
+      }
+    ],
+    "featured": false,
+    "image": [
+      {
+        "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26146246_W_1"
+      }
+    ]
+  },
+  {
+    "name": "Desert Boot",
+    "slug": "desert-boot",
+    "price": "140",
+    "description": "Womens Original Boots Khaki Suede",
+    "stars": "4",
+    "details": [
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit vel saepe necessitatibus.",
+      "Lorem ipsum dolor sit amet consectetur.",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "Lorem ipsum dolor sit."
+    ],
+    "reviews": [
+      {
+        "stars": "4",
+        "title": "Lorem, ipsum dolor.",
+        "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit vel saepe necessitatibus."
+      },
+      {
+        "stars": "3",
+        "title": "Lorem, ipsum dolor.",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
+      }
+    ],
+    "featured": false,
+    "image": [
+      {
+        "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26144168_W_1"
+      }
+    ]
+  }
+]

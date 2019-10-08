@@ -85,7 +85,7 @@ const GatsbyLink = styled(Link)`
 
   &.pay {
     width: 100%;
-    margin: 2em auto;
+    margin: 1em auto 0 auto;
     text-align: center;
 
     @media ${viewport[7]} {
@@ -153,7 +153,7 @@ const LinkUp = ({
 }
 
 LinkUp.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   style: PropTypes.object,
   type: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
