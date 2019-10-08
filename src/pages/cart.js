@@ -16,14 +16,18 @@ const Cart = () => (
       <Wrapper className="cartProcess">
         <Grid className="cartProcess">
           <article>
-            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>Shopping Cart</P>
+            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
+              <span style={{ fontWeight: 700 }}>1.</span> Shopping
+            </P>
           </article>
           <article className="active">
-            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>Check out</P>
+            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
+              <span style={{ fontWeight: 700 }}>2.</span> Check out
+            </P>
           </article>
           <article>
             <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
-              Order Completed
+              <span style={{ fontWeight: 700 }}>3.</span> Order Completed
             </P>
           </article>
         </Grid>
@@ -53,12 +57,19 @@ const Cart = () => (
           <tr>
             <td style={{ paddingTop: 0, paddingBottom: 0 }}>
               <img
-                style={{ float: `left`, width: `70px`, marginRight: `25px` }}
+                style={{ width: `60px` }}
                 src="https://clarks.scene7.com/is/image/Pangaea2Build/26135409_W_1"
                 alt=""
               />
-              <h4 style={{ paddingTop: `30px`, textAlign: `left` }}>
-                Lorem, ipsum dolor.
+              <h4
+                style={{
+                  marginBottom: `15px`,
+                  textAlign: `left`,
+                  fontSize: `0.92em`,
+                  letterSpacing: `-.5px`,
+                }}
+              >
+                Brown boots
               </h4>
             </td>
             <td>

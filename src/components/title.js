@@ -119,7 +119,7 @@ const StyledH2 = styled.h2`
     text-align: right;
   }
 
-  &.product-name{
+  &.product-name {
     margin: 0;
   }
 `
@@ -169,6 +169,11 @@ const StyledH4 = styled.h4`
 
   &.title-review {
     margin: 1em 0;
+  }
+
+  &.cart-product-name {
+    padding-top: 30px;
+    text-align: left;
   }
 `
 

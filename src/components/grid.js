@@ -156,7 +156,7 @@ const Grid = styled.div`
   &.cartProcess{
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    background: rgb(245,245,245);
+    /* background: rgb(245,245,245); */
     align-items: stretch;
 
     & article{
@@ -240,8 +240,9 @@ const Grid = styled.div`
         margin-top: 0.5em;
         margin-bottom: 0.5em;
         display: block;
-        letter-spacing: 0.5px;
-        font-style: italic;
+        letter-spacing: 0.2px;
+        color: #888;
+        /* font-style: italic; */
       }
 
       & .creditCard-input{
