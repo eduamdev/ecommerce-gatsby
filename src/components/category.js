@@ -41,7 +41,7 @@ const Category = () => {
       }
       rack: file(relativePath: { eq: "shoe-rack.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1800, maxHeight: 350) {
+          fluid(maxWidth: 1200, maxHeight: 350) {
             ...GatsbyImageSharpFluid
           }
         }
