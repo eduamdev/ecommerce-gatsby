@@ -35,6 +35,15 @@ const StyledWrapper = styled.div`
 
   &.category {
     position: relative;
+    width: 100%;
+
+    @media ${viewport[9]} {
+      width: 80%;
+    }
+
+    @media ${viewport[12]} {
+      width: 60%;
+    }
   }
 
   &.cartProcess {

@@ -75,7 +75,7 @@ const Category = () => {
             style={{
               position: `absolute`,
               bottom: `10%`,
-              left: `7.5%`,
+              left: `10%`,
               color: `#fff`,
               textDecoration: `none`,
               margin: 0,
@@ -94,7 +94,7 @@ const Category = () => {
             style={{
               position: `absolute`,
               bottom: `10%`,
-              right: `7.5%`,
+              right: `10%`,
               color: `#fff`,
               textDecoration: `none`,
               margin: 0,

@@ -41,6 +41,10 @@ const Grid = styled.div`
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
+
+    @media ${viewport[9]} {
+      grid-gap: 1em;
+    }
   }
 
   &.featured {
