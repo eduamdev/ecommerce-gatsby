@@ -85,7 +85,9 @@ const Cart = () => (
         </table>
         <Grid className="payment-details">
           <div className="details">
-            <P>Please enter your payment details:</P>
+            <P style={{ fontWeight: 500 }}>
+              Please enter your payment details:
+            </P>
             <label className="email-label" htmlFor="email">
               Email
             </label>

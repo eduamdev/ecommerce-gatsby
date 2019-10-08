@@ -65,6 +65,10 @@ const GatsbyLink = styled(Link)`
     color: rgb(187, 120, 120);
     margin-top: 1.75em;
     margin-bottom: 3em;
+
+    &:hover {
+      border-color: transparent;
+    }
   }
 
   &.cart,
@@ -72,14 +76,16 @@ const GatsbyLink = styled(Link)`
   &.addToCart,
   &.pay {
     display: inline-block;
-    border: 1px solid;
+    /* border: 1px solid; */
     background: rgb(187, 120, 120);
     color: #fff;
     padding: 0.75em 1.2em;
+    border-radius: 2px;
 
     &:hover {
-      background: transparent;
-      color: rgb(187, 120, 120);
+      /* background: transparent; */
+      /* color: rgb(187, 120, 120); */
+      background: rgb(146, 93, 93);
     }
   }
 
@@ -90,6 +96,10 @@ const GatsbyLink = styled(Link)`
 
     @media ${viewport[7]} {
       width: 80%;
+    }
+
+    @media ${viewport[12]} {
+      width: 60%;
     }
   }
 

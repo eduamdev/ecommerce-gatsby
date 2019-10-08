@@ -67,11 +67,16 @@ const Grid = styled.div`
   &.card {
     justify-content: stretch;
     background: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
     text-align: center;
+    transition:  all 0.1s;
+    box-shadow: 1px 3px 30px 5px #f5f5f5;
 
     &:hover {
       border-color: rgb(187, 120, 120);
+      /* border: transparent; */
+      transform:translate(1px, -1%);
+      box-shadow: none;
     }
   }
 
@@ -226,9 +231,10 @@ const Grid = styled.div`
         margin-bottom: 0.5em;
       }
 
-      & .email-input{
+      & .email-input, & .creditCard-input{
         width: 100%; 
         padding: 0.25em 1em;
+        border: 1px solid #ddd;
       }
 
       & .creditCard-label{
@@ -247,11 +253,6 @@ const Grid = styled.div`
         letter-spacing: 0.2px;
         color: #888;
         /* font-style: italic; */
-      }
-
-      & .creditCard-input{
-        width: 100%;
-        padding: 0.25em 1em;
       }
     }
 
@@ -281,6 +282,10 @@ const Grid = styled.div`
           margin: 0 auto;
         }
 
+        @media ${viewport[7]} {
+          width: 60%;
+        }
+
         & h4{
           justify-self: end;
           margin: 0;
@@ -307,6 +312,10 @@ const Grid = styled.div`
         @media ${viewport[7]}{
           width: 80%;
           margin: 0 auto;
+        }
+
+        @media ${viewport[7]} {
+          width: 60%;
         }
 
         & h4{
@@ -421,6 +430,7 @@ const Grid = styled.div`
 
         @media ${viewport[7]} {
           grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 1em 0.5em;
         }
 
         @media ${viewport[9]} {

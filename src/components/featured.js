@@ -25,7 +25,7 @@ const Featured = () => {
             className="featured"
             ariaLabel="Discover more"
           >
-            <P style={{ margin: 0 }}>Discover more</P>
+            <P style={{ margin: 0, fontWeight: 700 }}>Discover more</P>
           </LinkUp>
         </Grid>
       </Wrapper>
