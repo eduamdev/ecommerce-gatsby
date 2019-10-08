@@ -160,7 +160,7 @@ const Grid = styled.div`
     align-items: stretch;
 
     & article{
-      padding: 0.75em 0.1em;
+      padding: 0.5em 0.1em;
       border-bottom: 3px solid transparent;
 
       & p{
@@ -185,7 +185,7 @@ const Grid = styled.div`
       }
       
       @media ${viewport[7]}{
-        padding: 1.25em 0.5em;
+        padding: 1em 0.5em;
       }
 
     }
