@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
+import { viewport } from "./breakpoints"
 
 const Flex = styled.div`
   display: flex;
@@ -20,6 +21,45 @@ const Flex = styled.div`
     justify-content: center;
     padding: 0.5em 1em;
     cursor: pointer;
+  }
+
+  &.cartProcess {
+    padding: 0.25em 0.1em;
+    border-bottom: 3px solid transparent;
+    flex-direction: column;
+
+    & .step {
+      font-weight: 900;
+      font-size: 1.6em;
+      margin-bottom: 0.5em;
+      color: #bb7878;
+    }
+
+    & .process {
+      margin: 0;
+      letter-spacing: -0.5px;
+      font-size: 0.875em;
+
+      @media ${viewport[4]} {
+        font-size: 0.9em;
+      }
+
+      @media ${viewport[7]} {
+        font-size: 1em;
+      }
+    }
+
+    &.active {
+      border-bottom-color: #000;
+
+      & .process {
+        font-weight: 700;
+      }
+    }
+
+    @media ${viewport[7]} {
+      padding: 0.5em;
+    }
   }
 `
 

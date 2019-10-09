@@ -183,37 +183,6 @@ const Grid = styled.div`
     text-align: center;
     /* background: rgb(245,245,245); */
     align-items: stretch;
-
-    & article{
-      padding: 0.5em 0.1em;
-      border-bottom: 3px solid transparent;
-
-      & p{
-        font-size: 0.875em;
-
-        @media ${viewport[4]}{
-          font-size: 0.9em;
-        }
-
-        @media ${viewport[7]}{
-          font-size: 1em;
-        }
-      }
-
-      &.active{
-        border-bottom-color: #000;
-        background-color: #fff;
-
-        & p{
-          font-weight: 700;
-        }
-      }
-      
-      @media ${viewport[7]}{
-        padding: 0.5em;
-      }
-
-    }
   }
 
   &.cartInfo, &.error{

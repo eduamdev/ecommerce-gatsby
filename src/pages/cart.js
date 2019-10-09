@@ -1,5 +1,4 @@
 import React from "react"
-
 import LinkUp from "../components/link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,6 +7,7 @@ import Section from "../components/section"
 import Title from "../components/title"
 import P from "../components/paragraph"
 import Grid from "../components/grid"
+import Flex from "../components/flex"
 
 const Cart = () => (
   <Layout>
@@ -15,21 +15,18 @@ const Cart = () => (
     <Section className="cartProcess">
       <Wrapper className="cartProcess">
         <Grid className="cartProcess">
-          <article>
-            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
-              <span>1.</span> Shopping
-            </P>
-          </article>
-          <article className="active">
-            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
-              <span>2.</span> Check out
-            </P>
-          </article>
-          <article>
-            <P style={{ margin: 0, letterSpacing: `-0.5px` }}>
-              <span>3.</span> Order Completed
-            </P>
-          </article>
+          <Flex className="cartProcess">
+            <span className="step">1</span>
+            <P className="process">Shopping</P>
+          </Flex>
+          <Flex className="cartProcess active">
+            <span className="step">2</span>
+            <P className="process">Check out</P>
+          </Flex>
+          <Flex className="cartProcess">
+            <span className="step">3</span>
+            <P className="process">Order Completed</P>
+          </Flex>
         </Grid>
       </Wrapper>
     </Section>
