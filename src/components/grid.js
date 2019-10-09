@@ -389,6 +389,11 @@ const Grid = styled.div`
         grid-template-areas: "slider slider slider"
         "min . max";
         grid-row-gap: 0.35em;
+        visibility: hidden;
+
+        &.show{
+          visibility: visible;
+        }
 
         & .slider{
           grid-area: slider;

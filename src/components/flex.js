@@ -21,6 +21,12 @@ const Flex = styled.div`
     justify-content: center;
     padding: 0.5em 1em;
     cursor: pointer;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: rgb(237, 237, 240);
+    }
   }
 
   &.cartProcess {
@@ -63,13 +69,18 @@ const Flex = styled.div`
   }
 `
 
-const FlexContainer = ({ className, children }) => {
-  return <Flex className={className}>{children}</Flex>
+const FlexContainer = ({ className, children, onClick }) => {
+  return (
+    <Flex className={className} onClick={onClick}>
+      {children}
+    </Flex>
+  )
 }
 
 Flex.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
 }
 
 export default FlexContainer

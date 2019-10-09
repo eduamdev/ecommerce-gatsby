@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "name": "Batcombe Lord",
     "slug": "batcombe-lord",
     "price": "150",
@@ -32,6 +33,7 @@
     ]
   },
   {
+    "id": 1,
     "name": "Mila Myth",
     "slug": "mila-myth",
     "price": "120",
@@ -64,6 +66,7 @@
     ]
   },
   {
+    "id": 2,
     "name": "Desert Boot",
     "slug": "desert-boot",
     "price": "140",
