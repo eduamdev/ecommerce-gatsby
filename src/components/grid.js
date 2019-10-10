@@ -390,9 +390,14 @@ const Grid = styled.div`
         "min . max";
         grid-row-gap: 0.35em;
         visibility: hidden;
+        height: 0;
+        opacity: 0;
+        transition: all 0.1s;
 
         &.show{
           visibility: visible;
+          height: initial;
+          opacity: 1;
         }
 
         & .slider{
