@@ -1,8 +1,4 @@
-import React, { useState, useContext } from "react"
-import {
-  GlobalDispatchContext,
-  GlobalStateContext,
-} from "../context/GlobalContextProvider"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Section from "./section"
 import Grid from "./grid"
@@ -26,9 +22,9 @@ const Slider = styled.input`
 
 const ProductFilter = ({ products }) => {
   const [showFilter, toggle] = useState(false)
-  const state = useContext(GlobalStateContext)
-  const dispatch = useContext(GlobalDispatchContext)
-  const { maxPrice, minPrice, price } = state
+  let maxPrice = Math.max(...products.map(item => item.price))
+  let price = maxPrice
+  let minPrice = 0
 
   return (
     <Section className="filter">
@@ -45,11 +41,6 @@ const ProductFilter = ({ products }) => {
           min={minPrice}
           max={maxPrice}
           value={price}
-          onChange={() => {
-            dispatch({
-              type: "UPDATE_PRICE",
-            })
-          }}
         />
         <span className="min">${minPrice}</span>
         <span className="max">${maxPrice}</span>

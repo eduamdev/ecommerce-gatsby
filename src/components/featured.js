@@ -4,7 +4,6 @@ import Wrapper from "./wrapper"
 import Grid from "./grid"
 import Card from "./card"
 import Title from "./title"
-import LinkUp from "./link"
 import P from "./paragraph"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 
