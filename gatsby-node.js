@@ -8,6 +8,9 @@
 
 const products = require("./src/content/products.json")
 
+const men = products.filter(product => product.category === "men")
+const women = products.filter(product => product.category === "women")
+
 exports.createPages = ({ actions: { createPage } }) => {
   products.forEach(product => {
     createPage({
@@ -23,5 +26,19 @@ exports.createPages = ({ actions: { createPage } }) => {
         image: product.image,
       },
     })
-  })
+  }),
+    createPage({
+      path: `/men`,
+      component: require.resolve("./src/templates/products.js"),
+      context: {
+        products: men,
+      },
+    }),
+    createPage({
+      path: `/women`,
+      component: require.resolve("./src/templates/products.js"),
+      context: {
+        products: women,
+      },
+    })
 }

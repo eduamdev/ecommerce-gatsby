@@ -20,14 +20,7 @@ const Featured = () => {
           })}
         </Grid>
         <Grid>
-          <LinkUp
-            type="internal"
-            url="/products"
-            className="featured"
-            ariaLabel="Discover more"
-          >
-            <P style={{ margin: 0, fontWeight: 700 }}>Discover more</P>
-          </LinkUp>
+          <P className="featured">Discover more</P>
         </Grid>
       </Wrapper>
     </Section>

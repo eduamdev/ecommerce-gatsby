@@ -1,15 +1,12 @@
-import React, { useContext } from "react"
+import React from "react"
 import ProductFilter from "./productFilter"
 import ProductList from "./productList"
-import { GlobalStateContext } from "../context/GlobalContextProvider"
 
-const ProductContainer = () => {
-  const state = useContext(GlobalStateContext)
-
+const ProductContainer = ({ products }) => {
   return (
     <>
-      <ProductFilter products={state.products}></ProductFilter>
-      <ProductList products={state.products}></ProductList>
+      <ProductFilter products={products}></ProductFilter>
+      <ProductList products={products}></ProductList>
     </>
   )
 }

@@ -56,7 +56,7 @@ const Category = () => {
           <LinkUp
             className="women category-img"
             type="internal"
-            url="/products"
+            url="/women"
             ariaLabel="Shop women"
           >
             <Img
@@ -68,7 +68,7 @@ const Category = () => {
           <LinkUp
             className="men category-img"
             type="internal"
-            url="/products"
+            url="/men"
             ariaLabel="Shop men"
           >
             <Img fluid={data.men.childImageSharp.fluid} alt="shop men"></Img>
@@ -92,7 +92,7 @@ const Category = () => {
               textDecoration: `none`,
               margin: 0,
             }}
-            url="/products"
+            url="/women"
             ariaLabel="Shop women"
           >
             <span
@@ -119,7 +119,7 @@ const Category = () => {
               textDecoration: `none`,
               margin: 0,
             }}
-            url="/products"
+            url="/men"
             ariaLabel="Shop men"
           >
             <span

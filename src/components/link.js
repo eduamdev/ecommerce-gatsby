@@ -60,17 +60,6 @@ const GatsbyLink = styled(Link)`
     }
   }
 
-  &.featured {
-    border-bottom: 1px solid;
-    color: rgb(187, 120, 120);
-    margin-top: 1.75em;
-    margin-bottom: 3em;
-
-    &:hover {
-      border-color: transparent;
-    }
-  }
-
   &.cart,
   &.error,
   &.addToCart,

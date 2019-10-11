@@ -22,12 +22,7 @@ const Nav = () => {
       <List>
         <Flex>
           <li>
-            <LinkUp
-              className="nav"
-              type="internal"
-              url="/products"
-              ariaLabel="Men"
-            >
+            <LinkUp className="nav" type="internal" url="/men" ariaLabel="Men">
               Men
             </LinkUp>
           </li>
@@ -35,7 +30,7 @@ const Nav = () => {
             <LinkUp
               className="nav"
               type="internal"
-              url="/products"
+              url="/women"
               ariaLabel="Women"
             >
               Women

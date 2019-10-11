@@ -94,6 +94,18 @@ const StyledParagraph = styled.p`
     }
   }
 
+  &.featured {
+    border-bottom: 1px solid;
+    color: rgb(187, 120, 120);
+    margin-top: 1.75em;
+    margin-bottom: 3em;
+    font-weight: 700;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
   &.quantity {
     margin-top: 1.25em;
     margin-bottom: 1.25em;
