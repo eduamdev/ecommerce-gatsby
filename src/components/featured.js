@@ -1,20 +1,21 @@
-import React, { useContext } from "react"
+import React from "react"
 import Section from "./section"
 import Wrapper from "./wrapper"
 import Grid from "./grid"
 import Card from "./card"
 import Title from "./title"
 import P from "./paragraph"
-import { GlobalStateContext } from "../context/GlobalContextProvider"
+import items from "../content/products.json"
 
 const Featured = () => {
-  const state = useContext(GlobalStateContext)
+  let featuredProducts = items.filter(product => product.featured === true)
+
   return (
     <Section>
       <Wrapper>
         <Title text="Featured" placement="center"></Title>
         <Grid className="featured">
-          {state.featuredProducts.map(item => {
+          {featuredProducts.map(item => {
             return <Card key={item.id} item={item}></Card>
           })}
         </Grid>
