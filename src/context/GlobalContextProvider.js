@@ -1,18 +1,43 @@
 import React from "react"
+import items from "../content/products.json"
 
 export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
-const initialState = {
-  theme: "light",
+function getData() {
+  let products = formatData(items)
+  let featuredProducts = products.filter(product => product.featured === true)
+  let maxPrice = Math.max(...products.map(item => item.price))
+
+  return {
+    products,
+    featuredProducts,
+    sortedProducts: products,
+    loading: false,
+    price: maxPrice,
+    minPrice: 0,
+    maxPrice,
+  }
 }
+
+function formatData(items) {
+  let tempItems = items.map(item => {
+    let product = { ...item }
+
+    return product
+  })
+
+  return tempItems
+}
+
+const initialState = getData()
 
 function reducer(state, action) {
   switch (action.type) {
-    case "TOGGLE_THEME": {
+    case "UPDATE_PRICE": {
       return {
         ...state,
-        theme: state.theme === "light" ? "dark" : "light",
+        price: action.price,
       }
     }
     default:

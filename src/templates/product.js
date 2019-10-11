@@ -82,7 +82,7 @@ const Product = ({ pageContext }) => {
           <Grid className="product">
             <div className="product-image">
               <img
-                src={`${pageContext.image[0].url}`}
+                src={`${pageContext.image.url}`}
                 alt={`${pageContext.name}`}
               />
             </div>

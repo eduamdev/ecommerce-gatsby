@@ -6,28 +6,27 @@ import Title from "./title"
 import P from "./paragraph"
 // import Img from "gatsby-image"
 
-const Card = ({ item, image }) => {
+const Card = ({ item }) => {
+  const { name, description, slug, image, price } = item
+
   return (
     <article>
       <Grid className="card">
         <LinkUp
           className="card-image"
           type="internal"
-          url={item.url}
-          ariaLabel=""
+          url={`/product/${slug}`}
+          ariaLabel={name}
         >
-          <img
-            src="https://clarks.scene7.com/is/image/Pangaea2Build/26138235_W_1"
-            alt=""
-          />
+          <img src={image.url} alt={name} />
           <Title
             type="h3"
             className="card-title"
-            text="Desert Boots"
+            text={name}
             placement="center"
           ></Title>
-          <P className="card-description">Lorem, ipsum dolor.</P>
-          <P className="card-label">$250</P>
+          <P className="card-description">{description}</P>
+          <P className="card-label">${price}</P>
         </LinkUp>
       </Grid>
     </article>
@@ -35,8 +34,11 @@ const Card = ({ item, image }) => {
 }
 
 Card.propTypes = {
-  item: PropTypes.object.isRequired,
-  image: PropTypes.object,
+  product: PropTypes.object.isRequired,
+}
+
+Card.defaultProps = {
+  product: {},
 }
 
 export default Card
