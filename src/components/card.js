@@ -10,7 +10,7 @@ const Card = ({ item }) => {
   const { name, description, slug, image, price } = item
 
   return (
-    <article>
+    <article style={{ height: `100%` }}>
       <Grid className="card">
         <LinkUp
           className="card-image"

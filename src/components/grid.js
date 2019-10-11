@@ -80,6 +80,7 @@ const Grid = styled.div`
   }
 
   &.card {
+    height: 100%;
     justify-content: stretch;
     background: #fff;
     border: 1px solid #eee;
@@ -420,6 +421,7 @@ const Grid = styled.div`
 
       & .productList{
         display: grid;
+        align-items: stretch;
         grid-gap: 0.5em;
         grid-template-columns: 1fr 1fr;
 
