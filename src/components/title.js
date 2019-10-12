@@ -88,9 +88,7 @@ const StyledH1 = styled.h1`
       line-height: 1.7;
       display: block;
       letter-spacing: -0.2px;
-      font-weight: 500;
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      font-weight: 400;
     }
   }
 `
@@ -132,7 +130,7 @@ const StyledH3 = styled.h3`
   font-size: 1.2em;
 
   &.card-title {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
   }
 
   &.header {
@@ -152,12 +150,12 @@ const StyledH3 = styled.h3`
   }
 
   @media ${viewport[7]} {
-    font-size: 1.5em;
+    font-size: 1.45em;
     letter-spacing: -0.4px;
   }
 
   @media ${viewport[9]} {
-    font-size: 1.7em;
+    font-size: 1.55em;
   }
 `
 
@@ -174,6 +172,10 @@ const StyledH4 = styled.h4`
   &.cart-product-name {
     padding-top: 30px;
     text-align: left;
+  }
+
+  &.footer {
+    font-weight: 700;
   }
 `
 

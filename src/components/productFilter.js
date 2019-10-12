@@ -21,7 +21,7 @@ const Slider = styled.input`
 `
 
 const ProductFilter = ({ products }) => {
-  const [showFilter, toggle] = useState(false)
+  const [showFilter, toggle] = useState(true)
   let maxPrice = Math.max(...products.map(item => item.price))
   let price = maxPrice
   let minPrice = 0

@@ -26,10 +26,7 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26146501_W_1"
-    }
+    "featured": false
   },
   {
     "id": 1,
@@ -58,10 +55,7 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": true,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26146246_W_1"
-    }
+    "featured": true
   },
   {
     "id": 2,
@@ -90,10 +84,7 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": true,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26144168_W_1"
-    }
+    "featured": true
   },
   {
     "id": 3,
@@ -122,10 +113,7 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_385,h_385,f_auto,q_auto:sensitive,fl_lossy/5addd566849d40798a7ca5b500099bf9_9366/club-c-85.jpg"
-    }
+    "featured": false
   },
   {
     "id": 4,
@@ -149,10 +137,7 @@
         "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/ec1e447276304286b0a5a83f005e0f8f_9366/Reebok_CrossFit_Nano_8_Flexweave(r)_Black_CN1022_01_standard.jpg"
-    }
+    "featured": false
   },
   {
     "id": 5,
@@ -174,10 +159,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad nam omnis repudiandae! Corrupti adipisci hic debitis exercitationem, similique modi id non quam fugit?"
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/4f4785b0acae48eca9aaa9e5001674a3_9366/Club_C_85_Canvas_Beige_DV4174_01_standard.jpg"
-    }
+    "featured": false
   },
   {
     "id": 6,
@@ -210,10 +192,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": true,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/f7b5fd1b7d784efbbee8a9d701735298_9366/Reebok_CrossFit_Nano_6.0_Covert_Black_DV5628_01_standard.jpg"
-    }
+    "featured": true
   },
   {
     "id": 7,
@@ -235,10 +214,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad nam omnis repudiandae! Corrupti adipisci hic debitis exercitationem, similique modi id non quam fugit?"
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/894864258c9041f7b05ca9e4002c9e6b_9366/Reebok_Lite_Grey_DV4619_01_standard.jpg"
-    }
+    "featured": false
   },
   {
     "id": 8,
@@ -260,10 +236,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/3f3cafba9d4d478e9739a9840118f228_9366/Forever_Floatride_Energy_Green_DV4790_01_standard.jpg"
-    }
+    "featured": false
   },
   {
     "id": 9,
@@ -286,10 +259,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/7c46bddbed0a41b98aafa95e01362839_9366/NPC_UK_Cotton_and_Corn_Grey_DV8957_01_standard.jpg"
-    }
+    "featured": false
   },
   {
     "id": 10,
@@ -313,10 +283,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": true,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/f993cd3ae5014ea3adeca9df00080e4c_9366/Reebok_CrossFit(r)_Nano_2_Multicolor_DV8246_01_standard.jpg"
-    }
+    "featured": true
   },
   {
     "id": 11,
@@ -339,10 +306,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://assets.reebok.com/images/w_840,h_840,f_auto,q_auto:sensitive,fl_lossy/0a5f105369a541d0a19da66e0164b3b5_9366/Reebok_CrossFit_Grace_White_BD5005_01_standard.jpg"
-    }
+    "featured": false
   },
   {
     "id": 12,
@@ -365,10 +329,7 @@
         "content": "I bought this in the extra wide size but unfortunately my calf could not be accommodated. I am gutted because the boot is beautifully made and exceptionally stylish and wish it could have fitted me. The postal service was brilliant too. Can't fault Clarks just my shape!"
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26144986_W_4?wid=2000&hei=2000&fmt=jpg"
-    }
+    "featured": false
   },
   {
     "id": 13,
@@ -391,10 +352,7 @@
         "content": "I bought these shoes 2 weeks ago and have worn them on 3 occasions since. They are shoes that look good but are also comfortable to wear. Happy that I bought them. The wide fit was a bonus."
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26136040_W_1?wid=2000&hei=2000&fmt=jpg"
-    }
+    "featured": false
   },
   {
     "id": 14,
@@ -417,10 +375,7 @@
         "content": "I bought these for my girlfriend and she absolutly loved it. The design is very nice, they are also very confortable. She has used them as soon as they arrived!"
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26141666_W_1?wid=2000&hei=2000&fmt=jpg"
-    }
+    "featured": false
   },
   {
     "id": 15,
@@ -443,10 +398,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aperiam? Rerum, quae!"
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26141574_W_1?wid=2000&hei=2000&fmt=jpg"
-    }
+    "featured": false
   },
   {
     "id": 16,
@@ -469,10 +421,7 @@
         "content": "I bought these boot in two colours as the comfort level is second to none. Beautifully soft suede leather, comfortable cushion sole and great grip."
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26138060_W_1?wid=2000&hei=2000&fmt=jpg"
-    }
+    "featured": false
   },
   {
     "id": 17,
@@ -495,9 +444,6 @@
         "content": "I bought these to wear before I go into boots. I normally wear sandals or boots as my feet are narrow and bony. These shoes are extremely comfortable too and they are a 6.5 which you often can’t get."
       }
     ],
-    "featured": false,
-    "image": {
-      "url": "https://clarks.scene7.com/is/image/Pangaea2Build/26132486_W_1?wid=2000&hei=2000&fmt=jpg"
-    }
+    "featured": false
   }
 ]

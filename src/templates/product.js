@@ -12,6 +12,8 @@ import P from "../components/paragraph"
 import { star, halfStar, outlineStar } from "../components/svg"
 import styled from "styled-components"
 import LinkUp from "../components/link"
+import useImages from "../hooks/useImages"
+import Img from "gatsby-image"
 
 const ProductList = styled.ul`
   margin-bottom: 1em;
@@ -74,6 +76,9 @@ function getStars(num) {
 }
 
 const Product = ({ pageContext }) => {
+  const images = useImages()
+  const image = images[pageContext.slug.replace(/-/g, "_")]
+
   return (
     <Layout>
       <SEO title="Product" />
@@ -81,10 +86,10 @@ const Product = ({ pageContext }) => {
         <Wrapper>
           <Grid className="product">
             <div className="product-image">
-              <img
-                src={`${pageContext.image.url}`}
-                alt={`${pageContext.name}`}
-              />
+              <Img
+                fluid={image.childImageSharp.fluid}
+                alt={pageContext.name}
+              ></Img>
             </div>
             <div className="product-info">
               <Title

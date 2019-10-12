@@ -41,11 +41,15 @@ const Footer = () => {
         <Wrapper>
           <Grid className="footer">
             <div className="newsletter">
-              <Title type="h4" text="Sign Up to Our Newsletter"></Title>
+              <Title
+                className="footer"
+                type="h4"
+                text="Sign Up to Our Newsletter"
+              ></Title>
               <StyledInput type="text" placeholder="ENTER YOUR EMAIL" />
             </div>
             <div className="store">
-              <Title type="h4" text="Store"></Title>
+              <Title className="footer" type="h4" text="Store"></Title>
               <List>
                 <li>
                   <P>Contact Us</P>
@@ -59,7 +63,7 @@ const Footer = () => {
               </List>
             </div>
             <div className="orders">
-              <Title type="h4" text="Orders"></Title>
+              <Title className="footer" type="h4" text="Orders"></Title>
               <List>
                 <li>
                   <P>Delivery & Returns</P>
@@ -76,7 +80,7 @@ const Footer = () => {
               </List>
             </div>
             <div className="social">
-              <Title type="h4" text="Social"></Title>
+              <Title className="footer" type="h4" text="Social"></Title>
               <Flex>
                 <span style={{ width: `24px`, marginRight: `0.5em` }}>
                   {Facebook}

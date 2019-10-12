@@ -45,40 +45,44 @@ const Cart = () => (
           </LinkUp>
         </Grid>
         <table className="checkout">
-          <tr style={{ fontSize: `0.95em` }}>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-          <tr>
-            <td style={{ paddingTop: 0, paddingBottom: 0 }}>
-              <img
-                style={{ width: `60px` }}
-                src="https://clarks.scene7.com/is/image/Pangaea2Build/26135409_W_1"
-                alt=""
-              />
-              <h4
-                style={{
-                  marginBottom: `15px`,
-                  textAlign: `left`,
-                  fontSize: `0.92em`,
-                  letterSpacing: `-.5px`,
-                }}
-              >
-                Brown boots
-              </h4>
-            </td>
-            <td>
-              <P style={{ margin: 0 }}>$172</P>
-            </td>
-            <td>
-              <P style={{ margin: 0 }}>2</P>
-            </td>
-            <td>
-              <P style={{ margin: 0 }}>$344</P>
-            </td>
-          </tr>
+          <thead>
+            <tr style={{ fontSize: `0.95em` }}>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={{ paddingTop: 0, paddingBottom: 0 }}>
+                <img
+                  style={{ width: `60px` }}
+                  src="https://clarks.scene7.com/is/image/Pangaea2Build/26135409_W_1"
+                  alt=""
+                />
+                <h4
+                  style={{
+                    marginBottom: `15px`,
+                    textAlign: `left`,
+                    fontSize: `0.92em`,
+                    letterSpacing: `-.5px`,
+                  }}
+                >
+                  Brown boots
+                </h4>
+              </td>
+              <td>
+                <P style={{ margin: 0 }}>$172</P>
+              </td>
+              <td>
+                <P style={{ margin: 0 }}>2</P>
+              </td>
+              <td>
+                <P style={{ margin: 0 }}>$344</P>
+              </td>
+            </tr>
+          </tbody>
         </table>
         <Grid className="payment-details">
           <div className="details">

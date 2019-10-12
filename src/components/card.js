@@ -5,13 +5,9 @@ import LinkUp from "./link"
 import Title from "./title"
 import P from "./paragraph"
 import Img from "gatsby-image"
-import useImages from "../hooks/useImages"
 
-const Card = ({ item }) => {
-  const { name, description, slug, image, price } = item
-  const images = useImages()
-
-  // console.log(images["nano_6_covert".replace("-", "_")])
+const Card = ({ item, imageGraphQL }) => {
+  const { name, description, slug, price } = item
 
   return (
     <article style={{ height: `100%` }}>
@@ -22,14 +18,7 @@ const Card = ({ item }) => {
           url={`/product/${slug}`}
           ariaLabel={name}
         >
-          {images[slug.replace("-", "_")] ? (
-            <Img
-              fluid={images[slug.replace("-", "_")].childImageSharp.fluid}
-              alt={name}
-            ></Img>
-          ) : (
-            <img src={image.url} alt={name} />
-          )}
+          <Img fluid={imageGraphQL.childImageSharp.fluid} alt={name}></Img>
           <Title
             type="h3"
             className="card-title"
@@ -46,10 +35,12 @@ const Card = ({ item }) => {
 
 Card.propTypes = {
   product: PropTypes.object.isRequired,
+  imageGraphQL: PropTypes.object.isRequired,
 }
 
 Card.defaultProps = {
   product: {},
+  imageGraphQL: {},
 }
 
 export default Card
