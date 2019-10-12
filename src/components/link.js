@@ -121,6 +121,10 @@ const GatsbyLink = styled(Link)`
   &.card-image {
     padding: 0.25em;
     height: 100%;
+
+    @media ${viewport[12]} {
+      padding: 0.25em 0.5em;
+    }
   }
 `
 
