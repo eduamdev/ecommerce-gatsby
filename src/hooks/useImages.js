@@ -41,7 +41,7 @@ const useImages = () => {
         }
         calla_rose: file(relativePath: { eq: "products/calla-rose.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -50,14 +50,14 @@ const useImages = () => {
           relativePath: { eq: "products/clarkdale-arlo.jpg" }
         ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desert_boot: file(relativePath: { eq: "products/desert-boot.jpg" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -66,14 +66,14 @@ const useImages = () => {
           relativePath: { eq: "products/batcombe-lord.jpg" }
         ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         club_c_85: file(relativePath: { eq: "products/club-c-85.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -82,7 +82,7 @@ const useImages = () => {
           relativePath: { eq: "products/club-c-85-canvas.webp" }
         ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -91,21 +91,21 @@ const useImages = () => {
           relativePath: { eq: "products/floatride-energy.webp" }
         ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         grace: file(relativePath: { eq: "products/grace.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         laina_violet: file(relativePath: { eq: "products/laina-violet.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -114,21 +114,21 @@ const useImages = () => {
           relativePath: { eq: "products/laureti-grace.webp" }
         ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         lite: file(relativePath: { eq: "products/lite.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         nano_2: file(relativePath: { eq: "products/nano-2.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -137,7 +137,7 @@ const useImages = () => {
           relativePath: { eq: "products/nano-6-covert.webp" }
         ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -146,35 +146,35 @@ const useImages = () => {
           relativePath: { eq: "products/nano-8-flexweave.webp" }
         ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         netley_whirl: file(relativePath: { eq: "products/netley-whirl.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         npc_uk: file(relativePath: { eq: "products/npc-uk.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         pure_tone: file(relativePath: { eq: "products/pure-tone.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mila_myth: file(relativePath: { eq: "products/mila-myth.webp" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 450) {
               ...GatsbyImageSharpFluid
             }
           }
