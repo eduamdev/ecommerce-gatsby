@@ -4,10 +4,14 @@ import Grid from "./grid"
 import LinkUp from "./link"
 import Title from "./title"
 import P from "./paragraph"
-// import Img from "gatsby-image"
+import Img from "gatsby-image"
+import useImages from "../hooks/useImages"
 
 const Card = ({ item }) => {
   const { name, description, slug, image, price } = item
+  const images = useImages()
+
+  // console.log(images["nano_6_covert".replace("-", "_")])
 
   return (
     <article style={{ height: `100%` }}>
@@ -18,7 +22,14 @@ const Card = ({ item }) => {
           url={`/product/${slug}`}
           ariaLabel={name}
         >
-          <img src={image.url} alt={name} />
+          {images[slug.replace("-", "_")] ? (
+            <Img
+              fluid={images[slug.replace("-", "_")].childImageSharp.fluid}
+              alt={name}
+            ></Img>
+          ) : (
+            <img src={image.url} alt={name} />
+          )}
           <Title
             type="h3"
             className="card-title"

@@ -1,13 +1,16 @@
 import React from "react"
+import Img from "gatsby-image"
 import Section from "./section"
-import Image from "./image"
 import Title from "./title"
 import P from "./paragraph"
+import useImages from "../hooks/useImages"
 
 const Banner = () => {
+  const { banner } = useImages()
+
   return (
     <Section className="banner">
-      <Image></Image>
+      <Img fluid={banner.childImageSharp.fluid} alt="banner"></Img>
       <Title type="h1" className="banner">
         <span className="banner-span">New</span> Sport Collection
       </Title>

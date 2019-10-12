@@ -1,25 +1,15 @@
 import React from "react"
+import Img from "gatsby-image"
 import Section from "./section"
 import Wrapper from "./wrapper"
 import Grid from "./grid"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 import Title from "./title"
 import P from "./paragraph"
 import Flex from "./flex"
+import useImages from "../hooks/useImages"
 
 const Shoemaking = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      about: file(relativePath: { eq: "about.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  const { about } = useImages()
 
   return (
     <Section>
@@ -43,7 +33,10 @@ const Shoemaking = () => {
             </Flex>
           </div>
           <div>
-            <Img fluid={data.about.childImageSharp.fluid} />
+            <Img
+              fluid={about.childImageSharp.fluid}
+              alt="about shoemaking"
+            ></Img>
           </div>
         </Grid>
       </Wrapper>

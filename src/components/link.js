@@ -48,7 +48,27 @@ const GatsbyLink = styled(Link)`
     align-items: center;
     justify-content: center;
 
-    & .svg {
+    position: absolute;
+    bottom: 7%;
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+
+    &.men {
+      right: 10%;
+    }
+
+    &.women {
+      left: 10%;
+    }
+
+    & span:not(.icon) {
+      border-bottom: 1px solid #fff;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    & .icon {
       fill: #fff;
       width: 0.85em;
       height: auto;
