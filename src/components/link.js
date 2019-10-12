@@ -55,11 +55,11 @@ const GatsbyLink = styled(Link)`
     margin: 0;
 
     &.men {
-      right: 10%;
+      right: 7%;
     }
 
     &.women {
-      left: 10%;
+      left: 7%;
     }
 
     & span:not(.icon) {

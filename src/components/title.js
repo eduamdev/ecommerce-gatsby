@@ -65,7 +65,7 @@ const StyledH1 = styled.h1`
     top: 10%;
     left: 0.5em;
     font-weight: 900;
-    letter-spacing: -3px;
+    letter-spacing: -2.25px;
     margin: 0;
 
     @media ${viewport[7]} {
