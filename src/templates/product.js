@@ -110,7 +110,7 @@ const Product = ({ pageContext }) => {
 
               <LinkUp
                 type="internal"
-                url="/products"
+                url="/"
                 className="addToCart"
                 ariaLabel="Add to cart"
               >
