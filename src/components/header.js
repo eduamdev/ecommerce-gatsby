@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Wrapper>
       <Grid className="header">
-        <LinkUp type="internal" url="/" ariaLabel="Shoecase">
+        <LinkUp className="logo" type="internal" url="/" ariaLabel="Shoecase">
           <Title type="h3" text={siteTitle} className="header"></Title>
         </LinkUp>
         <Nav></Nav>

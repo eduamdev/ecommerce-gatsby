@@ -12,10 +12,16 @@ const GatsbyLink = styled(Link)`
   color: inherit;
   outline: none;
 
+  &.logo {
+    padding: 0.5em;
+    padding-left: 0;
+  }
+
   &.nav {
     font-weight: 500;
     letter-spacing: 0.2px;
     font-size: 0.95em;
+    padding: 0.75em;
 
     @media ${viewport[4]} {
       font-size: 0.9em;
@@ -31,6 +37,12 @@ const GatsbyLink = styled(Link)`
 
     &:hover {
       color: rgb(187, 120, 120);
+    }
+  }
+
+  &.header-cart {
+    & svg {
+      vertical-align: middle;
     }
   }
 

@@ -20,17 +20,27 @@ const Slider = styled.input`
   margin-top: 1em;
 `
 
-const ProductFilter = ({ products }) => {
+const ProductFilter = ({ products, filterByPrice }) => {
+  const maxPrice = Math.max(...products.map(item => item.price))
+  const minPrice = 0
   const [showFilter, toggle] = useState(true)
-  let maxPrice = Math.max(...products.map(item => item.price))
-  let price = maxPrice
-  let minPrice = 0
+  const [price, updatingPrice] = useState(maxPrice)
+
+  const handleChange = event => {
+    updatingPrice(event.target.value)
+    filterByPrice(event.target.value)
+  }
 
   return (
     <Section className="filter">
       <Grid>
         <Flex className="filter" onClick={() => toggle(!showFilter)}>
-          <P style={{ margin: 0 }}>Price</P>
+          <P style={{ margin: 0 }}>
+            Max price{" "}
+            <span style={{ color: `rgb(187,120,120)`, fontWeight: 700 }}>
+              ${price}
+            </span>
+          </P>
           <FilterSvg>{showFilter ? ArrowUp : ArrowDown}</FilterSvg>
         </Flex>
       </Grid>
@@ -41,6 +51,7 @@ const ProductFilter = ({ products }) => {
           min={minPrice}
           max={maxPrice}
           value={price}
+          onChange={handleChange}
         />
         <span className="min">${minPrice}</span>
         <span className="max">${maxPrice}</span>
@@ -51,10 +62,12 @@ const ProductFilter = ({ products }) => {
 
 ProductFilter.propTypes = {
   products: PropTypes.array.isRequired,
+  filterByPrice: PropTypes.func.isRequired,
 }
 
 ProductFilter.defaultProps = {
   products: [],
+  filterByPrice: {},
 }
 
 export default ProductFilter

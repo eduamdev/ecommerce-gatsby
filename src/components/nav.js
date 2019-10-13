@@ -11,7 +11,7 @@ const List = styled.ul`
     margin: 0;
 
     &:not(:last-child) {
-      margin-right: 2em;
+      margin-right: 0.75em;
     }
   }
 `

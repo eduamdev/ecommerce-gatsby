@@ -4,8 +4,7 @@ import SEO from "../components/seo"
 import Grid from "../components/grid"
 import Section from "../components/section"
 import Wrapper from "../components/wrapper"
-import ProductFilter from "../components/productFilter"
-import ProductList from "../components/productList"
+import ProductContainer from "../components/productContainer"
 
 const Products = ({ pageContext }) => {
   return (
@@ -14,8 +13,9 @@ const Products = ({ pageContext }) => {
       <Section style={{ padding: `1em 0 3em 0` }}>
         <Wrapper>
           <Grid className="productContainer">
-            <ProductFilter products={pageContext.products}></ProductFilter>
-            <ProductList products={pageContext.products}></ProductList>
+            <ProductContainer
+              products={pageContext.products}
+            ></ProductContainer>
           </Grid>
         </Wrapper>
       </Section>
