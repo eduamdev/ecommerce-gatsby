@@ -179,6 +179,54 @@ const useImages = () => {
             }
           }
         }
+        edward_walk: file(relativePath: { eq: "products/edward-walk.webp" }) {
+          childImageSharp {
+            fluid(maxWidth: 550, quality: 65) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        craft_albert: file(relativePath: { eq: "products/craft-albert.webp" }) {
+          childImageSharp {
+            fluid(maxWidth: 550, quality: 65) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        oliver_lace: file(relativePath: { eq: "products/oliver-lace.webp" }) {
+          childImageSharp {
+            fluid(maxWidth: 550, quality: 65) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        clarkdale_gobi: file(
+          relativePath: { eq: "products/clarkdale-gobi.jpg" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 550, quality: 65) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        orson_harbour: file(
+          relativePath: { eq: "products/orson-harbour.webp" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 550, quality: 65) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        batcombe_wing: file(
+          relativePath: { eq: "products/batcombe-wing.webp" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 550, quality: 65) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `
   )

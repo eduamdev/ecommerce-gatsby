@@ -445,5 +445,144 @@
       }
     ],
     "featured": false
+  },
+  {
+    "id": 18,
+    "name": "Edward Walk",
+    "slug": "edward-walk",
+    "category": "men",
+    "price": "99.95",
+    "description": "A wardrobe staple",
+    "stars": "4",
+    "details": [
+      "Upper Material: Leather",
+      "Lining Material: Textile",
+      "Sole Material: Mixed",
+      "Fastening Type: Lace"
+    ],
+    "reviews": [
+      {
+        "stars": "4",
+        "title": "Very comfortable",
+        "content": "Tried and worn this style for the past fifteen years."
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": 19,
+    "name": "Craft Albert",
+    "slug": "craft-albert",
+    "category": "men",
+    "price": "190",
+    "description": "Smart casual aesthetic",
+    "stars": "4.5",
+    "details": [
+      "Upper Material: Leather",
+      "Lining Material: Leather",
+      "Sole Material: Leather",
+      "Fastening Type: Lace",
+      "Boot Leg Height: 12 cm"
+    ],
+    "reviews": [
+      {
+        "stars": "4.5",
+        "title": "Very comfortable",
+        "content": "Tried and worn this style for the past fifteen years."
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": 20,
+    "name": "Oliver Lace",
+    "slug": "oliver-lace",
+    "category": "men",
+    "price": "150",
+    "description": "Classic English footwear",
+    "stars": "5",
+    "details": [
+      "Upper Material: Leather",
+      "Lining Material: Textile",
+      "Sole Material: Mixed",
+      "Fastening Type: Lace"
+    ],
+    "reviews": [
+      {
+        "stars": "5",
+        "title": "Nice shoe",
+        "content": "Nice shoe, would definitely buy something else from here"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": 21,
+    "name": "Clarkdale Gobi",
+    "slug": "clarkdale-gobi",
+    "category": "men",
+    "price": "150",
+    "description": "Classic Chelsea profile",
+    "stars": "5",
+    "details": [
+      "Upper Material: Suede Nubuck",
+      "Lining Material: Textile",
+      "Sole Material: Rising Rubber",
+      "Boot Leg Height: 14 cm"
+    ],
+    "reviews": [
+      {
+        "stars": "5",
+        "title": "Great boots",
+        "content": "I bought them a couple of weeks ago and I am very happy with the produsct, the website i ordered from and the fast delivery."
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": 22,
+    "name": "Orson Harbour",
+    "slug": "orson-harbour",
+    "category": "men",
+    "price": "130",
+    "description": "The ultimate lifestyle boat shoe",
+    "stars": "4.5",
+    "details": [
+      "Upper Material: Leather",
+      "Lining Material: Textile",
+      "Sole Material: Rubber",
+      "Fastening Type: Lace"
+    ],
+    "reviews": [
+      {
+        "stars": "4.5",
+        "title": "Ok",
+        "content": "Ok shoes nice style very light still don’t try yet"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": 23,
+    "name": "Batcombe Wing",
+    "slug": "batcombe-wing",
+    "category": "men",
+    "price": "110",
+    "description": "Men's brogues",
+    "stars": "5",
+    "details": [
+      "Upper Material: Leather",
+      "Lining Material: Textile",
+      "Sole Material: Rubber",
+      "Fastening Type: Lace"
+    ],
+    "reviews": [
+      {
+        "stars": "4.5",
+        "title": "Comfortable and very well made",
+        "content": "I purchased these at the Salisbury Store, the staff there were very helpful made the visit a breeze. As always Clarkes Comfort and quality, shoes always wear very well."
+      }
+    ],
+    "featured": false
   }
 ]
