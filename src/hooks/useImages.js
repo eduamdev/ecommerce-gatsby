@@ -7,42 +7,42 @@ const useImages = () => {
         banner: file(relativePath: { eq: "banner.jpg" }) {
           childImageSharp {
             fluid(maxHeight: 1800) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         women: file(relativePath: { eq: "women.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 800, maxHeight: 450) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         men: file(relativePath: { eq: "men.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 800, maxHeight: 450) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         rack: file(relativePath: { eq: "shoe-rack.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1200, maxHeight: 350) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
         about: file(relativePath: { eq: "about.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         calla_rose: file(relativePath: { eq: "products/calla-rose.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -51,14 +51,14 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         desert_boot: file(relativePath: { eq: "products/desert-boot.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -67,14 +67,14 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         club_c_85: file(relativePath: { eq: "products/club-c-85.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -83,7 +83,7 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -92,21 +92,21 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         grace: file(relativePath: { eq: "products/grace.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         laina_violet: file(relativePath: { eq: "products/laina-violet.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -115,21 +115,21 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         lite: file(relativePath: { eq: "products/lite.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         nano_2: file(relativePath: { eq: "products/nano-2.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -138,7 +138,7 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -147,56 +147,56 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         netley_whirl: file(relativePath: { eq: "products/netley-whirl.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         npc_uk: file(relativePath: { eq: "products/npc-uk.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         pure_tone: file(relativePath: { eq: "products/pure-tone.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         mila_myth: file(relativePath: { eq: "products/mila-myth.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         edward_walk: file(relativePath: { eq: "products/edward-walk.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         craft_albert: file(relativePath: { eq: "products/craft-albert.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
         oliver_lace: file(relativePath: { eq: "products/oliver-lace.webp" }) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -205,7 +205,7 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -214,7 +214,7 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -223,7 +223,7 @@ const useImages = () => {
         ) {
           childImageSharp {
             fluid(maxWidth: 550) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
