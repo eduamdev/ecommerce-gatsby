@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import Section from "./section"
 import Grid from "./grid"
@@ -6,6 +6,7 @@ import Flex from "./flex"
 import P from "./paragraph"
 import { ArrowDown, ArrowUp } from "./svg"
 import PropTypes from "prop-types"
+import useFilterState from "../hooks/useFilterState"
 
 const FilterSvg = styled.span`
   height: 20px;
@@ -21,30 +22,29 @@ const Slider = styled.input`
 `
 
 const ProductFilter = ({ products, filterByPrice }) => {
-  const maxPrice = Math.max(...products.map(item => item.price))
-  const minPrice = 0
-  const [showFilter, toggle] = useState(true)
-  const [price, updatingPrice] = useState(maxPrice)
-
-  const handleChange = event => {
-    updatingPrice(event.target.value)
-    filterByPrice(event.target.value)
-  }
+  const {
+    maxPrice,
+    minPrice,
+    price,
+    filterIsShowing,
+    toggle,
+    handleChange,
+  } = useFilterState(products, filterByPrice)
 
   return (
     <Section className="filter">
       <Grid>
-        <Flex className="filter" onClick={() => toggle(!showFilter)}>
+        <Flex className="filter" onClick={toggle}>
           <P style={{ margin: 0 }}>
-            Max price{" "}
+            Price{" "}
             <span style={{ color: `rgb(187,120,120)`, fontWeight: 700 }}>
               ${price}
             </span>
           </P>
-          <FilterSvg>{showFilter ? ArrowUp : ArrowDown}</FilterSvg>
+          <FilterSvg>{filterIsShowing ? ArrowUp : ArrowDown}</FilterSvg>
         </Flex>
       </Grid>
-      <Grid className={showFilter ? "filter-range show" : "filter-range"}>
+      <Grid className={filterIsShowing ? "filter-range show" : "filter-range"}>
         <Slider
           className="slider"
           type="range"
