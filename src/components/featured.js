@@ -13,7 +13,7 @@ const Featured = () => {
   const images = useImages()
 
   return (
-    <Section>
+    <Section style={{ paddingBottom: `1.5em` }}>
       <Wrapper>
         <Title
           type="h3"

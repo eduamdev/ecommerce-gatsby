@@ -12,8 +12,8 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Banner></Banner>
       <Category></Category>
-      <Featured></Featured>
       <Shoemaking></Shoemaking>
+      <Featured></Featured>
     </Layout>
   )
 }

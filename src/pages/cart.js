@@ -24,11 +24,15 @@ const Cart = () => {
       <Section className="cartProcess">
         <Wrapper className="cartProcess">
           <Grid className="cartProcess">
-            <Flex className="cartProcess">
+            <Flex
+              className={isCartEmpty ? "cartProcess active" : "cartProcess"}
+            >
               <span className="step">1</span>
               <P className="process">Shopping</P>
             </Flex>
-            <Flex className="cartProcess active">
+            <Flex
+              className={isCartEmpty ? "cartProcess" : "cartProcess active"}
+            >
               <span className="step">2</span>
               <P className="process">Check out</P>
             </Flex>
@@ -39,7 +43,7 @@ const Cart = () => {
           </Grid>
         </Wrapper>
       </Section>
-      <Section style={{ padding: `1.5em 0` }}>
+      <Section style={{ padding: `1.5em 0 3em 0` }}>
         <Wrapper>
           <Title type="h2" text="Cart" placement="center"></Title>
           {isCartEmpty ? (

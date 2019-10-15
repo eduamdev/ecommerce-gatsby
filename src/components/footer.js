@@ -33,8 +33,8 @@ const Footer = () => {
       <div
         style={{
           backgroundColor: `rgb(245,245,245)`,
-          marginTop: `3em`,
-          padding: `4em 0`,
+          marginTop: `1.5em`,
+          padding: `3em 0`,
           borderBottom: `1px solid rgb(175, 184, 202)`,
         }}
       >

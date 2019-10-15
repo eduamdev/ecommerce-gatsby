@@ -126,7 +126,7 @@ const GatsbyLink = styled(Link)`
   &.cart,
   &.error {
     margin-top: 1.75em;
-    margin-bottom: 3em;
+    margin-bottom: 1.75em;
   }
 
   &.card-image {
