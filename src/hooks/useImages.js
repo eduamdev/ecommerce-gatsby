@@ -28,7 +28,7 @@ const useImages = () => {
         rack: file(relativePath: { eq: "shoe-rack.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1200, maxHeight: 350) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
