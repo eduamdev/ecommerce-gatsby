@@ -123,12 +123,10 @@ function getStars(num) {
 }
 
 const Product = ({ pageContext }) => {
-  const images = useImages()
-  let [count, updateCount] = useState(1)
-  const image = images[pageContext.slug.replace(/-/g, "_")]
-
   const dispatch = useContext(GlobalDispatchContext)
-
+  let [count, updateCount] = useState(1)
+  const images = useImages()
+  const image = images[pageContext.slug.replace(/-/g, "_")]
   const {
     id,
     slug,

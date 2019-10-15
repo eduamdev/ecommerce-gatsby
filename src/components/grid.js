@@ -184,6 +184,7 @@ const Grid = styled.div`
     text-align: center;
     /* background: rgb(245,245,245); */
     align-items: stretch;
+    background-color: rgb(245, 245, 245);
   }
 
   &.cartInfo, &.error{

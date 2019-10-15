@@ -37,8 +37,8 @@ const Flex = styled.div`
     & .step {
       font-weight: 900;
       font-size: 1.6em;
-      margin-bottom: 0.5em;
-      color: #bb7878;
+      margin: 0.5em 0;
+      /* color: #bb7878; */
     }
 
     & .process {

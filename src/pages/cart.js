@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import useImages from "../hooks/useImages"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 import LinkUp from "../components/link"
 import Layout from "../components/layout"
@@ -9,10 +10,12 @@ import Title from "../components/title"
 import P from "../components/paragraph"
 import Grid from "../components/grid"
 import Flex from "../components/flex"
+import Img from "gatsby-image"
 
 const Cart = () => {
   const state = useContext(GlobalStateContext)
   const { cart, isCartEmpty } = state
+  const images = useImages()
   let total = 0
 
   return (
@@ -65,16 +68,17 @@ const Cart = () => {
                 <tbody>
                   {cart &&
                     cart.map((item, index) => {
+                      const image = images[item.slug.replace(/-/g, "_")]
                       total += item.total
 
                       return (
                         <tr key={index}>
                           <td style={{ paddingTop: 0, paddingBottom: 0 }}>
-                            <img
-                              style={{ width: `60px` }}
-                              src="https://clarks.scene7.com/is/image/Pangaea2Build/26135409_W_1"
+                            <Img
+                              style={{ width: 60 }}
+                              fluid={image.childImageSharp.fluid}
                               alt={item.name}
-                            />
+                            ></Img>
                             <h4
                               style={{
                                 marginBottom: `15px`,
