@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { GlobalStateContext } from "../context/GlobalContextProvider"
 import LinkUp from "../components/link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,10 +9,10 @@ import Title from "../components/title"
 import P from "../components/paragraph"
 import Grid from "../components/grid"
 import Flex from "../components/flex"
-import { GlobalStateContext } from "../context/GlobalContextProvider"
 
 const Cart = () => {
   const state = useContext(GlobalStateContext)
+  const { cart, isCartEmpty } = state
   let total = 0
 
   return (
@@ -38,7 +39,7 @@ const Cart = () => {
       <Section style={{ padding: `1.5em 0` }}>
         <Wrapper>
           <Title type="h2" text="Cart" placement="center"></Title>
-          {state.isCartEmpty ? (
+          {isCartEmpty ? (
             <Grid className="cartInfo">
               <P style={{ margin: 0 }}>Your cart is empty</P>
               <LinkUp
@@ -62,8 +63,8 @@ const Cart = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {state.cart &&
-                    state.cart.map((item, index) => {
+                  {cart &&
+                    cart.map((item, index) => {
                       total += item.total
 
                       return (

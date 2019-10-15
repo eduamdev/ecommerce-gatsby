@@ -16,11 +16,13 @@ const NotFoundPage = () => (
       <Wrapper>
         <Grid className="error">
           <Title type="h2" text="Page not found" placement="center"></Title>
-          <P style={{ margin: 0 }}>The page you were looking for does not exist</P>
+          <P style={{ margin: 0 }}>
+            The page you were looking for does not exist
+          </P>
           <LinkUp
             className="error"
             type="internal"
-            url="/products"
+            url="/men"
             ariaLabel="Go to shop"
           >
             Continue shopping

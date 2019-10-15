@@ -34,12 +34,12 @@ const Card = ({ item, imageGraphQL }) => {
 }
 
 Card.propTypes = {
-  product: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
   imageGraphQL: PropTypes.object.isRequired,
 }
 
 Card.defaultProps = {
-  product: {},
+  item: {},
   imageGraphQL: {},
 }
 
