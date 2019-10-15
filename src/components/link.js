@@ -61,17 +61,17 @@ const GatsbyLink = styled(Link)`
     justify-content: center;
 
     position: absolute;
-    bottom: 7%;
+    bottom: 5%;
     color: #fff;
     text-decoration: none;
     margin: 0;
 
     &.men {
-      right: 7%;
+      right: 10%;
     }
 
     &.women {
-      left: 7%;
+      left: 10%;
     }
 
     & span:not(.icon) {
@@ -130,11 +130,11 @@ const GatsbyLink = styled(Link)`
   }
 
   &.card-image {
-    padding: 0.25em;
+    padding: 0 0.5em;
     height: 100%;
 
     @media ${viewport[12]} {
-      padding: 0.25em 0.5em;
+      padding: 0 0.75em;
     }
   }
 `

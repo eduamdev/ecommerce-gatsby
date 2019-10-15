@@ -62,7 +62,7 @@ const StyledH1 = styled.h1`
 
   &.banner {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 0.5em;
     font-weight: 900;
     letter-spacing: -2.25px;
@@ -129,7 +129,7 @@ const StyledH3 = styled.h3`
   letter-spacing: -0.5px;
   font-size: 1.2em;
 
-  &.featured{
+  &.featured {
     font-size: 1.75em;
   }
 

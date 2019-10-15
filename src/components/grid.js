@@ -24,8 +24,8 @@ const Grid = styled.div`
       grid-area: svg;
       position: relative;
 
-      &.badge:after{
-        content: '';
+      &.badge:after {
+        content: "";
         position: absolute;
         top: -4px;
         right: -6px;
@@ -41,19 +41,20 @@ const Grid = styled.div`
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
-    grid-template-areas: "rack rack"
-    "women men";
+    grid-template-areas:
+      "rack rack"
+      "women men";
     margin-bottom: 1em;
 
     @media ${viewport[9]} {
       grid-gap: 1em;
     }
 
-    & .women{
+    & .women {
       grid-area: women;
     }
 
-    & .men{
+    & .men {
       grid-area: men;
     }
 
@@ -66,17 +67,9 @@ const Grid = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
 
-    /* @media ${viewport[4]} {
-      grid-template-columns: 1fr 1fr;
-    } */
-
     @media ${viewport[7]} {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
-    /* @media ${viewport[12]} {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    } */
   }
 
   &.card {
@@ -85,26 +78,24 @@ const Grid = styled.div`
     background: #fff;
     border: 1px solid #eee;
     text-align: center;
-    transition:  all 0.1s;
+    transition: all 0.1s;
     box-shadow: 1px 3px 30px 5px #f5f5f5;
 
     &:hover {
-      /* border-color: rgb(187, 120, 120); */
       border-color: rgb(195, 186, 186);
-      /* border: transparent; */
-      transform:translate(1px, -1%);
+      transform: translate(1px, -1%);
       box-shadow: none;
     }
   }
 
-  &.shoemaking{
+  &.shoemaking {
     grid-template-columns: 1.2fr 1fr;
 
-    @media ${viewport[7]}{
+    @media ${viewport[7]} {
       grid-template-columns: 1fr 1.2fr;
     }
 
-    & .text{
+    & .text {
       justify-self: end;
       text-align: right;
     }
@@ -179,7 +170,7 @@ const Grid = styled.div`
     }
   }
 
-  &.cartProcess{
+  &.cartProcess {
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     /* background: rgb(245,245,245); */
@@ -187,47 +178,50 @@ const Grid = styled.div`
     background-color: rgb(245, 245, 245);
   }
 
-  &.cartInfo, &.error{
+  &.cartInfo,
+  &.error {
     text-align: center;
   }
 
-  &.payment-details{
+  &.payment-details {
     margin: 5em 0 0 0;
     grid-template-columns: 1fr;
-    grid-template-areas: "details" 
-    "amount";
+    grid-template-areas:
+      "details"
+      "amount";
     grid-column-gap: 3em;
     grid-row-gap: 5em;
 
-    @media ${viewport[7]}{
+    @media ${viewport[7]} {
       margin: 5em 0 0 0;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "details amount";
     }
 
-    & .details{
+    & .details {
       grid-area: details;
 
-      & .email-label{
+      & .email-label {
         font-weight: 700;
         display: block;
         margin-bottom: 0.5em;
       }
 
-      & .email-input, & .creditCard-input{
-        width: 100%; 
+      & .email-input,
+      & .creditCard-input {
+        width: 100%;
         padding: 0.25em 1em;
         border: 1px solid #ddd;
       }
 
-      & .creditCard-label{
+      & .creditCard-label {
         font-weight: 700;
         display: block;
         margin-bottom: 0.5em;
         margin-top: 1em;
       }
 
-      & .creditCard-note{
+      & .creditCard-note {
         font-size: 0.7em;
         line-height: 1.25;
         margin-top: 0.5em;
@@ -235,7 +229,6 @@ const Grid = styled.div`
         display: block;
         letter-spacing: 0.2px;
         color: #888;
-        /* font-style: italic; */
       }
     }
 
@@ -246,10 +239,11 @@ const Grid = styled.div`
       align-items: center;
       justify-content: center;
       grid-template-columns: 1fr;
-      grid-template-areas: "subtotal"
-      "total";
+      grid-template-areas:
+        "subtotal"
+        "total";
 
-      & .subtotal{
+      & .subtotal {
         grid-area: subtotal;
         display: grid;
         align-items: center;
@@ -260,7 +254,7 @@ const Grid = styled.div`
         padding: 0.5em 0 0.5em 0;
         align-self: stretch;
 
-        @media ${viewport[7]}{
+        @media ${viewport[7]} {
           width: 80%;
           margin: 0 auto;
         }
@@ -269,18 +263,18 @@ const Grid = styled.div`
           width: 60%;
         }
 
-        & h4{
+        & h4 {
           justify-self: end;
           margin: 0;
           font-size: 0.9em;
         }
 
-        & p{
+        & p {
           margin: 0;
         }
       }
 
-      & .total{
+      & .total {
         grid-area: total;
         display: grid;
         align-items: center;
@@ -292,7 +286,7 @@ const Grid = styled.div`
         /* background: #f5f5f5; */
         border-top: 1px solid #ddd;
 
-        @media ${viewport[7]}{
+        @media ${viewport[7]} {
           width: 80%;
           margin: 0 auto;
         }
@@ -301,14 +295,14 @@ const Grid = styled.div`
           width: 60%;
         }
 
-        & h4{
+        & h4 {
           justify-self: end;
           margin: 0;
         }
 
-        & p{
+        & p {
           margin: 0;
-          color: rgb(187,120,120);
+          color: rgb(187, 120, 120);
           font-weight: 700;
           font-size: 1.1em;
         }
@@ -316,11 +310,12 @@ const Grid = styled.div`
     }
   }
 
-  &.product{
+  &.product {
     grid-template-columns: 1.2fr 1fr;
-    grid-template-areas: "image info"
-    "details details"
-    "reviews reviews";
+    grid-template-areas:
+      "image info"
+      "details details"
+      "reviews reviews";
     grid-row-gap: 3em;
     grid-column-gap: 0.5em;
 
@@ -338,21 +333,22 @@ const Grid = styled.div`
       grid-template-columns: 1fr 1.55fr;
       grid-column-gap: 5em;
       grid-row-gap: 0;
-      grid-template-areas: "image info"
-    ". details"
-    "reviews reviews";
+      grid-template-areas:
+        "image info"
+        ". details"
+        "reviews reviews";
     }
 
-    & .product-image{
+    & .product-image {
       grid-area: image;
     }
 
-    & .product-info{
+    & .product-info {
       grid-area: info;
       align-self: start;
     }
 
-    & .product-details{
+    & .product-details {
       grid-area: details;
       border-top: 1px solid #ddd;
       padding-top: 2em;
@@ -362,63 +358,60 @@ const Grid = styled.div`
       }
     }
 
-    & .product-reviews{
+    & .product-reviews {
       grid-area: reviews;
     }
   }
 
-  &.productContainer{
+  &.productContainer {
     grid-template-columns: 1fr;
-    grid-template-areas: "filter"
-    "products";
+    grid-template-areas:
+      "filter"
+      "products";
     align-items: start;
     grid-gap: 1em;
 
-    @media ${viewport[7]} {
-      /* grid-template-columns: 2.5fr 1fr;
-      grid-template-areas: "products filter"; */
-    }
-
-    & .filter{
+    & .filter {
       grid-area: filter;
 
-      & .filter-range{
+      & .filter-range {
         width: 300px;
         margin: 1em auto;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "slider slider slider"
-        "min . max";
+        grid-template-areas:
+          "slider slider slider"
+          "min . max";
         grid-row-gap: 0.35em;
         visibility: hidden;
         height: 0;
         opacity: 0;
         transition: all 0.1s;
 
-        &.show{
+        &.show {
           visibility: visible;
           height: initial;
           opacity: 1;
         }
 
-        & .slider{
+        & .slider {
           grid-area: slider;
         }
 
-        & .min{
+        & .min {
           grid-area: min;
         }
 
-        & .max{
+        & .max {
           grid-area: max;
           justify-self: end;
         }
       }
     }
 
-    & .products{
+    & .products {
       grid-area: products;
 
-      & .productList{
+      & .productList {
         display: grid;
         align-items: stretch;
         grid-gap: 0.5em;

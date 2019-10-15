@@ -16,7 +16,7 @@ const StyledSection = styled.section`
     position: relative;
 
     & div {
-      max-height: 600px;
+      max-height: 550px;
     }
   }
 
