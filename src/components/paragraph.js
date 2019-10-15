@@ -107,34 +107,10 @@ const StyledParagraph = styled.p`
   }
 
   &.quantity {
-    margin-top: 1.25em;
+    margin-top: 2em;
     margin-bottom: 1.25em;
     display: grid;
     grid-template-columns: max-content max-content max-content;
-
-    & .update-num {
-      font-weight: 200;
-      font-size: 1.7em;
-      padding: 0 0.6em;
-      border: 0;
-      background: rgb(245, 245, 245);
-      width: 3rem;
-      height: 3rem;
-      cursor: pointer;
-    }
-
-    & input {
-      outline: none;
-      font-size: 1.1em;
-      font-weight: 700;
-      padding: 0 0 0 0.75em;
-      width: 3rem;
-      height: 3rem;
-      border: none;
-      line-height: 1.3;
-      appearance: none;
-      margin: 0;
-    }
   }
 `
 

@@ -94,7 +94,6 @@ const GatsbyLink = styled(Link)`
 
   &.cart,
   &.error,
-  &.addToCart,
   &.pay {
     display: inline-block;
     /* border: 1px solid; */

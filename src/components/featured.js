@@ -15,7 +15,12 @@ const Featured = () => {
   return (
     <Section>
       <Wrapper>
-        <Title text="Featured" placement="center"></Title>
+        <Title
+          type="h3"
+          className="featured"
+          text="Featured"
+          placement="center"
+        ></Title>
         <Grid className="featured">
           {featuredProducts.map(item => {
             const image = images[item.slug.replace(/-/g, "_")]

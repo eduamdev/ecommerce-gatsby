@@ -16,6 +16,7 @@ exports.createPages = ({ actions: { createPage } }) => {
       path: `/product/${product.slug}/`,
       component: require.resolve("./src/templates/product.js"),
       context: {
+        id: product.id,
         slug: product.slug,
         name: product.name,
         price: product.price,

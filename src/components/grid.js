@@ -190,10 +190,6 @@ const Grid = styled.div`
     text-align: center;
   }
 
-  &.cartInfo{
-    display: none;
-  }
-
   &.payment-details{
     margin: 5em 0 0 0;
     grid-template-columns: 1fr;
@@ -332,12 +328,14 @@ const Grid = styled.div`
     }
 
     @media ${viewport[7]} {
+      grid-template-columns: 1fr 1.2fr;
       grid-column-gap: 2.75em;
       grid-row-gap: 1em;
     }
 
     @media ${viewport[12]} {
-      grid-column-gap: 3em;
+      grid-template-columns: 1fr 1.55fr;
+      grid-column-gap: 5em;
       grid-row-gap: 0;
       grid-template-areas: "image info"
     ". details"

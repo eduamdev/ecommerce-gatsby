@@ -1,5 +1,6 @@
-import React from "react"
-
+import React, { useState, useContext } from "react"
+import useImages from "../hooks/useImages"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Grid from "../components/grid"
@@ -11,8 +12,6 @@ import Title from "../components/title"
 import P from "../components/paragraph"
 import { star, halfStar, outlineStar } from "../components/svg"
 import styled from "styled-components"
-import LinkUp from "../components/link"
-import useImages from "../hooks/useImages"
 import Img from "gatsby-image"
 
 const ProductList = styled.ul`
@@ -37,6 +36,54 @@ const ReviewList = styled.ul`
 
     &:first-child {
       padding-top: 1em;
+    }
+  }
+`
+
+const Input = styled.input`
+  outline: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 0 0 0 0.75em;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  line-height: 1.3;
+  appearance: none;
+  margin: 0;
+`
+
+const Button = styled.button`
+  cursor: pointer;
+  outline: 0;
+  border: none;
+
+  &.update-num {
+    font-weight: 200;
+    font-size: 1.7em;
+    padding: 0 0.6em;
+    border: 0;
+    background: #ddd;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+
+    &:hover {
+      background: #e5e5e5;
+    }
+  }
+
+  &.addToCart {
+    display: inline-block;
+    background: rgb(187, 120, 120);
+    color: #fff;
+    padding: 0.75em 1.2em;
+    border-radius: 2px;
+    width: 9rem;
+    text-align: center;
+
+    &:hover {
+      background: rgb(146, 93, 93);
     }
   }
 `
@@ -77,85 +124,122 @@ function getStars(num) {
 
 const Product = ({ pageContext }) => {
   const images = useImages()
+  let [count, updateCount] = useState(1)
   const image = images[pageContext.slug.replace(/-/g, "_")]
+
+  const dispatch = useContext(GlobalDispatchContext)
+
+  const {
+    id,
+    slug,
+    name,
+    description,
+    stars,
+    price,
+    details,
+    reviews,
+  } = pageContext
 
   return (
     <Layout>
       <SEO title="Product" />
       <Section>
-        <Wrapper>
-          <Grid className="product">
-            <div className="product-image">
-              <Img
-                fluid={image.childImageSharp.fluid}
-                alt={pageContext.name}
-              ></Img>
-            </div>
-            <div className="product-info">
-              <Title
-                className="product-name"
-                type="h2"
-                text={`${pageContext.name}`}
-              ></Title>
-              <P className="product-info__price">$ {pageContext.price}</P>
-              <P>{pageContext.description}</P>
-              <Flex className="product-star-rating">
-                {getStars(`${pageContext.stars}`)}
-              </Flex>
-              <P className="quantity">
-                <button className="update-num">-</button>
-                <input type="number" value="1" />
-                <button className="update-num">+</button>
-              </P>
-
-              <LinkUp
-                type="internal"
-                url="/"
-                className="addToCart"
-                ariaLabel="Add to cart"
-              >
-                Add to cart
-              </LinkUp>
-            </div>
-            <div className="product-details">
-              <Title
-                className="product-details__title"
-                type="h3"
-                text="Details"
-              ></Title>
-              <ProductList>
-                {pageContext.details.length &&
-                  pageContext.details.map((item, index) => {
-                    return <li key={index}>{item}</li>
+        <form onSubmit={ev => ev.preventDefault()}>
+          <Wrapper>
+            <Grid className="product">
+              <div className="product-image">
+                <Img fluid={image.childImageSharp.fluid} alt={name}></Img>
+              </div>
+              <div className="product-info">
+                <Title
+                  className="product-name"
+                  type="h2"
+                  text={`${name}`}
+                ></Title>
+                <P className="product-info__price">$ {price}</P>
+                <P>{description}</P>
+                <Flex className="product-star-rating">
+                  {getStars(`${stars}`)}
+                </Flex>
+                <P className="quantity">
+                  <Button
+                    className="update-num"
+                    onClick={() => {
+                      count > 1 && updateCount(count - 1)
+                    }}
+                  >
+                    -
+                  </Button>
+                  <Input type="number" value={count} readOnly />
+                  <Button
+                    className="update-num"
+                    onClick={() => {
+                      updateCount(count + 1)
+                    }}
+                  >
+                    +
+                  </Button>
+                </P>
+                <Button
+                  type="button"
+                  className="addToCart"
+                  onClick={() => {
+                    dispatch({
+                      type: "ADD_PRODUCT_TO_CART",
+                      product: {
+                        id,
+                        slug,
+                        name,
+                        quantity: count,
+                        price,
+                        total: count * price,
+                      },
+                    })
+                  }}
+                >
+                  Add to cart
+                </Button>
+              </div>
+              <div className="product-details">
+                <Title
+                  className="product-details__title"
+                  type="h3"
+                  text="Details"
+                ></Title>
+                <ProductList>
+                  {details.length &&
+                    details.map((item, index) => {
+                      return <li key={index}>{item}</li>
+                    })}
+                </ProductList>
+              </div>
+              <div className="product-reviews">
+                <Title
+                  className="product-reviews"
+                  type="h3"
+                  text="Reviews"
+                ></Title>
+                <ReviewList>
+                  {reviews.map((review, index) => {
+                    return (
+                      <li key={index}>
+                        <Flex className="product-star-rating">
+                          {getStars(`${review.stars}`)}
+                        </Flex>
+                        <Title
+                          type="h4"
+                          className="title-review"
+                          text={`${review.title}`}
+                        ></Title>
+                        <P>{review.content}</P>
+                      </li>
+                    )
                   })}
-              </ProductList>
-            </div>
-            <div className="product-reviews">
-              <Title
-                className="product-reviews"
-                type="h3"
-                text="Reviews"
-              ></Title>
-              <ReviewList>
-                {pageContext.reviews.map((review, index) => {
-                  return (
-                    <li key={index}>
-                      <Flex className="product-star-rating">
-                        {getStars(`${review.stars}`)}
-                      </Flex>
-                      <Title
-                        type="h4"
-                        className="title-review"
-                        text={`${review.title}`}
-                      ></Title>
-                      <P>{review.content}</P>
-                    </li>
-                  )
-                })}
-              </ReviewList>
-            </div>
-          </Grid>
-        </Wrapper>
+                </ReviewList>
+              </div>
+            </Grid>
+          </Wrapper>
+        </form>
       </Section>
       <Featured></Featured>
     </Layout>

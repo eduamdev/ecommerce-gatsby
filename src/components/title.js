@@ -129,6 +129,10 @@ const StyledH3 = styled.h3`
   letter-spacing: -0.5px;
   font-size: 1.2em;
 
+  &.featured{
+    font-size: 1.75em;
+  }
+
   &.card-title {
     margin-bottom: 0.5em;
   }

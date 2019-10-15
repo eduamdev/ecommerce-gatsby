@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export default initialValue => {
-  const [allProducts] = useState(initialValue)
+  const allProducts = initialValue
   const [filteredProducts, filtering] = useState(allProducts)
 
   return {

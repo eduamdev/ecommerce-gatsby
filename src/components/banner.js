@@ -16,7 +16,7 @@ const Banner = () => {
       </Title>
       <P className="banner">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
-        soluta.
+        soluta. Lorem ipsum dolor sit.
       </P>
     </Section>
   )

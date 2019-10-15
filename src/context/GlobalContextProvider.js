@@ -4,15 +4,20 @@ export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 const initialState = {
+  product: {},
   cart: [],
+  isCartEmpty: true,
 }
 
 function reducer(state, action) {
   switch (action.type) {
-    case "ADD_PRODUCT": {
+    case "ADD_PRODUCT_TO_CART": {
       return {
-        ...state,
-        cart: action.cart,
+        product: action.product,
+        cart: state.isCartEmpty
+          ? [action.product]
+          : [...state.cart, action.product],
+        isCartEmpty: false,
       }
     }
     default:
