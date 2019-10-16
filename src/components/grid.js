@@ -142,30 +142,41 @@ const Grid = styled.div`
   }
 
   &.payment {
-    grid-template-columns: 1fr max-content 2em max-content 1fr;
-    grid-template-areas: ". paypal . visa .";
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-areas: ". svg .";
 
-    & .paypal {
-      grid-area: paypal;
-    }
+    & .svg {
+      grid-area: svg;
+      height: 38px;
 
-    & .visa {
-      grid-area: visa;
-
-      & svg {
-        width: 54px;
-
-        @media ${viewport[7]} {
-          width: 65px;
-        }
+      @media ${viewport[7]}{
+        height: 44px;
       }
-    }
 
-    & span svg {
-      max-height: 32px;
+      @media ${viewport[12]}{
+        height: 48px;
+      }
 
-      @media ${viewport[7]} {
-        max-height: 48px;
+      & span{
+
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+
+        & svg{
+          width: 38px;
+          height: 38px;
+
+          @media ${viewport[7]}{
+            width: 44px;
+            height: 44px;
+          }
+
+          @media ${viewport[12]}{
+            width: 48px;
+            height: 48px;
+          }
+        }
       }
     }
   }

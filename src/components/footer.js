@@ -6,7 +6,7 @@ import Title from "./title"
 import P from "./paragraph"
 import styled from "styled-components"
 import Flex from "./flex"
-import { Facebook, Instagram, Visa, Paypal } from "./svg"
+import { Facebook, Instagram, Visa, Paypal, Amex, MasterCard, Stripe } from "./svg"
 
 const StyledInput = styled.input`
   width: 100%;
@@ -93,8 +93,13 @@ const Footer = () => {
       </div>
       <Section style={{ padding: `2em 0` }} className="payment">
         <Grid className="payment">
-          <span className="paypal">{Paypal}</span>
-          <span className="visa">{Visa}</span>
+          <Flex className="svg">
+          <span className="">{Stripe}</span>
+          <span className="">{Visa}</span>
+          <span className="">{MasterCard}</span>
+          <span className="">{Paypal}</span>
+          <span className="">{Amex}</span>
+          </Flex> 
         </Grid>
       </Section>
       <Section style={{ padding: `1.5em 0` }}>
