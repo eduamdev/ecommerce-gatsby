@@ -6,6 +6,25 @@ import { viewport } from "./breakpoints"
 const Flex = styled.div`
   display: flex;
 
+  &.logo {
+    align-items: center;
+    justify-content: center;
+
+    & .logo-img {
+      width: 54px;
+      height: 54px;
+      margin-right: 10px;
+    }
+
+    & .logo-text {
+      display: none;
+
+      @media ${viewport[7]} {
+        display: inherit;
+      }
+    }
+  }
+
   &.shoemaker {
     justify-content: flex-end;
   }

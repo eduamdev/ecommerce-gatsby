@@ -84,11 +84,13 @@ const StyledH1 = styled.h1`
 
     & .banner-span {
       color: #bb7878;
-      font-size: 0.4em;
+      font-size: 0.3em;
       line-height: 1.7;
       display: block;
-      letter-spacing: -0.2px;
-      font-weight: 400;
+      letter-spacing: 2px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-shadow: 2px 3px #fff;
     }
   }
 `
@@ -137,7 +139,7 @@ const StyledH3 = styled.h3`
     margin-bottom: 0.5em;
   }
 
-  &.header {
+  &.logo-text {
     margin-bottom: 0;
     font-family: serif;
     font-style: italic;

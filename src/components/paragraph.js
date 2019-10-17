@@ -34,7 +34,7 @@ const StyledParagraph = styled.p`
     font-weight: 400;
   }
 
-  &.banner {
+  &.banner-disclaimer {
     position: absolute;
     left: 10%;
     bottom: 2%;

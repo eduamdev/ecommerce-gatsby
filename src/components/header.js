@@ -1,13 +1,16 @@
-import PropTypes from "prop-types"
 import React, { useContext } from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Title from "./title"
 import Wrapper from "./wrapper"
 import Nav from "./nav"
 import Grid from "./grid"
+import Flex from "./flex"
 import { Cart } from "./svg"
 import LinkUp from "./link"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
+import useImages from "../hooks/useImages"
+import Img from "gatsby-image"
 
 const StyledHeader = styled.header`
   height: 80px;
@@ -18,13 +21,26 @@ const StyledHeader = styled.header`
 
 const Header = ({ siteTitle }) => {
   const state = useContext(GlobalStateContext)
+  const { logo } = useImages()
 
   return (
     <StyledHeader>
       <Wrapper>
         <Grid className="header">
-          <LinkUp className="logo" type="internal" url="/" ariaLabel="Shoecase">
-            <Title type="h3" text={siteTitle} className="header"></Title>
+          <LinkUp
+            className="header logo"
+            type="internal"
+            url="/"
+            ariaLabel="Shoecase"
+          >
+            <Flex className="logo">
+              <Img
+                className="logo-img"
+                fixed={logo.childImageSharp.fixed}
+                alt="Shoecase"
+              ></Img>
+              <Title type="h3" text={siteTitle} className="logo-text"></Title>
+            </Flex>
           </LinkUp>
           <Nav></Nav>
           <LinkUp

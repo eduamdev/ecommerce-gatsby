@@ -4,6 +4,13 @@ const useImages = () => {
   const images = useStaticQuery(
     graphql`
       query {
+        logo: file(relativePath: { eq: "logo.png" }) {
+          childImageSharp {
+            fixed(width: 54, height: 54, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         banner: file(relativePath: { eq: "banner.jpg" }) {
           childImageSharp {
             fluid(maxHeight: 1100) {

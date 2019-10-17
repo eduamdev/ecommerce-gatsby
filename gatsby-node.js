@@ -1,11 +1,3 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
 const products = require("./src/content/products.json")
 const men = products.filter(product => product.category === "men")
 const women = products.filter(product => product.category === "women")

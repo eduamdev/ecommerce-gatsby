@@ -14,7 +14,7 @@ const Banner = () => {
       <Title type="h1" className="banner">
         <span className="banner-span">New</span> Sport Collection
       </Title>
-      <P className="banner">
+      <P className="banner-disclaimer">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
         soluta. Lorem ipsum dolor sit.
       </P>

@@ -14,7 +14,6 @@ const GatsbyLink = styled(Link)`
 
   &.logo {
     padding: 0.5em;
-    padding-left: 0;
   }
 
   &.nav {

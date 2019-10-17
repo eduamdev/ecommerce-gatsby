@@ -9,8 +9,12 @@ const Grid = styled.div`
   justify-content: center;
 
   &.header {
-    grid-template-columns: max-content 2.5em max-content 1fr 1.5em;
+    grid-template-columns: max-content 1em max-content 1fr 1.5em;
     grid-template-areas: "title . nav . svg";
+
+    @media ${viewport[7]} {
+      grid-template-columns: max-content 2.5em max-content 1fr 1.5em;
+    }
 
     & .header {
       grid-area: title;
@@ -149,30 +153,29 @@ const Grid = styled.div`
       grid-area: svg;
       height: 38px;
 
-      @media ${viewport[7]}{
+      @media ${viewport[7]} {
         height: 44px;
       }
 
-      @media ${viewport[12]}{
+      @media ${viewport[12]} {
         height: 48px;
       }
 
-      & span{
-
+      & span {
         &:not(:first-child) {
           margin-left: 10px;
         }
 
-        & svg{
+        & svg {
           width: 38px;
           height: 38px;
 
-          @media ${viewport[7]}{
+          @media ${viewport[7]} {
             width: 44px;
             height: 44px;
           }
 
-          @media ${viewport[12]}{
+          @media ${viewport[12]} {
             width: 48px;
             height: 48px;
           }
