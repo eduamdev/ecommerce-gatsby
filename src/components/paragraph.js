@@ -106,6 +106,18 @@ const StyledParagraph = styled.p`
     }
   }
 
+  &.shoemakingLink {
+    display: inline-block;
+    border-bottom: 1px solid;
+    color: rgb(187, 120, 120);
+    margin: 0;
+    font-weight: 700;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
   &.quantity {
     margin-top: 2em;
     margin-bottom: 1.25em;

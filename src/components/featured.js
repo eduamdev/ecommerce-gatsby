@@ -13,7 +13,7 @@ const Featured = () => {
   const images = useImages()
 
   return (
-    <Section style={{ paddingBottom: `1.5em` }}>
+    <Section className="featured">
       <Wrapper>
         <Title
           type="h3"
@@ -23,7 +23,7 @@ const Featured = () => {
         ></Title>
         <Grid className="featured">
           {featuredProducts.map(item => {
-            const image = images[item.slug.replace(/-/g, "_")]
+            const image = images[item.image]
 
             return <Card key={item.id} item={item} imageGraphQL={image}></Card>
           })}

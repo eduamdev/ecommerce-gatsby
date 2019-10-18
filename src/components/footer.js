@@ -6,7 +6,15 @@ import Title from "./title"
 import P from "./paragraph"
 import styled from "styled-components"
 import Flex from "./flex"
-import { Facebook, Instagram, Visa, Paypal, Amex, MasterCard, Stripe } from "./svg"
+import {
+  Facebook,
+  Instagram,
+  Visa,
+  Paypal,
+  Amex,
+  MasterCard,
+  Stripe,
+} from "./svg"
 
 const StyledInput = styled.input`
   width: 100%;
@@ -33,7 +41,6 @@ const Footer = () => {
       <div
         style={{
           backgroundColor: `rgb(245,245,245)`,
-          marginTop: `1.5em`,
           padding: `3em 0`,
           borderBottom: `1px solid rgb(175, 184, 202)`,
         }}
@@ -94,12 +101,12 @@ const Footer = () => {
       <Section style={{ padding: `2em 0` }} className="payment">
         <Grid className="payment">
           <Flex className="svg">
-          <span className="">{Stripe}</span>
-          <span className="">{Visa}</span>
-          <span className="">{MasterCard}</span>
-          <span className="">{Paypal}</span>
-          <span className="">{Amex}</span>
-          </Flex> 
+            <span className="">{Stripe}</span>
+            <span className="">{Visa}</span>
+            <span className="">{MasterCard}</span>
+            <span className="">{Paypal}</span>
+            <span className="">{Amex}</span>
+          </Flex>
         </Grid>
       </Section>
       <Section style={{ padding: `1.5em 0` }}>

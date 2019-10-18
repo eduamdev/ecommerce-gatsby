@@ -94,9 +94,15 @@ const Grid = styled.div`
 
   &.shoemaking {
     grid-template-columns: 1.2fr 1fr;
+    grid-column-gap: 2em;
 
     @media ${viewport[7]} {
-      grid-template-columns: 1fr 1.2fr;
+      grid-column-gap: 4em;
+      grid-template-columns: 1.7fr 1fr;
+    }
+
+    @media ${viewport[12]} {
+      grid-column-gap: 5.5em;
     }
 
     & .text {

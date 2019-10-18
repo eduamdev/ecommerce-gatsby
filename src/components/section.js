@@ -20,6 +20,14 @@ const StyledSection = styled.section`
     }
   }
 
+  &.category {
+    background: linear-gradient(#f5f5f5 75%, #fff 100%);
+  }
+
+  &.featured {
+    background: linear-gradient(#f7f4f5 0%, #fff 30%);
+  }
+
   &.payment {
     background: rgb(245, 245, 245);
   }

@@ -33,8 +33,8 @@ const StyledWrapper = styled.div`
     padding: 1.45rem 0;
   }
 
-  &.category {
-    position: relative;
+  &.category,
+  &.shoemaking {
     width: 100%;
 
     @media ${viewport[9]} {
@@ -44,6 +44,10 @@ const StyledWrapper = styled.div`
     @media ${viewport[12]} {
       width: 60%;
     }
+  }
+
+  &.category {
+    position: relative;
   }
 
   &.cartProcess {

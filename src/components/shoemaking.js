@@ -9,11 +9,11 @@ import Flex from "./flex"
 import useImages from "../hooks/useImages"
 
 const Shoemaking = () => {
-  const { about } = useImages()
+  const { shoemaking } = useImages()
 
   return (
-    <Section>
-      <Wrapper>
+    <Section style={{ marginBottom: `2em` }}>
+      <Wrapper className="shoemaking">
         <Grid className="shoemaking">
           <div className="text">
             <Title
@@ -25,16 +25,18 @@ const Shoemaking = () => {
               <P
                 style={{
                   margin: 0,
+                  marginBottom: `1.5em`,
                   display: `inline`,
                 }}
               >
-                Learn more about our shoemaking process
+                Learn more about our shoemaking process and get involved
               </P>
             </Flex>
+            <P className="shoemakingLink">Discover how</P>
           </div>
           <div>
             <Img
-              fluid={about.childImageSharp.fluid}
+              fluid={shoemaking.childImageSharp.fluid}
               alt="about shoemaking"
             ></Img>
           </div>

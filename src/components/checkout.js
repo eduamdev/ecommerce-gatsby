@@ -8,7 +8,6 @@ import { CardElement, injectStripe } from "react-stripe-elements"
 const Checkout = ({ total }) => {
   return (
     <>
-      {/* <CardElement /> */}
       <Grid className="payment-details">
         <div className="details">
           <P style={{ fontWeight: 500 }}>Please enter your payment details:</P>
@@ -28,7 +27,8 @@ const Checkout = ({ total }) => {
             Test using this credit card: 4242 4242 4242 4242, and enter any 5
             digits for the zip code
           </span>
-          <input name="creditCard" type="text" className="creditCard-input" />
+          {/* <input name="creditCard" type="text" className="creditCard-input" /> */}
+          <CardElement className="creditCard-input" />
         </div>
         <div className="amount">
           <div className="subtotal">

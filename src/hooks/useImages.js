@@ -39,9 +39,9 @@ const useImages = () => {
             }
           }
         }
-        about: file(relativePath: { eq: "about.jpg" }) {
+        shoemaking: file(relativePath: { eq: "shoemaking.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 700) {
+            fluid(maxWidth: 500) {
               ...GatsbyImageSharpFluid
             }
           }

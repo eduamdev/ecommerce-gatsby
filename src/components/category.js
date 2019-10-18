@@ -22,7 +22,7 @@ const Category = () => {
   const { women, men, rack } = useImages()
 
   return (
-    <Section>
+    <Section className="category">
       <Wrapper className="category">
         <Grid className="category">
           <LinkUp
