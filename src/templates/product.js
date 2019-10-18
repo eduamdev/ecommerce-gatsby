@@ -126,7 +126,6 @@ const Product = ({ pageContext }) => {
   const dispatch = useContext(GlobalDispatchContext)
   let [count, updateCount] = useState(1)
   const images = useImages()
-  const image = images[pageContext.slug.replace(/-/g, "_")]
   const {
     id,
     slug,
@@ -136,6 +135,7 @@ const Product = ({ pageContext }) => {
     price,
     details,
     reviews,
+    image,
   } = pageContext
 
   return (
@@ -146,7 +146,10 @@ const Product = ({ pageContext }) => {
           <Wrapper>
             <Grid className="product">
               <div className="product-image">
-                <Img fluid={image.childImageSharp.fluid} alt={name}></Img>
+                <Img
+                  fluid={images[image].childImageSharp.fluid}
+                  alt={name}
+                ></Img>
               </div>
               <div className="product-info">
                 <Title
@@ -191,6 +194,7 @@ const Product = ({ pageContext }) => {
                         quantity: count,
                         price,
                         total: count * price,
+                        image,
                       },
                     })
                   }}

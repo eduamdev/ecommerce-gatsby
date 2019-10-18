@@ -390,7 +390,7 @@ const Grid = styled.div`
 
       & .filter-range {
         width: 300px;
-        margin: 1em auto;
+        margin: 0.35em auto 1em auto;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
           "slider slider slider"

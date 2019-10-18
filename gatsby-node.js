@@ -16,6 +16,7 @@ exports.createPages = ({ actions: { createPage } }) => {
         stars: product.stars,
         details: product.details,
         reviews: product.reviews,
+        image: product.image,
       },
     })
   }),

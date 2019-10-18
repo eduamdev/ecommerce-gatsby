@@ -26,7 +26,8 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "batcombe_lord"
   },
   {
     "id": 1,
@@ -55,7 +56,8 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": true
+    "featured": true,
+    "image": "mila_myth"
   },
   {
     "id": 2,
@@ -84,7 +86,8 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": true
+    "featured": true,
+    "image": "desert_boot"
   },
   {
     "id": 3,
@@ -113,7 +116,8 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "club_c_85"
   },
   {
     "id": 4,
@@ -137,7 +141,8 @@
         "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "nano_8_flexweave"
   },
   {
     "id": 5,
@@ -159,7 +164,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad nam omnis repudiandae! Corrupti adipisci hic debitis exercitationem, similique modi id non quam fugit?"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "club_c_85_canvas"
   },
   {
     "id": 6,
@@ -192,7 +198,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": true
+    "featured": true,
+    "image": "nano_6_covert"
   },
   {
     "id": 7,
@@ -214,7 +221,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ad nam omnis repudiandae! Corrupti adipisci hic debitis exercitationem, similique modi id non quam fugit?"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "lite"
   },
   {
     "id": 8,
@@ -236,7 +244,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "floatride_energy"
   },
   {
     "id": 9,
@@ -259,7 +268,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "npc_uk"
   },
   {
     "id": 10,
@@ -283,7 +293,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": true
+    "featured": true,
+    "image": "nano_2"
   },
   {
     "id": 11,
@@ -306,7 +317,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "grace"
   },
   {
     "id": 12,
@@ -329,7 +341,8 @@
         "content": "I bought this in the extra wide size but unfortunately my calf could not be accommodated. I am gutted because the boot is beautifully made and exceptionally stylish and wish it could have fitted me. The postal service was brilliant too. Can't fault Clarks just my shape!"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "netley_whirl"
   },
   {
     "id": 13,
@@ -352,7 +365,8 @@
         "content": "I bought these shoes 2 weeks ago and have worn them on 3 occasions since. They are shoes that look good but are also comfortable to wear. Happy that I bought them. The wide fit was a bonus."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "calla_rose"
   },
   {
     "id": 14,
@@ -375,7 +389,8 @@
         "content": "I bought these for my girlfriend and she absolutly loved it. The design is very nice, they are also very confortable. She has used them as soon as they arrived!"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "laina_violet"
   },
   {
     "id": 15,
@@ -398,7 +413,8 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aperiam? Rerum, quae!"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "laureti_grace"
   },
   {
     "id": 16,
@@ -421,7 +437,8 @@
         "content": "I bought these boot in two colours as the comfort level is second to none. Beautifully soft suede leather, comfortable cushion sole and great grip."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "clarkdale_arlo"
   },
   {
     "id": 17,
@@ -444,7 +461,8 @@
         "content": "I bought these to wear before I go into boots. I normally wear sandals or boots as my feet are narrow and bony. These shoes are extremely comfortable too and they are a 6.5 which you often can’t get."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "pure_tone"
   },
   {
     "id": 18,
@@ -467,7 +485,8 @@
         "content": "Tried and worn this style for the past fifteen years."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "edward_walk"
   },
   {
     "id": 19,
@@ -491,7 +510,8 @@
         "content": "Tried and worn this style for the past fifteen years."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "craft_albert"
   },
   {
     "id": 20,
@@ -514,7 +534,8 @@
         "content": "Nice shoe, would definitely buy something else from here"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "oliver_lace"
   },
   {
     "id": 21,
@@ -537,7 +558,8 @@
         "content": "I bought them a couple of weeks ago and I am very happy with the produsct, the website i ordered from and the fast delivery."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "clarkdale_gobi"
   },
   {
     "id": 22,
@@ -560,7 +582,8 @@
         "content": "Ok shoes nice style very light still don’t try yet"
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "orson_harbour"
   },
   {
     "id": 23,
@@ -583,6 +606,7 @@
         "content": "I purchased these at the Salisbury Store, the staff there were very helpful made the visit a breeze. As always Clarkes Comfort and quality, shoes always wear very well."
       }
     ],
-    "featured": false
+    "featured": false,
+    "image": "batcombe_wing"
   }
 ]

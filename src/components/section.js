@@ -32,6 +32,7 @@ const StyledSection = styled.section`
 
   &.cartProcess {
     padding: 1em 0;
+    padding-top: 0;
   }
 `
 

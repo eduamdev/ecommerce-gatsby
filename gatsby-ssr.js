@@ -1,7 +1,6 @@
 const React = require("react")
-const GlobalContextProvider = require("./src/context/GlobalContextProvider")
-  .default
+const StripeWrapper = require("./src/context/StripeContextProvider").default
 
 exports.wrapRootElement = ({ element }) => {
-  return <GlobalContextProvider>{element}</GlobalContextProvider>
+  return <StripeWrapper>{element}</StripeWrapper>
 }

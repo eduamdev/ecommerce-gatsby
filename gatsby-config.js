@@ -5,6 +5,12 @@ module.exports = {
     author: `@edroamz`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-stripe`,
+      options: {
+        async: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
