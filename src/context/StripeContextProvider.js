@@ -21,10 +21,7 @@ const StripeWrapper = ({ children }) => {
   }, []) // <-- passing in an empty array since I only want to run this hook once
 
   return (
-    <StripeProvider
-      apiKey={process.env.GATSBY_STRIPE_PUBLISHABLE_KEY}
-      stripe={stripe}
-    >
+    <StripeProvider stripe={stripe}>
       <GlobalContextProvider>{children}</GlobalContextProvider>
     </StripeProvider>
   )
