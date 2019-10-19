@@ -50,7 +50,17 @@ const StyledWrapper = styled.div`
     position: relative;
   }
 
-  &.cartProcess {
+  &.cart{
+    @media ${viewport[7]} {
+      padding: 0;
+    }
+
+    @media ${viewport[9]} {
+      padding: 0 1rem;
+    }
+  }
+
+  /* &.cartProcess {
     max-width: 100%;
     width: 100%;
     margin: 0;
@@ -74,7 +84,7 @@ const StyledWrapper = styled.div`
       padding-left: 3rem;
       padding-right: 3rem;
     }
-  }
+  } */
 `
 
 const Wrapper = ({ className, children }) => {

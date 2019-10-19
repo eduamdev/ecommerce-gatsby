@@ -1,10 +1,9 @@
 import React from "react"
 import P from "./paragraph"
 import Grid from "./grid"
-import PropTypes from "prop-types"
 import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"
-import { viewport } from "./breakpoints"
+import Title from "./title"
 
 const Button = styled.button`
   &.pay {
@@ -15,16 +14,9 @@ const Button = styled.button`
     padding: 0.75em 1.2em;
     border-radius: 2px;
     width: 100%;
-    margin: 1em auto 0 auto;
+    margin: 2em auto 0 auto;
     text-align: center;
-
-    @media ${viewport[7]} {
-      width: 80%;
-    }
-
-    @media ${viewport[12]} {
-      width: 60%;
-    }
+    border: none;
 
     &:hover {
       background: rgb(146, 93, 93);
@@ -71,54 +63,47 @@ class Checkout extends React.Component {
         <div id="card-errors" role="alert"></div>
         <Grid className="payment-details">
           <div className="details">
-            <P style={{ fontWeight: 500 }}>
-              Please enter your payment details:
-            </P>
-            <label className="email-label" htmlFor="email">
-              Email
-            </label>
-            <input
-              name="email"
-              type="email"
-              className="email-input"
-              placeholder="name@example.com"
-            />
-            <label className="creditCard-label" htmlFor="creditCard">
-              Credit Card
-            </label>
-            <span className="creditCard-note">
-              Test using this credit card: 4242 4242 4242 4242, and enter any 5
-              digits for the zip code
-            </span>
-            <CardElement className="creditCard-input" />
-          </div>
-          <div className="amount">
-            <div className="subtotal">
-              <h4>Subtotal</h4>
-              <P>${this.props.total}</P>
-              <h4>Shipping</h4>
-              <P>Free</P>
-            </div>
-            <div className="total">
-              <h4>Total</h4>
-              <P>${this.props.total}</P>
-            </div>
-            <Button className="pay" onClick={this.submit}>
-              Pay with credit card
-            </Button>
+            <Title
+              type="h3"
+              className="payment-title"
+              text="Payment Information"
+            ></Title>
+            <fieldset
+              style={{
+                padding: "2em 1.75em",
+                border: "2px solid #eee",
+                margin: 0,
+              }}
+            >
+              <legend style={{ padding: "0 0.5em" }}>
+                Please enter your payment details below
+              </legend>
+              <label className="email-label" htmlFor="email">
+                Email
+              </label>
+              <input
+                name="email"
+                type="email"
+                className="email-input"
+                placeholder="name@example.com"
+              />
+              <label className="creditCard-label" htmlFor="creditCard">
+                Credit Card
+              </label>
+              <span className="creditCard-note">
+                Test using this credit card: 4242 4242 4242 4242, and enter any
+                5 digits for the zip code
+              </span>
+              <CardElement className="creditCard-input" />
+              <Button className="pay" onClick={this.submit}>
+                Pay with credit card
+              </Button>
+            </fieldset>
           </div>
         </Grid>
       </>
     )
   }
-}
-
-Checkout.propTypes = {
-  total: PropTypes.number.isRequired,
-}
-
-Checkout.defaultProps = {
-  total: 0,
 }
 
 export default injectStripe(Checkout)

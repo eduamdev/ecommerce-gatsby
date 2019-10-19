@@ -30,13 +30,16 @@ const ReviewList = styled.ul`
   list-style: none;
 
   & li {
-    border-bottom: 1px solid #ddd;
     padding: 2em 1em 2em 0;
     margin: 0;
 
     &:first-child {
       padding-top: 1em;
     }
+  }
+
+  & li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
   }
 `
 
@@ -191,6 +194,7 @@ const Product = ({ pageContext }) => {
                         id,
                         slug,
                         name,
+                        description,
                         quantity: count,
                         price,
                         total: count * price,

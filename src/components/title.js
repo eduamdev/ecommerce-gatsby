@@ -39,6 +39,14 @@ const Container = styled.div`
   &.card-title{
     margin-top: 1em;
   }
+
+  &.payment-title{
+    margin-bottom: 1em;
+
+    @media ${viewport[7]} {
+      margin-bottom: 3em;
+    }
+  }
 `
 
 const StyledH1 = styled.h1`

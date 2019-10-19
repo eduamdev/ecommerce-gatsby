@@ -3,6 +3,7 @@ import Checkout from "./checkout"
 import OrderSummary from "./orderSummary"
 import useImages from "../hooks/useImages"
 import { Elements } from "react-stripe-elements"
+import Grid from "./grid"
 
 const CheckoutContainer = ({ cart }) => {
   let images = useImages()
@@ -10,10 +11,20 @@ const CheckoutContainer = ({ cart }) => {
 
   return (
     <>
-      <OrderSummary cart={cart} images={images}></OrderSummary>
-      <Elements>
-        <Checkout total={total}></Checkout>
-      </Elements>
+      <Grid className="checkout">
+        <div className="summary">
+          <OrderSummary
+            cart={cart}
+            images={images}
+            total={total}
+          ></OrderSummary>
+        </div>
+        <div className="payment">
+          <Elements>
+            <Checkout></Checkout>
+          </Elements>
+        </div>
+      </Grid>
     </>
   )
 }

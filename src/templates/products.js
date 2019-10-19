@@ -9,7 +9,7 @@ import ProductContainer from "../components/productContainer"
 const Products = ({ pageContext }) => (
   <Layout>
     <SEO title="Products" />
-    <Section style={{ padding: `1em 0 3em 0` }}>
+    <Section style={{ padding: `1em 0 5em 0` }}>
       <Wrapper>
         <Grid className="productContainer">
           <ProductContainer products={pageContext.products}></ProductContainer>

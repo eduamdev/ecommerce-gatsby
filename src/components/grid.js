@@ -190,36 +190,181 @@ const Grid = styled.div`
     }
   }
 
-  &.cartProcess {
+  /* &.cartProcess {
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    /* background: rgb(245,245,245); */
     align-items: stretch;
     background-color: rgb(245, 245, 245);
-  }
+  } */
 
   &.cartInfo,
   &.error {
     text-align: center;
   }
 
-  &.payment-details {
-    margin: 5em 0 0 0;
+  &.checkout {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "details"
-      "amount";
-    grid-column-gap: 3em;
     grid-row-gap: 5em;
+    grid-template-areas:
+      "summary"
+      "payment";
 
-    @media ${viewport[7]} {
-      margin: 5em 0 0 0;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "details amount";
+    & .payment {
+      grid-area: payment;
+
+      @media ${viewport[7]} {
+        align-self: start;
+        padding-top: 2em;
+      }
     }
 
+    & .summary {
+      grid-area: summary;
+
+      @media ${viewport[7]} {
+        align-self: start;
+        box-shadow: -10px 0px 17px -13px #ddd;
+        padding: 2em;
+        padding-right: 0;
+      }
+
+      @media ${viewport[9]} {
+        padding: 2em;
+      }
+    }
+
+    @media ${viewport[7]} {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "payment summary";
+      grid-column-gap: 2em;
+    }
+
+    @media ${viewport[9]} {
+      grid-template-columns: 1.5fr 1fr;
+    }
+
+    @media ${viewport[12]} {
+      grid-template-columns: 1.75fr 1fr;
+      grid-template-areas: "payment summary";
+      grid-column-gap: 4em;
+    }
+  }
+
+  &.order-summary {
+    margin-top: 1em;
+    grid-template-columns: max-content 1.5fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-template-areas: "img info price total";
+
+    @media ${viewport[7]} {
+      margin-top: 3em;
+    }
+
+    & .order-summary__img {
+      grid-area: img;
+      width: 80px;
+    }
+
+    & .order-summary__info {
+      grid-area: info;
+      align-self: baseline;
+
+      & h4 {
+        margin-bottom: 0.25em;
+      }
+
+      & span {
+        font-size: 0.8em;
+        line-height: 1.4;
+      }
+    }
+
+    & .order-summary__price {
+      grid-area: price;
+      align-self: center;
+      font-size: 0.85em;
+
+      @media ${viewport[7]} {
+        align-self: baseline;
+      }
+    }
+
+    & .order-summary__total {
+      grid-area: total;
+      align-self: center;
+      color: rgb(187, 120, 120);
+      font-weight: 700;
+      font-size: 0.85em;
+
+      @media ${viewport[7]} {
+        align-self: baseline;
+      }
+    }
+  }
+
+  &.order-amount {
+    padding-top: 3em;
+    grid-template-columns: 1fr 1fr;
+
+    @media ${viewport[7]} {
+      padding-top: 1.5em;
+    }
+
+    & .left {
+      justify-self: start;
+      margin-bottom: 0.35em;
+      font-size: 0.9em;
+    }
+
+    & .right {
+      justify-self: end;
+      margin-bottom: 0.35em;
+      font-size: 0.9em;
+    }
+
+    & .subtotal,
+    & .shipping {
+      color: rgb(187, 120, 120);
+      font-weight: 700;
+    }
+
+    & .shipping {
+      font-size: 0.85em;
+    }
+
+    & .total {
+      justify-self: stretch;
+      align-self: start;
+      font-size: 1.25em;
+      margin-top: 0.35em;
+      padding-top: 1em;
+      border-top: 1px solid #ddd;
+      color: rgb(146, 93, 93);
+      font-weight: 900;
+
+      @media ${viewport[7]} {
+        margin-top: 0.5em;
+        padding-top: 1.5em;
+      }
+    }
+  }
+
+  &.payment-details {
+    grid-template-columns: 1fr;
+
     & .details {
-      grid-area: details;
+      align-self: start;
+      justify-self: center;
+      width: 100%;
+
+      @media ${viewport[9]} {
+        width: 80%;
+        max-width: 600px;
+      }
+
+      @media ${viewport[12]} {
+        width: 60%;
+      }
 
       & .email-label {
         font-weight: 700;
@@ -227,105 +372,36 @@ const Grid = styled.div`
         margin-bottom: 0.5em;
       }
 
+      & .email-input {
+        font-size: 0.9em;
+        outline: none;
+      }
+
       & .email-input,
       & .creditCard-input {
         width: 100%;
-        padding: 0.25em 1em;
+        padding: 0.7em 1em;
         border: 1px solid #ddd;
+        border: none;
+        margin: 0.5em 0;
+        box-shadow: 1px 1px 2px 1px #ddd;
       }
 
       & .creditCard-label {
         font-weight: 700;
         display: block;
         margin-bottom: 0.5em;
-        margin-top: 1em;
+        margin-top: 2.25em;
       }
 
       & .creditCard-note {
         font-size: 0.7em;
         line-height: 1.25;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
         display: block;
         letter-spacing: 0.2px;
         color: #888;
-      }
-    }
-
-    & .amount {
-      grid-area: amount;
-      align-self: end;
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "subtotal"
-        "total";
-
-      & .subtotal {
-        grid-area: subtotal;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 3em;
-        grid-row-gap: 0.3em;
-        padding: 0.5em 0 0.5em 0;
-        align-self: stretch;
-
-        @media ${viewport[7]} {
-          width: 80%;
-          margin: 0 auto;
-        }
-
-        @media ${viewport[7]} {
-          width: 60%;
-        }
-
-        & h4 {
-          justify-self: end;
-          margin: 0;
-          font-size: 0.9em;
-        }
-
-        & p {
-          margin: 0;
-        }
-      }
-
-      & .total {
-        grid-area: total;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 3em;
-        padding: 1em 0 1em 0;
-        align-self: stretch;
-        /* background: #f5f5f5; */
-        border-top: 1px solid #ddd;
-
-        @media ${viewport[7]} {
-          width: 80%;
-          margin: 0 auto;
-        }
-
-        @media ${viewport[7]} {
-          width: 60%;
-        }
-
-        & h4 {
-          justify-self: end;
-          margin: 0;
-        }
-
-        & p {
-          margin: 0;
-          color: rgb(187, 120, 120);
-          font-weight: 700;
-          font-size: 1.1em;
-        }
       }
     }
   }

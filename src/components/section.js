@@ -37,11 +37,11 @@ const StyledSection = styled.section`
   &.banner {
     padding: 0;
   }
-
+  /* 
   &.cartProcess {
     padding: 1em 0;
     padding-top: 0;
-  }
+  } */
 `
 
 const Section = ({ id, className, style, children }) => {
