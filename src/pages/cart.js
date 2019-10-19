@@ -17,7 +17,7 @@ const Cart = () => {
   return (
     <Layout>
       <SEO title="Cart" />
-      <Section style={{ padding: `2em 0 5em 0` }}>
+      <Section style={{ padding: `1em 0 2em 0` }}>
         <Wrapper className="cart">
           {isCartEmpty ? (
             <>
