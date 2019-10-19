@@ -72,6 +72,10 @@ const Grid = styled.div`
     grid-gap: 0.5em;
 
     @media ${viewport[7]} {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media ${viewport[9]} {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }

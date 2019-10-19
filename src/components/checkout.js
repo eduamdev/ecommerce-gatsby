@@ -59,7 +59,6 @@ class Checkout extends React.Component {
 
     return (
       <>
-        <div id="card-errors" role="alert"></div>
         <Grid className="payment-details">
           <div className="details">
             <Title
@@ -93,6 +92,16 @@ class Checkout extends React.Component {
                 Test using this credit card: 4242 4242 4242 4242, and enter any
                 5 digits for the zip code
               </span>
+              <div
+                id="card-errors"
+                role="alert"
+                style={{
+                  color: "tomato",
+                  fontWeight: 700,
+                  fontSize: "0.85em",
+                  paddingTop: "10px",
+                }}
+              ></div>
               <CardElement className="creditCard-input" />
               <Button className="pay" onClick={this.submit}>
                 Pay with credit card
