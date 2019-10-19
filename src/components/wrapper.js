@@ -55,8 +55,8 @@ const StyledWrapper = styled.div`
       padding: 0;
     }
 
-    @media ${viewport[9]} {
-      padding: 0 1rem;
+    @media ${viewport[12]} {
+      padding-right: 0;
     }
   }
 

@@ -227,10 +227,6 @@ const Grid = styled.div`
         padding: 2em;
         padding-right: 0;
       }
-
-      @media ${viewport[9]} {
-        padding: 2em;
-      }
     }
 
     @media ${viewport[7]} {
@@ -244,7 +240,7 @@ const Grid = styled.div`
     }
 
     @media ${viewport[12]} {
-      grid-template-columns: 1.75fr 1fr;
+      grid-template-columns: 2fr 1fr;
       grid-template-areas: "payment summary";
       grid-column-gap: 4em;
     }
