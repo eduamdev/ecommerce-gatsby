@@ -253,10 +253,6 @@ const Grid = styled.div`
     grid-column-gap: 1em;
     grid-template-areas: "img info price total";
 
-    @media ${viewport[7]} {
-      margin-top: 3em;
-    }
-
     & .order-summary__img {
       grid-area: img;
       width: 80px;

@@ -1,5 +1,4 @@
 import React from "react"
-import P from "./paragraph"
 import Grid from "./grid"
 import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"

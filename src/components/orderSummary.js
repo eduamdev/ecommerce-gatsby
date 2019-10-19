@@ -9,14 +9,18 @@ import { viewport } from "./breakpoints"
 
 const Article = styled.article`
   @media ${viewport[7]} {
-    margin-bottom: 1.75em;
+    margin-bottom: 1.5em;
   }
 `
 
 const OrderSummary = ({ cart, images, total }) => {
   return (
     <>
-      <Title type="h3" text="Order Summary"></Title>
+      <Title
+        type="h3"
+        className="orderSummary-title"
+        text="Order Summary"
+      ></Title>
       {cart &&
         cart.map((item, index) => {
           const image = images[item.image]

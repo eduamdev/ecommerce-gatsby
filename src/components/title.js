@@ -40,11 +40,19 @@ const Container = styled.div`
     margin-top: 1em;
   }
 
-  &.payment-title{
+  &.payment-title, &.orderSummary-title{
     margin-bottom: 1em;
 
     @media ${viewport[7]} {
       margin-bottom: 3em;
+    }
+  }
+
+  &.orderSummary-title{
+    margin-top: 2em;
+
+    @media ${viewport[7]} {
+      margin-top: 0;
     }
   }
 `
