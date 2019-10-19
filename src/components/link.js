@@ -92,40 +92,21 @@ const GatsbyLink = styled(Link)`
   }
 
   &.cart,
-  &.error,
-  &.pay {
+  &.error {
     display: inline-block;
     /* border: 1px solid; */
     background: rgb(187, 120, 120);
     color: #fff;
     padding: 0.75em 1.2em;
     border-radius: 2px;
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
 
     &:hover {
       /* background: transparent; */
       /* color: rgb(187, 120, 120); */
       background: rgb(146, 93, 93);
     }
-  }
-
-  &.pay {
-    width: 100%;
-    margin: 1em auto 0 auto;
-    text-align: center;
-
-    @media ${viewport[7]} {
-      width: 80%;
-    }
-
-    @media ${viewport[12]} {
-      width: 60%;
-    }
-  }
-
-  &.cart,
-  &.error {
-    margin-top: 1.75em;
-    margin-bottom: 1.75em;
   }
 
   &.card-image {
