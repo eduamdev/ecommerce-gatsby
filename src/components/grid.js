@@ -80,7 +80,7 @@ const Grid = styled.div`
     height: 100%;
     justify-content: stretch;
     background: #fff;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     text-align: center;
     transition: all 0.1s;
     box-shadow: 1px 3px 30px 5px #f5f5f5;
@@ -223,7 +223,8 @@ const Grid = styled.div`
 
       @media ${viewport[7]} {
         align-self: start;
-        box-shadow: -10px 0px 17px -13px #ddd;
+        /* box-shadow: -10px 0px 17px -13px #ddd; */
+        box-shadow: #ccc -10px 0px 17px -15px;
         padding: 2em;
         padding-right: 0;
       }
@@ -334,7 +335,7 @@ const Grid = styled.div`
       font-size: 1.25em;
       margin-top: 0.35em;
       padding-top: 1em;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #ccc;
       color: rgb(146, 93, 93);
       font-weight: 900;
 
@@ -377,10 +378,10 @@ const Grid = styled.div`
       & .creditCard-input {
         width: 100%;
         padding: 0.7em 1em;
-        border: 1px solid #ddd;
+        /* border: 1px solid #ddd; */
         border: none;
         margin: 0.5em 0;
-        box-shadow: 1px 1px 2px 1px #ddd;
+        box-shadow: 1px 1px 2px 1px #ccc;
       }
 
       & .creditCard-label {
