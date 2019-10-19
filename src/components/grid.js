@@ -87,7 +87,8 @@ const Grid = styled.div`
     border: 1px solid #ddd;
     text-align: center;
     transition: all 0.1s;
-    box-shadow: 1px 3px 30px 5px #f5f5f5;
+    box-shadow: 1px 2px 10px 2px #f5f5f5;
+    border-radius: 4px;
 
     &:hover {
       border-color: rgb(195, 186, 186);
@@ -208,7 +209,7 @@ const Grid = styled.div`
 
   &.checkout {
     grid-template-columns: 1fr;
-    grid-row-gap: 5em;
+    grid-row-gap: 4.5em;
     grid-template-areas:
       "summary"
       "payment";
@@ -224,42 +225,53 @@ const Grid = styled.div`
 
     & .summary {
       grid-area: summary;
+      border-radius: 8px;
+      box-shadow: 1px 2px 7px 1px #e5e5e5;
+      padding: 2em 1em;
 
       @media ${viewport[7]} {
         align-self: start;
         /* box-shadow: -10px 0px 17px -13px #ddd; */
-        box-shadow: #ccc -10px 0px 17px -15px;
+        /* box-shadow: #ccc -10px 0px 17px -15px; */
+
+        /* padding-right: 0; */
+      }
+
+      @media ${viewport[9]} {
         padding: 2em;
-        padding-right: 0;
       }
     }
 
     @media ${viewport[7]} {
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "payment summary";
-      grid-column-gap: 2em;
+      grid-column-gap: 1em;
     }
 
     @media ${viewport[9]} {
       grid-template-columns: 1.5fr 1fr;
+      grid-column-gap: 0;
     }
 
     @media ${viewport[12]} {
       grid-template-columns: 2fr 1fr;
       grid-template-areas: "payment summary";
-      grid-column-gap: 4em;
     }
   }
 
   &.order-summary {
     margin-top: 1em;
-    grid-template-columns: max-content 1.5fr 1fr 1fr;
+    grid-template-columns: max-content 2fr 1fr 1fr;
     grid-column-gap: 1em;
     grid-template-areas: "img info price total";
 
     & .order-summary__img {
       grid-area: img;
-      width: 80px;
+      width: 60px;
+
+      @media ${viewport[12]} {
+        width: 80px;
+      }
     }
 
     & .order-summary__info {
@@ -335,7 +347,7 @@ const Grid = styled.div`
       font-size: 1.25em;
       margin-top: 0.35em;
       padding-top: 1em;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid #ddd;
       color: rgb(146, 93, 93);
       font-weight: 900;
 

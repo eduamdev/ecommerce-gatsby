@@ -47,14 +47,6 @@ const Container = styled.div`
       margin-bottom: 3em;
     }
   }
-
-  &.orderSummary-title{
-    margin-top: 2em;
-
-    @media ${viewport[7]} {
-      margin-top: 0;
-    }
-  }
 `
 
 const StyledH1 = styled.h1`
@@ -99,7 +91,8 @@ const StyledH1 = styled.h1`
     }
 
     & .banner-span {
-      color: #bb7878;
+      /* color: #bb7878; */
+      color: tomato;
       font-size: 0.3em;
       line-height: 1.7;
       display: block;
