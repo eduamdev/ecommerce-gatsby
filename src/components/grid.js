@@ -227,7 +227,7 @@ const Grid = styled.div`
       grid-area: summary;
       border-radius: 8px;
       box-shadow: 1px 2px 7px 1px #e5e5e5;
-      padding: 2em 1em;
+      padding: 2em 1.25em;
 
       @media ${viewport[7]} {
         align-self: start;
