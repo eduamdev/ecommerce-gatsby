@@ -84,6 +84,8 @@ const Grid = styled.div`
     transition: all 0.15s;
     border-radius: 4px;
     padding: 0.5em;
+    padding-bottom: 2em;
+    position: relative;
 
     &:hover {
       transform: translate(1px, -2%);

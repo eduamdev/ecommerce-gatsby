@@ -70,8 +70,11 @@ const StyledParagraph = styled.p`
   &.card-label {
     font-weight: 700;
     letter-spacing: -0.2px;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     text-align: right;
+    position: absolute;
+    right: 7%;
+    bottom: 3.5%;
 
     @media ${viewport[7]} {
       font-size: 1em;
