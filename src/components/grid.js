@@ -202,17 +202,22 @@ const Grid = styled.div`
 
   &.checkout {
     grid-template-columns: 1fr;
-    grid-row-gap: 4.5em;
+    grid-row-gap: 1.5em;
     grid-template-areas:
       "summary"
       "payment";
 
     & .payment {
       grid-area: payment;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding: 2em 1.25em;
 
       @media ${viewport[7]} {
         align-self: start;
         padding-top: 2em;
+        padding: 0;
+        border: 0;
       }
     }
 
@@ -220,7 +225,8 @@ const Grid = styled.div`
       grid-area: summary;
       border-radius: 8px;
       /* box-shadow: 1px 2px 7px 1px #e5e5e5; */
-      box-shadow: -2px 1px 12px 1px #e5e5e5;
+      /* box-shadow: -2px 1px 12px 1px #e5e5e5; */
+      border: 1px solid #ddd;
       padding: 2em 1.25em;
 
       @media ${viewport[7]} {
