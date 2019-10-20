@@ -379,11 +379,12 @@ const Grid = styled.div`
       & .email-input,
       & .creditCard-input {
         width: 100%;
-        padding: 0.7em 1em;
+        padding: 0.65rem 1rem;
         /* border: 1px solid #ddd; */
         border: none;
         margin: 0.5em 0;
-        box-shadow: 1px 1px 2px 1px #ccc;
+        /* box-shadow: 1px 1px 2px 1px #ccc; */
+        border: 1px solid #aaa;
       }
 
       & .creditCard-label {
