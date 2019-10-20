@@ -219,6 +219,10 @@ const Grid = styled.div`
         padding: 0;
         border: 0;
       }
+
+      @media ${viewport[9]} {
+        padding: 2em;
+      }
     }
 
     & .summary {
