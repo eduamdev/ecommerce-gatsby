@@ -132,6 +132,19 @@ const StyledH2 = styled.h2`
 
   &.product-name {
     margin: 0;
+    font-size: 1.35em;
+
+    @media ${viewport[4]} {
+      font-size: 1.55em;
+    }
+
+    @media ${viewport[7]} {
+      font-size: 1.75em;
+    }
+
+    @media ${viewport[9]} {
+      font-size: 2em;
+    }
   }
 `
 

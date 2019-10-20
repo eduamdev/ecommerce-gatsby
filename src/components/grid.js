@@ -83,8 +83,6 @@ const Grid = styled.div`
     text-align: center;
     transition: all 0.15s;
     border-radius: 4px;
-    padding: 0.5em;
-    padding-bottom: 2em;
     position: relative;
 
     &:hover {
@@ -444,6 +442,7 @@ const Grid = styled.div`
     & .product-info {
       grid-area: info;
       align-self: start;
+      padding-bottom: 1.5em;
     }
 
     & .product-details {

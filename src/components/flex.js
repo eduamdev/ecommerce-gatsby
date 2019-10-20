@@ -92,9 +92,9 @@ const Flex = styled.div`
   }
 `
 
-const FlexContainer = ({ className, children, onClick }) => {
+const FlexContainer = ({ className, style, children, onClick }) => {
   return (
-    <Flex className={className} onClick={onClick}>
+    <Flex className={className} onClick={onClick} style={style}>
       {children}
     </Flex>
   )
@@ -102,6 +102,7 @@ const FlexContainer = ({ className, children, onClick }) => {
 
 Flex.propTypes = {
   className: PropTypes.string,
+  style: PropTypes.object,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
 }

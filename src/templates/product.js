@@ -16,11 +16,11 @@ import Img from "gatsby-image"
 
 const ProductList = styled.ul`
   margin-bottom: 1em;
-  margin-top: 1em;
+  margin-top: 2em;
   list-style-type: square;
 
   & li {
-    margin: 0;
+    margin-bottom: 0.3em;
   }
 `
 
@@ -160,11 +160,14 @@ const Product = ({ pageContext }) => {
                   type="h2"
                   text={`${name}`}
                 ></Title>
-                <P className="product-info__price">$ {price}</P>
-                <P>{description}</P>
-                <Flex className="product-star-rating">
+                <Flex
+                  className="product-star-rating"
+                  style={{ margin: "1em 0" }}
+                >
                   {getStars(`${stars}`)}
                 </Flex>
+                <P>{description}</P>
+                <P className="product-info__price">$ {price}</P>
                 <P className="quantity">
                   <Button
                     className="update-num"
