@@ -32,7 +32,7 @@ const Shoemaking = () => {
                 Learn more about our shoemaking process and get involved
               </P>
             </Flex>
-            <P className="shoemakingLink">Discover more</P>
+            <P className="shoemakingLink">Learn more</P>
           </div>
           <div>
             <Img

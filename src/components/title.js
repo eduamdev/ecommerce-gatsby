@@ -7,6 +7,12 @@ const Container = styled.div`
   display: grid;
   align-items: center;
 
+  &.card-title {
+    padding-top: 0.5em;
+    border-top: 1px solid #ddd;
+    margin-top: 0.5em;
+  }
+
   ${props =>
     props.placement === "left" &&
     css`
@@ -34,11 +40,7 @@ const Container = styled.div`
 
   &.header {
     display: unset;
-  }
-
-  &.card-title{
-    margin-top: 1em;
-  }
+  }  
 
   &.payment-title, &.orderSummary-title{
     margin-bottom: 1em;
@@ -70,7 +72,7 @@ const StyledH1 = styled.h1`
 
   &.banner {
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 0.5em;
     font-weight: 900;
     letter-spacing: -2.25px;
@@ -144,15 +146,12 @@ const StyledH3 = styled.h3`
     font-size: 1.75em;
   }
 
-  &.card-title {
-    margin-bottom: 0.5em;
-  }
-
   &.logo-text {
     margin-bottom: 0;
-    font-family: serif;
+    font-size: 1.4em;
+    font-family: "Playfair Display", serif;
     font-style: italic;
-    letter-spacing: -2px;
+    letter-spacing: -0.75px;
   }
 
   &.product-details__title,
@@ -179,6 +178,12 @@ const StyledH4 = styled.h4`
   font-weight: 900;
   padding: 0;
   letter-spacing: -0.3px;
+
+  &.card-title {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+  }
 
   &.title-review {
     margin: 1em 0;

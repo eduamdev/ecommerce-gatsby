@@ -58,18 +58,20 @@ const StyledParagraph = styled.p`
 
   &.card-description {
     margin-bottom: 1em;
+    text-align: left;
   }
 
   &.card-label,
   &.product-info__price {
-    font-weight: 900;
     font-size: 0.9em;
     color: rgb(187, 120, 120);
   }
 
   &.card-label {
+    font-weight: 700;
     letter-spacing: -0.2px;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
+    text-align: right;
 
     @media ${viewport[7]} {
       font-size: 1em;
@@ -81,6 +83,7 @@ const StyledParagraph = styled.p`
   }
 
   &.product-info__price {
+    font-weight: 900;
     margin: 0.5em 0;
     font-size: 1.1em;
     letter-spacing: -0.5px;
@@ -95,15 +98,16 @@ const StyledParagraph = styled.p`
   }
 
   &.featured {
-    border-bottom: 1px solid;
+    border: 1px solid #ccc;
+    border-radius: 100px;
     color: rgb(187, 120, 120);
     margin-top: 1.75em;
-    margin-bottom: 3em;
     font-weight: 700;
-
+    padding: 0.5em 1em;
+    /* 
     &:hover {
       border-color: transparent;
-    }
+    } */
   }
 
   &.shoemakingLink {

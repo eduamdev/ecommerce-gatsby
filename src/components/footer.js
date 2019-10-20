@@ -5,6 +5,7 @@ import Grid from "./grid"
 import Title from "./title"
 import P from "./paragraph"
 import styled from "styled-components"
+import { viewport } from "./breakpoints"
 import Flex from "./flex"
 import {
   Facebook,
@@ -32,6 +33,14 @@ const List = styled.ul`
 
   & li {
     margin-bottom: 0.25em;
+
+    @media ${viewport[7]} {
+      margin-bottom: 0.5em;
+    }
+
+    @media ${viewport[9]} {
+      margin-bottom: 0.75em;
+    }
   }
 `
 
@@ -42,7 +51,7 @@ const Footer = () => {
         style={{
           backgroundColor: `rgb(245,245,245)`,
           padding: `3em 0`,
-          borderBottom: `1px solid rgb(175, 184, 202)`,
+          borderBottom: `1px solid #ccc`,
         }}
       >
         <Wrapper>

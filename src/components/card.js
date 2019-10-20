@@ -20,10 +20,10 @@ const Card = ({ item, imageGraphQL }) => {
         >
           <Img fluid={imageGraphQL.childImageSharp.fluid} alt={name}></Img>
           <Title
-            type="h3"
+            type="h4"
             className="card-title"
             text={name}
-            placement="center"
+            placement="left"
           ></Title>
           <P className="card-description">{description}</P>
           <P className="card-label">${price}</P>
