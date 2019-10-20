@@ -353,7 +353,7 @@ const Grid = styled.div`
 
     & .details {
       align-self: start;
-      justify-self: center;
+      justify-self: start;
       width: 100%;
 
       @media ${viewport[9]} {
@@ -362,7 +362,7 @@ const Grid = styled.div`
       }
 
       @media ${viewport[12]} {
-        width: 60%;
+        width: 80%;
       }
 
       & .email-label {
