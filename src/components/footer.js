@@ -100,7 +100,7 @@ const Footer = () => {
       </div>
       <Section style={{ padding: `2em 0` }} className="payment">
         <Grid className="payment">
-          <Flex className="svg">
+          <Flex className="payment-svg">
             <span className="">{Stripe}</span>
             <span className="">{Visa}</span>
             <span className="">{MasterCard}</span>

@@ -60,7 +60,7 @@ const GatsbyLink = styled(Link)`
     justify-content: center;
 
     position: absolute;
-    bottom: 5%;
+    bottom: 7.5%;
     color: #fff;
     text-decoration: none;
     margin: 0;

@@ -86,6 +86,10 @@ const Flex = styled.div`
       padding: 0.5em;
     }
   }
+
+  &.payment-svg {
+    fill: #a2675c;
+  }
 `
 
 const FlexContainer = ({ className, children, onClick }) => {

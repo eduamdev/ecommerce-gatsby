@@ -45,9 +45,7 @@ const Grid = styled.div`
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5em;
-    grid-template-areas:
-      "rack rack"
-      "women men";
+    grid-template-areas: "women men";
     margin-bottom: 1em;
 
     @media ${viewport[9]} {
@@ -60,10 +58,6 @@ const Grid = styled.div`
 
     & .men {
       grid-area: men;
-    }
-
-    & .rack {
-      grid-area: rack;
     }
   }
 
@@ -160,7 +154,7 @@ const Grid = styled.div`
     grid-template-columns: 1fr max-content 1fr;
     grid-template-areas: ". svg .";
 
-    & .svg {
+    & .payment-svg {
       grid-area: svg;
       height: 38px;
 

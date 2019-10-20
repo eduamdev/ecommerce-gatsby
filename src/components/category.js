@@ -19,7 +19,7 @@ const ImgLayer = styled.div`
 `
 
 const Category = () => {
-  const { women, men, rack } = useImages()
+  const { women, men } = useImages()
 
   return (
     <Section className="category">
@@ -43,11 +43,6 @@ const Category = () => {
             <Img fluid={men.childImageSharp.fluid} alt="shop men"></Img>
             <ImgLayer></ImgLayer>
           </LinkUp>
-          <Img
-            className="rack"
-            fluid={rack.childImageSharp.fluid}
-            alt="shoe rack"
-          ></Img>
         </Grid>
         <P style={{ margin: 0 }}>
           <LinkUp
