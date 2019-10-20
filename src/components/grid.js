@@ -216,12 +216,8 @@ const Grid = styled.div`
       @media ${viewport[7]} {
         align-self: start;
         padding-top: 2em;
-        padding: 0;
-        border: 0;
-      }
-
-      @media ${viewport[9]} {
         padding: 2em;
+        border: 0;
       }
     }
 
@@ -292,10 +288,7 @@ const Grid = styled.div`
       grid-area: price;
       align-self: center;
       font-size: 0.85em;
-
-      @media ${viewport[7]} {
-        align-self: baseline;
-      }
+      text-align: right;
     }
 
     & .order-summary__total {
@@ -304,10 +297,7 @@ const Grid = styled.div`
       color: rgb(187, 120, 120);
       font-weight: 700;
       font-size: 0.85em;
-
-      @media ${viewport[7]} {
-        align-self: baseline;
-      }
+      text-align: right;
     }
   }
 
