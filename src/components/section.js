@@ -25,7 +25,7 @@ const StyledSection = styled.section`
   }
 
   &.featured {
-    background: linear-gradient(#f7f4f5 0%, #fff 30%);
+    /* background: linear-gradient(#f7f4f5 0%, #fff 30%); */
   }
 
   &.payment {

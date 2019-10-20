@@ -82,18 +82,11 @@ const Grid = styled.div`
     border: 1px solid #ddd;
     text-align: center;
     transition: all 0.15s;
-    /* box-shadow: 1px 1px 5px 1px #e5e5e5; */
-    /* box-shadow: 1px 2px 10px 2px #f5f5f5; */
-    /* box-shadow: 1px 2px 7px 1px #e5e5e5; */
     border-radius: 4px;
     padding: 0.5em;
 
     &:hover {
-      /* border-color: rgb(195, 186, 186); */
       transform: translate(1px, -2%);
-      /* box-shadow: 2px 4px 15px 5px #f5f5f5; */
-      /* box-shadow: -1px -1px 7px 3px #eee; */
-      /* border-color: transparent; */
     }
   }
 
