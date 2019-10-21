@@ -164,7 +164,7 @@ const StyledH3 = styled.h3`
   }
 
   &.product-details__title,
-  &.product-reviews {
+  &.product-reviews__title {
     margin: 0;
   }
 

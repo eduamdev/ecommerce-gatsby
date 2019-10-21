@@ -33,6 +33,11 @@ const StyledWrapper = styled.div`
     padding: 1.45rem 0;
   }
 
+  &.product {
+    /* max-width: 100%;
+    width: 100%; */
+  }
+
   &.cart {
     @media ${viewport[7]} {
       padding: 0;

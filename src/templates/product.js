@@ -84,6 +84,7 @@ const Button = styled.button`
     border-radius: 2px;
     width: 9rem;
     text-align: center;
+    margin-bottom: 1em;
 
     &:hover {
       background: rgb(146, 93, 93);
@@ -144,9 +145,9 @@ const Product = ({ pageContext }) => {
   return (
     <Layout>
       <SEO title="Product" />
-      <Section>
+      <Section style={{ background: "#f5f5f5" }}>
         <form onSubmit={ev => ev.preventDefault()}>
-          <Wrapper>
+          <Wrapper className="product">
             <Grid className="product">
               <div className="product-image">
                 <Img
@@ -224,7 +225,7 @@ const Product = ({ pageContext }) => {
               </div>
               <div className="product-reviews">
                 <Title
-                  className="product-reviews"
+                  className="product-reviews__title"
                   type="h3"
                   text="Reviews"
                 ></Title>
