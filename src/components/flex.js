@@ -84,7 +84,7 @@ const Flex = styled.div`
   }
 
   &.payment-svg {
-    fill: #a7a7a7;
+    fill: rgb(187, 120, 120);
   }
 `
 
