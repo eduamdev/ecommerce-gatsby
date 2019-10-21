@@ -107,22 +107,6 @@ const StyledParagraph = styled.p`
     margin-top: 1.75em;
     font-weight: 700;
     padding: 0.5em 1em;
-    /* 
-    &:hover {
-      border-color: transparent;
-    } */
-  }
-
-  &.shoemakingLink {
-    display: inline-block;
-    border-bottom: 1px solid;
-    color: rgb(187, 120, 120);
-    margin: 0;
-    font-weight: 700;
-
-    &:hover {
-      border-color: transparent;
-    }
   }
 
   &.quantity {

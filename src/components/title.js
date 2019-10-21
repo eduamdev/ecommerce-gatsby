@@ -126,10 +126,6 @@ const StyledH2 = styled.h2`
     font-size: 2.5em;
   }
 
-  &.shoemaking {
-    text-align: right;
-  }
-
   &.product-name {
     margin: 0;
     font-size: 1.35em;

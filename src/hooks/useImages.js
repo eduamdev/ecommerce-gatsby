@@ -18,23 +18,30 @@ const useImages = () => {
             }
           }
         }
-        women: file(relativePath: { eq: "women.jpg" }) {
+        shoe1: file(relativePath: { eq: "shoe1.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 800, maxHeight: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        men: file(relativePath: { eq: "men.jpg" }) {
+        shoe2: file(relativePath: { eq: "shoe2.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 800, maxHeight: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        shoemaking: file(relativePath: { eq: "shoemaking.jpg" }) {
+        shoe3: file(relativePath: { eq: "shoe3.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 800, maxHeight: 450) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        rack: file(relativePath: { eq: "shoe-rack.jpg" }) {
+          childImageSharp {
+            fluid(maxHeight: 900) {
               ...GatsbyImageSharpFluid
             }
           }

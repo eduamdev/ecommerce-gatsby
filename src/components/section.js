@@ -20,12 +20,18 @@ const StyledSection = styled.section`
     }
   }
 
-  &.category {
-    /* background: linear-gradient(#f5f5f5 75%, #fff 100%); */
+  &.featured {
+    background: linear-gradient(#f7f4f5 0%, #fff 30%);
   }
 
-  &.featured {
-    /* background: linear-gradient(#f7f4f5 0%, #fff 30%); */
+  &.rack {
+    margin-bottom: 2em;
+    padding-bottom: 5em;
+    padding-top: 0;
+
+    @media ${viewport[9]} {
+      padding: 0 0 3em 0;
+    }
   }
 
   &.payment {
@@ -37,11 +43,6 @@ const StyledSection = styled.section`
   &.banner {
     padding: 0;
   }
-  /* 
-  &.cartProcess {
-    padding: 1em 0;
-    padding-top: 0;
-  } */
 `
 
 const Section = ({ id, className, style, children }) => {

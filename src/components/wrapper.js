@@ -33,24 +33,7 @@ const StyledWrapper = styled.div`
     padding: 1.45rem 0;
   }
 
-  &.category,
-  &.shoemaking {
-    width: 100%;
-
-    @media ${viewport[9]} {
-      width: 80%;
-    }
-
-    @media ${viewport[12]} {
-      width: 60%;
-    }
-  }
-
-  &.category {
-    position: relative;
-  }
-
-  &.cart{
+  &.cart {
     @media ${viewport[7]} {
       padding: 0;
     }
@@ -59,32 +42,6 @@ const StyledWrapper = styled.div`
       padding-right: 0;
     }
   }
-
-  /* &.cartProcess {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-    @media ${viewport[7]} {
-      padding: 0 1rem;
-      max-width: 90%;
-      width: 90%;
-      margin: 0 auto;
-    }
-
-    @media ${viewport[9]} {
-      max-width: 85%;
-      width: 85%;
-    }
-
-    @media ${viewport[12]} {
-      max-width: 1420px;
-      width: 90%;
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
-  } */
 `
 
 const Wrapper = ({ className, children }) => {

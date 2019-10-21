@@ -45,52 +45,6 @@ const GatsbyLink = styled(Link)`
     }
   }
 
-  &.category-img {
-    position: relative;
-    /* border: 1px solid #ddd;
-
-    &:hover {
-      border-color: rgb(187, 120, 120);
-    } */
-  }
-
-  &.category {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    bottom: 7.5%;
-    color: #fff;
-    text-decoration: none;
-    margin: 0;
-
-    &.men {
-      right: 10%;
-    }
-
-    &.women {
-      left: 10%;
-    }
-
-    & span:not(.icon) {
-      border-bottom: 1px solid #fff;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-    }
-
-    & .icon {
-      fill: #fff;
-      width: 0.85em;
-      height: auto;
-      margin-left: 4px;
-
-      @media ${viewport[7]} {
-        width: 1em;
-      }
-    }
-  }
-
   &.cart,
   &.error {
     display: inline-block;

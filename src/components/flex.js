@@ -25,10 +25,6 @@ const Flex = styled.div`
     }
   }
 
-  &.shoemaker {
-    justify-content: flex-end;
-  }
-
   &.product-star-rating {
     & svg {
       height: 22px;

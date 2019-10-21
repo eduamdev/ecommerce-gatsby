@@ -41,23 +41,46 @@ const Grid = styled.div`
     }
   }
 
-  &.category {
+  &.articles {
     align-items: stretch;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5em;
-    grid-template-areas: "women men";
+    grid-template-columns: 1fr;
+    grid-gap: 2em 1.75em;
     margin-bottom: 1em;
+    border-radius: 4px;
 
-    @media ${viewport[9]} {
-      grid-gap: 1em;
+    @media ${viewport[7]} {
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
-    & .women {
-      grid-area: women;
-    }
+    & .article {
+      &:hover {
+        box-shadow: 3px 4px 15px 4px rgba(150, 150, 150, 0.1);
+      }
 
-    & .men {
-      grid-area: men;
+      & .article-img {
+      }
+
+      & .article-text {
+        padding: 1.2em;
+        /* border: 1px solid #ddd; */
+        box-shadow: 1px 1px 1px 1px #eee;
+
+        & span {
+          font-size: 0.675em;
+          text-transform: uppercase;
+          font-weight: 300;
+          letter-spacing: 2px;
+        }
+
+        & .article-title {
+          /* font-weight: 500; */
+          letter-spacing: 0.2px;
+          line-height: 1.5;
+          margin: 0.7em 0 0.55em 0;
+          font-size: 0.9em;
+          color: #353535;
+        }
+      }
     }
   }
 
@@ -87,25 +110,6 @@ const Grid = styled.div`
 
     &:hover {
       transform: translate(1px, -2%);
-    }
-  }
-
-  &.shoemaking {
-    grid-template-columns: 1.2fr 1fr;
-    grid-column-gap: 2em;
-
-    @media ${viewport[7]} {
-      grid-column-gap: 4em;
-      grid-template-columns: 1.7fr 1fr;
-    }
-
-    @media ${viewport[12]} {
-      grid-column-gap: 5.5em;
-    }
-
-    & .text {
-      justify-self: end;
-      text-align: right;
     }
   }
 
@@ -207,6 +211,10 @@ const Grid = styled.div`
       "summary"
       "payment";
 
+    @media ${viewport[12]} {
+      margin-right: 3em;
+    }
+
     & .payment {
       grid-area: payment;
       border-radius: 8px;
@@ -235,10 +243,6 @@ const Grid = styled.div`
 
       @media ${viewport[9]} {
         padding: 2em;
-      }
-
-      @media ${viewport[12]} {
-        margin-right: 3em;
       }
     }
 
@@ -280,6 +284,7 @@ const Grid = styled.div`
 
       & h4 {
         margin-bottom: 0.25em;
+        line-height: 1.4;
       }
 
       & span {
@@ -383,12 +388,13 @@ const Grid = styled.div`
       & .email-input,
       & .creditCard-input {
         width: 100%;
-        padding: 0.65rem 1rem;
+        padding: 0.55rem 1rem;
         /* border: 1px solid #ddd; */
         border: none;
         margin: 0.5em 0;
         /* box-shadow: 1px 1px 2px 1px #ccc; */
         border: 1px solid #aaa;
+        border-radius: 4px;
       }
 
       & .creditCard-label {
