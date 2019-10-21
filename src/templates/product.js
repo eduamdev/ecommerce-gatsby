@@ -219,7 +219,11 @@ const Product = ({ pageContext }) => {
                 <ProductList>
                   {details.length &&
                     details.map((item, index) => {
-                      return <li key={index}>{item}</li>
+                      return (
+                        <li key={index}>
+                          <P>{item}</P>
+                        </li>
+                      )
                     })}
                 </ProductList>
               </div>

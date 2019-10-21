@@ -416,7 +416,7 @@ const Grid = styled.div`
       "info info"
       "details details"
       "reviews reviews";
-    grid-gap: 2em;
+    grid-gap: 1em 2em;
 
     @media ${viewport[4]} {
       grid-template-columns: 1fr 1fr;
@@ -428,6 +428,7 @@ const Grid = styled.div`
         "image info"
         "image details"
         "reviews reviews";
+      grid-gap: 2em;
     }
 
     @media ${viewport[12]} {
