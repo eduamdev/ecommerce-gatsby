@@ -236,6 +236,10 @@ const Grid = styled.div`
       @media ${viewport[9]} {
         padding: 2em;
       }
+
+      @media ${viewport[12]} {
+        margin-right: 3em;
+      }
     }
 
     @media ${viewport[7]} {
