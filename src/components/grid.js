@@ -439,6 +439,8 @@ const Grid = styled.div`
       align-self: start;
       padding: 0 1em;
       background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
     }
 
     & .product-info {
