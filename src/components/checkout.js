@@ -36,7 +36,7 @@ class Checkout extends React.Component {
     const displayError = document.getElementById("card-errors")
 
     let { token, error } = await this.props.stripe.createToken({
-      name: "Name",
+      name: "User",
     })
     // console.log(token, error)
 
@@ -44,6 +44,7 @@ class Checkout extends React.Component {
       displayError.textContent = error.message
     } else {
       displayError.textContent = ""
+
       let response = await fetch("/charge", {
         method: "POST",
         headers: { "Content-Type": "text/plain" },
@@ -80,6 +81,7 @@ class Checkout extends React.Component {
                 Email
               </label>
               <input
+                id="email"
                 name="email"
                 type="email"
                 className="email-input"
@@ -102,7 +104,17 @@ class Checkout extends React.Component {
                   paddingTop: "10px",
                 }}
               ></div>
-              <CardElement className="creditCard-input" />
+              <CardElement
+                className="creditCard-input"
+                onChange={event => {
+                  const displayError = document.getElementById("card-errors")
+                  if (event.error) {
+                    displayError.textContent = event.error.message
+                  } else {
+                    displayError.textContent = ""
+                  }
+                }}
+              />
               <Button className="pay" onClick={this.submit}>
                 Pay with credit card
               </Button>

@@ -8,6 +8,7 @@ import Grid from "./grid"
 const CheckoutContainer = ({ cart }) => {
   let images = useImages()
   const total = cart.map(item => item.total).reduce((acc, curr) => acc + curr)
+  const idempotency_key = cart[0].id
 
   return (
     <>
@@ -21,7 +22,7 @@ const CheckoutContainer = ({ cart }) => {
         </div>
         <div className="payment">
           <Elements>
-            <Checkout></Checkout>
+            <Checkout total={total} idempotencyKey={idempotency_key}></Checkout>
           </Elements>
         </div>
       </Grid>

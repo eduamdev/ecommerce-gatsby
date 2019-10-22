@@ -38,7 +38,7 @@ const Block = styled.div`
 
     & .rack-card__title {
       font-size: 1em;
-      margin-bottom: 1em;
+      margin-bottom: 0.8em;
 
       @media ${viewport[7]} {
         font-size: 1.15em;
@@ -69,10 +69,9 @@ const Rack = () => {
             alt="about shoemaking"
           ></Img>
           <div className="rack-card">
-            <h4 className="rack-card__title">Lorem ipsum dolor sit amet.</h4>
+            <h4 className="rack-card__title">Lorem, ipsum dolor.</h4>
             <p className="rack-card__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Explicabo, quae!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </Block>
