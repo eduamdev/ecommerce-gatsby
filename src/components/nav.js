@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Flex from "./flex"
 import LinkUp from "./link"
+import { viewport } from "./breakpoints"
 
 const List = styled.ul`
   list-style: none;
@@ -11,7 +12,11 @@ const List = styled.ul`
     margin: 0;
 
     &:not(:last-child) {
-      margin-right: 0.75em;
+      margin-right: 0.25em;
+
+      @media ${viewport[7]} {
+        margin-right: 0.75em;
+      }
     }
   }
 `

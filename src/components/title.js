@@ -153,6 +153,19 @@ const StyledH3 = styled.h3`
 
   &.featured {
     font-size: 1.75em;
+    position: relative;
+    margin-bottom: 1.5em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 1px;
+      bottom: -30%;
+      left: 30%;
+      border-bottom: 2px solid #bb7878;
+      border-radius: 8px;
+    }
   }
 
   &.logo-text {

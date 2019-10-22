@@ -25,8 +25,12 @@ const Block = styled.div`
     right: unset;
     background: #fff;
     padding: 1.75em;
-    box-shadow: 3px 3px 1px 1px rgba(150, 150, 150, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
     max-width: 100%;
+
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.14);
+    }
 
     @media ${viewport[9]} {
       left: unset;

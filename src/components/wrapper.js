@@ -31,6 +31,9 @@ const StyledWrapper = styled.div`
 
   &.header {
     padding: 1.45rem 0;
+
+    max-width: 95%;
+    width: 95%;
   }
 
   &.product {

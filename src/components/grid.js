@@ -9,11 +9,11 @@ const Grid = styled.div`
   justify-content: center;
 
   &.header {
-    grid-template-columns: max-content 1em max-content 1fr 1.5em;
+    grid-template-columns: max-content 1em max-content 1fr max-content;
     grid-template-areas: "title . nav . svg";
 
     @media ${viewport[7]} {
-      grid-template-columns: max-content 2.5em max-content 1fr 1.5em;
+      grid-template-columns: max-content 2.5em max-content 1fr max-content;
     }
 
     & .header {
@@ -38,6 +38,10 @@ const Grid = styled.div`
         background: tomato;
         border-radius: 100%;
       }
+
+      & svg {
+        width: 1.6em;
+      }
     }
   }
 
@@ -53,8 +57,8 @@ const Grid = styled.div`
     }
 
     & .article {
-      &:hover {
-        box-shadow: 3px 4px 15px 4px rgba(150, 150, 150, 0.1);
+      &:hover .article-text {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
       }
 
       & .article-img {
@@ -62,8 +66,7 @@ const Grid = styled.div`
 
       & .article-text {
         padding: 1.2em;
-        /* border: 1px solid #ddd; */
-        box-shadow: 1px 1px 1px 1px #eee;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 
         & span {
           font-size: 0.675em;
@@ -73,12 +76,12 @@ const Grid = styled.div`
         }
 
         & .article-title {
-          /* font-weight: 500; */
+          font-weight: 500;
           letter-spacing: 0.2px;
-          line-height: 1.5;
-          margin: 0.7em 0 0.55em 0;
+          line-height: 1.55;
+          margin: 0.7em 0 0 0;
           font-size: 0.9em;
-          color: #353535;
+          color: #000;
         }
       }
     }
@@ -102,7 +105,8 @@ const Grid = styled.div`
     height: 100%;
     justify-content: stretch;
     background: #fff;
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
     text-align: center;
     transition: all 0.15s;
     border-radius: 4px;
@@ -159,14 +163,14 @@ const Grid = styled.div`
 
     & .payment-svg {
       grid-area: svg;
-      height: 38px;
+      height: 42px;
 
       @media ${viewport[7]} {
-        height: 44px;
+        height: 48px;
       }
 
       @media ${viewport[12]} {
-        height: 48px;
+        height: 52px;
       }
 
       & span {
@@ -175,17 +179,17 @@ const Grid = styled.div`
         }
 
         & svg {
-          width: 38px;
-          height: 38px;
+          width: 42px;
+          height: 42px;
 
           @media ${viewport[7]} {
-            width: 44px;
-            height: 44px;
+            width: 48px;
+            height: 48px;
           }
 
           @media ${viewport[12]} {
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
           }
         }
       }
@@ -195,6 +199,7 @@ const Grid = styled.div`
   &.cartInfo,
   &.error {
     text-align: center;
+    margin-top: 0.5em;
   }
 
   &.checkout {
@@ -225,9 +230,7 @@ const Grid = styled.div`
     & .summary {
       grid-area: summary;
       border-radius: 8px;
-      /* box-shadow: 1px 2px 7px 1px #e5e5e5; */
-      /* box-shadow: -2px 1px 12px 1px #e5e5e5; */
-      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
       padding: 2em 1.25em;
 
       @media ${viewport[7]} {
@@ -276,13 +279,14 @@ const Grid = styled.div`
       align-self: baseline;
 
       & h4 {
-        margin-bottom: 0.25em;
-        line-height: 1.4;
+        margin-bottom: 0.75em;
+        line-height: 1.15;
       }
 
       & span {
         font-size: 0.8em;
-        line-height: 1.4;
+        line-height: 1.5;
+        display: block;
       }
     }
 
@@ -384,9 +388,9 @@ const Grid = styled.div`
         padding: 0.55rem 1rem;
         /* border: 1px solid #ddd; */
         border: none;
-        margin: 0.5em 0;
+        margin: 0;
         /* box-shadow: 1px 1px 2px 1px #ccc; */
-        border: 1px solid #aaa;
+        border: 1px solid #ddd;
         border-radius: 4px;
       }
 
@@ -394,17 +398,16 @@ const Grid = styled.div`
         font-weight: 700;
         display: block;
         margin-bottom: 0.5em;
-        margin-top: 2.25em;
+        margin-top: 1.75em;
       }
 
       & .creditCard-note {
         font-size: 0.7em;
-        line-height: 1.25;
-        margin-top: 0.75em;
-        margin-bottom: 0.75em;
+        line-height: 1.5;
+        margin: 0;
         display: block;
         letter-spacing: 0.2px;
-        color: #888;
+        font-weight: 300;
       }
     }
   }
@@ -470,7 +473,8 @@ const Grid = styled.div`
       background: #fff;
       padding: 2em;
       border-radius: 4px;
-      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      /* border: 1px solid #ddd; */
       /* box-shadow: #ddd 3px 3px 13px 3px; */
     }
   }

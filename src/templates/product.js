@@ -66,7 +66,7 @@ const Button = styled.button`
     font-size: 1.7em;
     padding: 0 0.6em;
     border: 0;
-    background: #ddd;
+    background: #eee;
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -145,7 +145,7 @@ const Product = ({ pageContext }) => {
   return (
     <Layout>
       <SEO title="Product" />
-      <Section style={{ background: "#f5f5f5" }}>
+      <Section style={{ background: "rgba(238, 238, 248, 0.3)" }}>
         <form onSubmit={ev => ev.preventDefault()}>
           <Wrapper className="product">
             <Grid className="product">

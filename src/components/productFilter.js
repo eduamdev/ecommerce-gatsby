@@ -37,7 +37,14 @@ const ProductFilter = ({ products, filterByPrice }) => {
         <Flex className="filter" onClick={toggle}>
           <P style={{ margin: 0 }}>
             Price{" "}
-            <span style={{ color: `rgb(187,120,120)`, fontWeight: 700 }}>
+            <span
+              style={{
+                color: `rgb(187,120,120)`,
+                fontWeight: 500,
+                fontSize: "1.3em",
+                marginLeft: "5px",
+              }}
+            >
               ${price}
             </span>
           </P>

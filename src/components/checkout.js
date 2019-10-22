@@ -69,7 +69,7 @@ class Checkout extends React.Component {
             ></Title>
             <fieldset
               style={{
-                padding: "2em 1.75em",
+                padding: "2em 1.75em 1.75em",
                 border: "1px solid #ddd",
                 margin: 0,
               }}

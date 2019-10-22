@@ -19,7 +19,7 @@ const Articles = () => {
               alt="Shoe 1"
             ></Img>
             <div className="article-text">
-              <span>Lorem, ipsum.</span>
+              <span>Lorem.</span>
               <h6 className="article-title">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Mollitia, earum.
@@ -48,7 +48,7 @@ const Articles = () => {
               alt="Shoe 3"
             ></Img>
             <div className="article-text">
-              <span>Lorem, ipsum.</span>
+              <span>Lorem, ipsum dolor.</span>
               <h6 className="article-title">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Mollitia, earum.

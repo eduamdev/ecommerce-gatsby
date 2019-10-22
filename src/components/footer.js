@@ -32,11 +32,7 @@ const List = styled.ul`
   list-style: none;
 
   & li {
-    margin-bottom: 0.25em;
-
-    @media ${viewport[7]} {
-      margin-bottom: 0.5em;
-    }
+    margin-bottom: 0.5em;
 
     @media ${viewport[9]} {
       margin-bottom: 0.75em;

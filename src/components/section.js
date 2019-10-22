@@ -5,23 +5,23 @@ import PropTypes from "prop-types"
 
 const StyledSection = styled.section`
   margin: 0;
-  padding: 2.25em 0;
+  padding: 1.5em 0;
   background: #fff;
 
   @media ${viewport[7]} {
-    padding: 3em 0;
+    padding: 2em 0;
   }
 
   &.banner {
     position: relative;
 
     & div {
-      max-height: 550px;
+      max-height: 600px;
     }
   }
 
   &.featured {
-    background: linear-gradient(#f7f4f5 0%, #fff 30%);
+    /* background: linear-gradient(#f7f4f5 0%, #fff 70%); */
   }
 
   &.rack {

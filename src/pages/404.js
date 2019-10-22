@@ -12,7 +12,7 @@ import LinkUp from "../components/link"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-    <Section>
+    <Section style={{ padding: `2em 0` }}>
       <Wrapper>
         <Grid className="error">
           <Title type="h2" text="Page not found" placement="center"></Title>

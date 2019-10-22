@@ -17,12 +17,12 @@ const Cart = () => {
   return (
     <Layout>
       <SEO title="Cart" />
-      <Section style={{ padding: `1em 0 2em 0` }}>
+      <Section style={{ padding: `2em 0` }}>
         <Wrapper className="cart">
           {isCartEmpty ? (
             <>
-              <Title type="h2" text="Cart" placement="center"></Title>
               <Grid className="cartInfo">
+                <Title type="h2" text="Cart" placement="center"></Title>
                 <P style={{ margin: 0 }}>Your cart is empty</P>
                 <LinkUp
                   className="cart"

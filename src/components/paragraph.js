@@ -37,11 +37,12 @@ const StyledParagraph = styled.p`
   &.banner-disclaimer {
     position: absolute;
     left: 10%;
-    bottom: 2%;
-    max-width: 60%;
+    bottom: 5%;
+    max-width: 80%;
     text-align: left;
-    font-size: 0.625em;
-    line-height: 1.3;
+    font-size: 0.7em;
+    line-height: 1.9;
+    margin: 0;
 
     @media ${viewport[7]} {
       font-size: 0.8em;
@@ -57,6 +58,7 @@ const StyledParagraph = styled.p`
   }
 
   &.card-description {
+    font-weight: 300;
     margin-bottom: 1em;
     text-align: left;
   }
@@ -68,7 +70,7 @@ const StyledParagraph = styled.p`
   }
 
   &.card-label {
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: -0.2px;
     margin-bottom: 0;
     text-align: right;
@@ -86,7 +88,7 @@ const StyledParagraph = styled.p`
   }
 
   &.product-info__price {
-    font-weight: 900;
+    font-weight: 500;
     margin: 0.5em 0;
     font-size: 1.1em;
     letter-spacing: -0.5px;
@@ -101,12 +103,9 @@ const StyledParagraph = styled.p`
   }
 
   &.featured {
-    border: 1px solid #ccc;
-    border-radius: 100px;
     color: rgb(187, 120, 120);
-    margin-top: 1.75em;
+    margin-top: 2.5em;
     font-weight: 700;
-    padding: 0.5em 1em;
   }
 
   &.quantity {
