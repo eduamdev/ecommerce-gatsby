@@ -18,7 +18,7 @@ const Cart = () => {
     <Layout>
       <SEO title="Cart" />
       <Section style={{ padding: `2em 0` }}>
-        <Wrapper className="cart">
+        <Wrapper>
           {isCartEmpty ? (
             <>
               <Grid className="cartInfo">

@@ -40,16 +40,6 @@ const StyledWrapper = styled.div`
     /* max-width: 100%;
     width: 100%; */
   }
-
-  &.cart {
-    @media ${viewport[7]} {
-      padding: 0;
-    }
-
-    @media ${viewport[12]} {
-      padding-right: 0;
-    }
-  }
 `
 
 const Wrapper = ({ className, children }) => {

@@ -9,11 +9,12 @@ import PropTypes from "prop-types"
 import useFilterState from "../hooks/useFilterState"
 
 const FilterSvg = styled.span`
-  height: 20px;
+  height: 18px;
   margin-left: 0.2em;
 
   & svg {
     height: 100%;
+    vertical-align: baseline !important;
   }
 `
 
@@ -41,7 +42,7 @@ const ProductFilter = ({ products, filterByPrice }) => {
               style={{
                 color: `rgb(187,120,120)`,
                 fontWeight: 500,
-                fontSize: "1.3em",
+                fontSize: "1.25em",
                 marginLeft: "5px",
               }}
             >

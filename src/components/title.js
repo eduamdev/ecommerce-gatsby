@@ -44,7 +44,9 @@ const Container = styled.div`
 
   &.payment-title, &.orderSummary-title{
     margin-bottom: 1em;
+  }
 
+  &.orderSummary-title{
     @media ${viewport[7]} {
       margin-bottom: 3em;
     }
@@ -154,14 +156,14 @@ const StyledH3 = styled.h3`
   &.featured {
     font-size: 1.75em;
     position: relative;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
 
     &:before {
       content: "";
       position: absolute;
       width: 40%;
       height: 1px;
-      bottom: -30%;
+      bottom: -70%;
       left: 30%;
       border-bottom: 2px solid #bb7878;
       border-radius: 8px;
@@ -170,10 +172,15 @@ const StyledH3 = styled.h3`
 
   &.logo-text {
     margin-bottom: 0;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-family: "Playfair Display", serif;
     font-style: italic;
-    letter-spacing: -0.75px;
+    letter-spacing: -0.5px;
+  }
+
+  &.payment-title,
+  &.orderSummary-title {
+    letter-spacing: 0;
   }
 
   &.product-details__title,

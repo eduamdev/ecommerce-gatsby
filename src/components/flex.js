@@ -55,7 +55,7 @@ const Flex = styled.div`
   }
 
   &.payment-svg {
-    fill: #717171;
+    /* fill: #717171; */
   }
 `
 

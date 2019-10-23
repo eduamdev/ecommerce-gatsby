@@ -209,21 +209,17 @@ const Grid = styled.div`
       "summary"
       "payment";
 
-    @media ${viewport[12]} {
-      margin-right: 3em;
-    }
-
     & .payment {
       grid-area: payment;
       border-radius: 8px;
-      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      border-top: 1px solid #eee;
       padding: 2em 1.25em;
 
       @media ${viewport[7]} {
         align-self: start;
         padding-top: 2em;
         padding: 2em;
-        border: 0;
       }
     }
 
@@ -231,6 +227,7 @@ const Grid = styled.div`
       grid-area: summary;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      border-top: 1px solid #eee;
       padding: 2em 1.25em;
 
       @media ${viewport[7]} {
@@ -244,18 +241,9 @@ const Grid = styled.div`
 
     @media ${viewport[7]} {
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "payment summary";
+      grid-template-columns: minmax(min-content, 600px) 1fr minmax(min-content, 500px);
+      grid-template-areas: "payment . summary";
       grid-column-gap: 1em;
-    }
-
-    @media ${viewport[9]} {
-      grid-template-columns: 1.5fr 1fr;
-      grid-column-gap: 0;
-    }
-
-    @media ${viewport[12]} {
-      grid-template-columns: 2fr 1fr;
-      grid-template-areas: "payment summary";
     }
   }
 
@@ -362,14 +350,14 @@ const Grid = styled.div`
       justify-self: start;
       width: 100%;
 
-      @media ${viewport[9]} {
+      /* @media ${viewport[9]} {
         width: 80%;
         max-width: 600px;
       }
 
       @media ${viewport[12]} {
         width: 80%;
-      }
+      } */
 
       & .email-input {
         font-size: 0.9em;
@@ -377,36 +365,35 @@ const Grid = styled.div`
       }
 
       & .email-input,
-      & .creditCard-input {
+      & .creditCard-input,
+      .wc-stripe-elements-field {
         width: 100%;
-        padding: 0.55rem 1rem;
-        /* border: 1px solid #ddd; */
-        border: none;
+        padding: 0.75rem;
         margin: 0;
-        /* box-shadow: 1px 1px 2px 1px #ccc; */
         border: 1px solid #ddd;
         border-radius: 4px;
+        line-height: 0;
+        font-size: 17px;
       }
 
       & .email-label,
       & .creditCard-label {
         font-weight: 700;
-        font-size: 0.95em;
+        font-size: 0.8em;
         display: block;
-        margin-bottom: 0.2em;
+        margin-bottom: 0;
       }
 
       & .creditCard-label {
         margin-top: 1.5em;
       }
 
-      & .creditCard-note {
-        font-size: 0.7em;
-        line-height: 1.5;
-        margin: 0;
-        display: block;
+      & .card-errors {
+        color: tomato;
+        font-weight: 500;
+        font-size: 0.85em;
         letter-spacing: 0.2px;
-        font-weight: 300;
+        padding-top: 6px;
       }
     }
   }

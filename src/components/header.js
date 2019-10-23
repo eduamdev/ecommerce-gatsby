@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   display: grid;
   align-items: center;
   background-color: #fff;
-  /* border-top: 4px solid rgba(187, 120, 120, 0.7); */
+  border-top: 2px solid #bb7878;
   border-bottom: 1px solid #ddd;
 `
 

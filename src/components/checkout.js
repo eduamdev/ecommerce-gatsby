@@ -3,6 +3,7 @@ import Grid from "./grid"
 import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"
 import Title from "./title"
+import P from "./paragraph"
 
 const Button = styled.button`
   &.pay {
@@ -60,7 +61,7 @@ class Checkout extends React.Component {
           },
         })
 
-        console.log(response)
+        // console.log(response)
 
         if (response.ok) console.log("Purchase Complete!")
       } catch (error) {
@@ -82,58 +83,35 @@ class Checkout extends React.Component {
               className="payment-title"
               text="Payment Information"
             ></Title>
-            <fieldset
-              style={{
-                padding: "2em 1.75em 1.75em",
-                border: "1px solid #ddd",
-                margin: 0,
+            <P>Please enter your payment details below</P>
+            <label className="email-label" htmlFor="email">
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              className="email-input"
+              placeholder="name@example.com"
+            />
+            <label className="creditCard-label" htmlFor="creditCard">
+              Credit Card
+            </label>
+            <CardElement
+              className="creditCard-input"
+              onChange={event => {
+                const displayError = document.getElementById("card-errors")
+                if (event.error) {
+                  displayError.textContent = event.error.message
+                } else {
+                  displayError.textContent = ""
+                }
               }}
-            >
-              <legend style={{ padding: "0 0.5em" }}>
-                Please enter your payment details below
-              </legend>
-              <label className="email-label" htmlFor="email">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                className="email-input"
-                placeholder="name@example.com"
-              />
-              <label className="creditCard-label" htmlFor="creditCard">
-                Credit Card
-              </label>
-              <span className="creditCard-note">
-                Test using this credit card: 4242 4242 4242 4242, and enter any
-                5 digits for the zip code
-              </span>
-              <div
-                id="card-errors"
-                role="alert"
-                style={{
-                  color: "tomato",
-                  fontWeight: 700,
-                  fontSize: "0.85em",
-                  paddingTop: "10px",
-                }}
-              ></div>
-              <CardElement
-                className="creditCard-input"
-                onChange={event => {
-                  const displayError = document.getElementById("card-errors")
-                  if (event.error) {
-                    displayError.textContent = event.error.message
-                  } else {
-                    displayError.textContent = ""
-                  }
-                }}
-              />
-              <Button className="pay" onClick={this.submit}>
-                Pay with credit card
-              </Button>
-            </fieldset>
+            />
+            <div id="card-errors" role="alert" className="card-errors"></div>
+            <Button className="pay" onClick={this.submit}>
+              Pay with credit card
+            </Button>
           </div>
         </Grid>
       </>
