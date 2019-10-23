@@ -209,6 +209,8 @@ const StyledH4 = styled.h4`
 
   &.title-review {
     margin: 1em 0;
+    font-weight: 700;
+    color: #000;
   }
 
   &.cart-product-name {

@@ -371,12 +371,6 @@ const Grid = styled.div`
         width: 80%;
       }
 
-      & .email-label {
-        font-weight: 700;
-        display: block;
-        margin-bottom: 0.5em;
-      }
-
       & .email-input {
         font-size: 0.9em;
         outline: none;
@@ -394,11 +388,16 @@ const Grid = styled.div`
         border-radius: 4px;
       }
 
+      & .email-label,
       & .creditCard-label {
         font-weight: 700;
+        font-size: 0.95em;
         display: block;
-        margin-bottom: 0.5em;
-        margin-top: 1.75em;
+        margin-bottom: 0.2em;
+      }
+
+      & .creditCard-label {
+        margin-top: 1.5em;
       }
 
       & .creditCard-note {

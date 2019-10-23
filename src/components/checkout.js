@@ -34,6 +34,7 @@ class Checkout extends React.Component {
     ev.preventDefault()
 
     const displayError = document.getElementById("card-errors")
+    const email = document.getElementById("email")
 
     let { token, error } = await this.props.stripe.createToken({
       name: "User",
@@ -45,13 +46,27 @@ class Checkout extends React.Component {
     } else {
       displayError.textContent = ""
 
-      let response = await fetch("/charge", {
-        method: "POST",
-        headers: { "Content-Type": "text/plain" },
-        body: token.id,
-      })
+      try {
+        let response = await fetch("/.netlify/functions/index", {
+          method: "POST",
+          body: {
+            stripeToken: token,
+            stripeAmt: this.props.total * 100,
+            stripeIdempotency: this.props.idempotencyKey,
+            stripeEmail: email.value,
+          },
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
 
-      if (response.ok) console.log("Purchase Complete!")
+        console.log(response)
+
+        if (response.ok) console.log("Purchase Complete!")
+      } catch (error) {
+        console.log(error.message)
+        return
+      }
     }
   }
 
