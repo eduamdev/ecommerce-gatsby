@@ -49,12 +49,12 @@ class Checkout extends React.Component {
       try {
         let response = await fetch("/.netlify/functions/index", {
           method: "POST",
-          body: {
+          body: JSON.stringify({
             stripeToken: token.id,
             stripeAmt: this.props.total * 100,
             stripeIdempotency: this.props.idempotencyKey,
             stripeEmail: email.value,
-          },
+          }),
           headers: {
             "Content-Type": "application/json",
           },
