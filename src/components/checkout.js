@@ -50,7 +50,7 @@ class Checkout extends React.Component {
         let response = await fetch("/.netlify/functions/index", {
           method: "POST",
           body: {
-            stripeToken: token,
+            stripeToken: token.id,
             stripeAmt: this.props.total * 100,
             stripeIdempotency: this.props.idempotencyKey,
             stripeEmail: email.value,
