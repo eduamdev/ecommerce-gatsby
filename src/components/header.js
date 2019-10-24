@@ -13,11 +13,11 @@ import useImages from "../hooks/useImages"
 import Img from "gatsby-image"
 
 const StyledHeader = styled.header`
-  height: 80px;
+  /* height: 80px; */
   display: grid;
   align-items: center;
   background-color: #fff;
-  border-top: 2px solid #bb7878;
+  /* border-top: 2px solid #bb7878; */
   border-bottom: 1px solid #ddd;
 `
 
@@ -26,36 +26,40 @@ const Header = ({ siteTitle }) => {
   const { logo } = useImages()
 
   return (
-    <StyledHeader>
-      <Wrapper>
-        <Grid className="header">
-          <LinkUp
-            className="header logo"
-            type="internal"
-            url="/"
-            ariaLabel="Shoecase"
-          >
-            <Flex className="logo">
-              <Img
-                className="logo-img"
-                fixed={logo.childImageSharp.fixed}
-                alt="Shoecase"
-              ></Img>
-              <Title type="h3" text={siteTitle} className="logo-text"></Title>
-            </Flex>
-          </LinkUp>
-          <Nav></Nav>
-          <LinkUp
-            className={state.isCartEmpty ? "header-cart" : "header-cart badge"}
-            type="internal"
-            url="/cart"
-            ariaLabel="cart"
-          >
-            {Cart}
-          </LinkUp>
-        </Grid>
-      </Wrapper>
-    </StyledHeader>
+    <>
+      <StyledHeader>
+        <Wrapper>
+          <Grid className="header">
+            <LinkUp
+              className="header logo"
+              type="internal"
+              url="/"
+              ariaLabel="Shoecase"
+            >
+              <Flex className="logo">
+                <Img
+                  className="logo-img"
+                  fixed={logo.childImageSharp.fixed}
+                  alt="Shoecase"
+                ></Img>
+                <Title type="h3" text={siteTitle} className="logo-text"></Title>
+              </Flex>
+            </LinkUp>
+            <Nav></Nav>
+            <LinkUp
+              className={
+                state.isCartEmpty ? "header-cart" : "header-cart badge"
+              }
+              type="internal"
+              url="/cart"
+              ariaLabel="cart"
+            >
+              {Cart}
+            </LinkUp>
+          </Grid>
+        </Wrapper>
+      </StyledHeader>
+    </>
   )
 }
 

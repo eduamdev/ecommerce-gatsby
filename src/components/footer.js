@@ -118,7 +118,7 @@ const Footer = () => {
           </Flex>
         </Grid>
       </Section>
-      <Section style={{ padding: `1.5em 0` }}>
+      <Section style={{ padding: `1.5em 0`, borderTop: `1px solid #ddd` }}>
         <Wrapper>
           <Grid>
             <P style={{ margin: 0 }}>

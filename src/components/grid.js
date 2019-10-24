@@ -26,22 +26,7 @@ const Grid = styled.div`
 
     & .header-cart {
       grid-area: svg;
-      position: relative;
-
-      &.badge:after {
-        content: "";
-        position: absolute;
-        top: -4px;
-        right: -6px;
-        height: 10px;
-        width: 10px;
-        background: tomato;
-        border-radius: 100%;
-      }
-
-      & svg {
-        width: 1.6em;
-      }
+      
     }
   }
 
@@ -181,15 +166,18 @@ const Grid = styled.div`
         & svg {
           width: 42px;
           height: 42px;
+          padding: 0.05em;
 
           @media ${viewport[7]} {
             width: 48px;
             height: 48px;
+            padding: 0.1em;
           }
 
           @media ${viewport[12]} {
             width: 52px;
             height: 52px;
+            padding: 0.15em;
           }
         }
       }
@@ -272,7 +260,7 @@ const Grid = styled.div`
       }
 
       & span {
-        font-size: 0.8em;
+        font-size: 0.85em;
         line-height: 1.5;
         display: block;
       }
@@ -288,7 +276,7 @@ const Grid = styled.div`
     & .order-summary__total {
       grid-area: total;
       align-self: center;
-      color: rgb(187, 120, 120);
+      color: #AD343E;
       font-weight: 700;
       font-size: 0.85em;
       text-align: right;
@@ -317,7 +305,7 @@ const Grid = styled.div`
 
     & .subtotal,
     & .shipping {
-      color: rgb(187, 120, 120);
+      color: #AD343E;
       font-weight: 700;
     }
 
@@ -477,7 +465,8 @@ const Grid = styled.div`
       grid-area: filter;
 
       & .filter-range {
-        width: 300px;
+        font-size:0.9em;
+        width: 250px;
         margin: 0.35em auto 1em auto;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:

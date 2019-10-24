@@ -43,7 +43,7 @@ const Container = styled.div`
   }  
 
   &.payment-title, &.orderSummary-title{
-    margin-bottom: 1em;
+    margin-bottom: 2.5em;
   }
 
   &.orderSummary-title{
@@ -59,6 +59,7 @@ const StyledH1 = styled.h1`
   padding: 0;
   letter-spacing: -0.5px;
   font-size: 2.5em;
+  color: #000;
 
   @media ${viewport[4]} {
     font-size: 2.55em;
@@ -86,12 +87,12 @@ const StyledH1 = styled.h1`
 
     @media ${viewport[9]} {
       left: 2em;
-      letter-spacing: -2px;
+      letter-spacing: -1px;
     }
 
     @media ${viewport[12]} {
       left: 3em;
-      letter-spacing: -1.5px;
+      letter-spacing: -0.5px;
     }
 
     & .banner-span {
@@ -109,9 +110,10 @@ const StyledH1 = styled.h1`
 `
 
 const StyledH2 = styled.h2`
-  display: inline;
+  /* display: inline; */
   font-size: 1.55em;
-  font-weight: 900;
+  font-weight: 700;
+  margin-bottom: 1em;
   padding: 0;
   letter-spacing: -0.5px;
 
@@ -130,43 +132,44 @@ const StyledH2 = styled.h2`
 
   &.product-name {
     margin: 0;
-    font-size: 1.35em;
+    font-size: 1.4em;
 
     @media ${viewport[4]} {
-      font-size: 1.55em;
+      font-size: 1.4em;
     }
 
     @media ${viewport[7]} {
-      font-size: 1.75em;
+      font-size: 1.45em;
     }
 
     @media ${viewport[9]} {
-      font-size: 2em;
+      font-size: 1.5em;
     }
   }
 `
 
 const StyledH3 = styled.h3`
   display: inline;
-  font-weight: 900;
+  font-weight: 700;
   padding: 0;
   letter-spacing: -0.5px;
   font-size: 1.2em;
 
   &.featured {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     position: relative;
-    margin-bottom: 2em;
-    letter-spacing: 0.2px;
+    margin-bottom: 2.5em;
+    letter-spacing: -0.2px;
+    /* word-spacing: 5px; */
 
     &:before {
       content: "";
       position: absolute;
-      width: 40%;
+      width: 30%;
       height: 1px;
-      bottom: -70%;
-      left: 30%;
-      border-bottom: 2px solid #bb7878;
+      bottom: -80%;
+      left: 35%;
+      border-bottom: 2px solid #ad343e;
       border-radius: 8px;
     }
   }
@@ -177,6 +180,7 @@ const StyledH3 = styled.h3`
     font-family: "Playfair Display", serif;
     font-style: italic;
     letter-spacing: -0.5px;
+    color: #000;
   }
 
   &.payment-title,
@@ -190,27 +194,27 @@ const StyledH3 = styled.h3`
   }
 
   @media ${viewport[4]} {
-    font-size: 1.35em;
+    font-size: 1.2em;
   }
 
   @media ${viewport[7]} {
-    font-size: 1.45em;
+    /* font-size: 1.3em; */
     letter-spacing: -0.4px;
   }
 
   @media ${viewport[9]} {
-    font-size: 1.55em;
+    font-size: 1.25em;
   }
 `
 
 const StyledH4 = styled.h4`
   display: inline;
-  font-weight: 900;
+  font-weight: 700;
   padding: 0;
-  letter-spacing: -0.3px;
+  /* letter-spacing: -0.3px; */
 
   &.card-title {
-    font-size: 1.1em;
+    font-size: 1.05em;
     margin-bottom: 0.5em;
     padding-top: 0.5em;
   }

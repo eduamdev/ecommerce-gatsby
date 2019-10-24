@@ -40,7 +40,27 @@ const GatsbyLink = styled(Link)`
   }
 
   &.header-cart {
+    position: relative;
+
+    &.badge:after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      right: -6px;
+      height: 8px;
+      width: 8px;
+      background: #DB5461;
+      border-radius: 100%;
+
+      @media ${viewport[7]} {
+        top: -4px;
+        height: 9px;
+        width: 9px;
+      }
+    }
+
     & svg {
+      width: 1.4em;
       vertical-align: middle;
     }
   }

@@ -11,9 +11,14 @@ const Flex = styled.div`
     justify-content: center;
 
     & .logo-img {
-      width: 54px;
-      height: 54px;
+      width: 48px;
+      height: 48px;
       margin-right: 10px;
+
+      @media ${viewport[7]} {
+        width: 54px;
+        height: 54px;
+      }
     }
 
     & .logo-text {
@@ -48,7 +53,7 @@ const Flex = styled.div`
     align-items: baseline;
 
     & span {
-      fill: rgb(187, 120, 120);
+      fill: #ad343e;
       width: 20px;
       margin-left: 10px;
     }

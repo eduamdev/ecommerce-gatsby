@@ -36,11 +36,11 @@ const ProductFilter = ({ products, filterByPrice }) => {
     <Section className="filter">
       <Grid>
         <Flex className="filter" onClick={toggle}>
-          <P style={{ margin: 0 }}>
+          <P style={{ margin: 0, fontSize: "0.85em" }}>
             Price{" "}
             <span
               style={{
-                color: `rgb(187,120,120)`,
+                color: `#AD343E`,
                 fontWeight: 500,
                 fontSize: "1.25em",
                 marginLeft: "5px",

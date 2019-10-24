@@ -16,7 +16,7 @@ const Banner = () => {
       </Title>
       <P className="banner-disclaimer">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
-        soluta. Lorem ipsum dolor sit.
+        soluta.
       </P>
     </Section>
   )

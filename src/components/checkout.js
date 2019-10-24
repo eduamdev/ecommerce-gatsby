@@ -38,7 +38,6 @@ const Checkout = ({ total, stripe }) => {
     let { token, error } = await stripe.createToken({
       name: "User",
     })
-    // console.log(token, error)
 
     if (error) {
       displayError.textContent = error.message
@@ -62,10 +61,9 @@ const Checkout = ({ total, stripe }) => {
         // console.log(response)
 
         if (response.ok) {
-          // this.setState({ complete: true })
-          console.log("Purchase Complete!")
-
           dispatch({ type: "PURCHASE_SUCCESSFUL" })
+        } else {
+          console.log("Something went wrong :/")
         }
       } catch (error) {
         console.log(error.message)

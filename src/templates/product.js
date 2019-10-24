@@ -20,7 +20,7 @@ const ProductList = styled.ul`
   list-style-type: square;
 
   & li {
-    margin-bottom: 0.3em;
+    margin-bottom: 0.15em;
   }
 `
 
@@ -48,8 +48,8 @@ const Input = styled.input`
   font-size: 1.1em;
   font-weight: 700;
   padding: 0 0 0 0.75em;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: none;
   line-height: 1.3;
   appearance: none;
@@ -63,12 +63,12 @@ const Button = styled.button`
 
   &.update-num {
     font-weight: 200;
-    font-size: 1.7em;
-    padding: 0 0.6em;
+    font-size: 1.5em;
+    padding: 0;
     border: 0;
     background: #eee;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     cursor: pointer;
 
     &:hover {
@@ -82,7 +82,7 @@ const Button = styled.button`
     color: #fff;
     padding: 0.75em 1.2em;
     border-radius: 2px;
-    width: 9rem;
+    /* width: 9rem; */
     text-align: center;
     margin-bottom: 1em;
 
@@ -168,7 +168,7 @@ const Product = ({ pageContext }) => {
                   {getStars(`${stars}`)}
                 </Flex>
                 <P>{description}</P>
-                <P className="product-info__price">$ {price}</P>
+                <P className="product-info__price">${price}</P>
                 <P className="quantity">
                   <Button
                     className="update-num"
