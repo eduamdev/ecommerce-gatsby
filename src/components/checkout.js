@@ -5,6 +5,7 @@ import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"
 import Title from "./title"
 import P from "./paragraph"
+import uuid from "uuid"
 
 const Button = styled.button`
   &.pay {
@@ -25,7 +26,7 @@ const Button = styled.button`
   }
 `
 
-const Checkout = ({ total, idempotencyKey, stripe }) => {
+const Checkout = ({ total, stripe }) => {
   const dispatch = useContext(GlobalDispatchContext)
 
   async function submit(ev) {
@@ -50,7 +51,7 @@ const Checkout = ({ total, idempotencyKey, stripe }) => {
           body: JSON.stringify({
             stripeToken: token.id,
             stripeAmt: total * 100,
-            stripeIdempotency: idempotencyKey,
+            stripeIdempotency: uuid.v1(),
             stripeEmail: email.value,
           }),
           headers: {
@@ -58,7 +59,7 @@ const Checkout = ({ total, idempotencyKey, stripe }) => {
           },
         })
 
-        console.log(response)
+        // console.log(response)
 
         if (response.ok) {
           // this.setState({ complete: true })
