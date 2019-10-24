@@ -7,17 +7,27 @@ const initialState = {
   product: {},
   cart: [],
   isCartEmpty: true,
+  isPurchaseComplete: false,
 }
 
 function reducer(state, action) {
   switch (action.type) {
     case "ADD_PRODUCT_TO_CART": {
       return {
+        ...state,
         product: action.product,
         cart: state.isCartEmpty
           ? [action.product]
           : [...state.cart, action.product],
         isCartEmpty: false,
+      }
+    }
+    case "PURCHASE_SUCCESSFUL": {
+      return {
+        product: {},
+        cart: [],
+        isCartEmpty: true,
+        isPurchaseComplete: true
       }
     }
     default:

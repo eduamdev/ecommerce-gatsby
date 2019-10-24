@@ -34,6 +34,10 @@ const List = styled.ul`
   & li {
     margin-bottom: 0.5em;
 
+    & p {
+      font-weight: 500;
+    }
+
     @media ${viewport[9]} {
       margin-bottom: 0.75em;
     }

@@ -20,7 +20,7 @@ const Featured = () => {
         <Title
           type="h3"
           className="featured"
-          text="Featured"
+          text="Featured Products"
           placement="center"
         ></Title>
         <Grid className="featured">

@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 import Grid from "./grid"
 import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"
@@ -24,20 +25,16 @@ const Button = styled.button`
   }
 `
 
-class Checkout extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { complete: false }
-    this.submit = this.submit.bind(this)
-  }
+const Checkout = ({ total, idempotencyKey, stripe }) => {
+  const dispatch = useContext(GlobalDispatchContext)
 
-  async submit(ev) {
+  async function submit(ev) {
     ev.preventDefault()
 
     const displayError = document.getElementById("card-errors")
     const email = document.getElementById("email")
 
-    let { token, error } = await this.props.stripe.createToken({
+    let { token, error } = await stripe.createToken({
       name: "User",
     })
     // console.log(token, error)
@@ -52,8 +49,8 @@ class Checkout extends React.Component {
           method: "POST",
           body: JSON.stringify({
             stripeToken: token.id,
-            stripeAmt: this.props.total * 100,
-            stripeIdempotency: this.props.idempotencyKey,
+            stripeAmt: total * 100,
+            stripeIdempotency: idempotencyKey,
             stripeEmail: email.value,
           }),
           headers: {
@@ -61,9 +58,14 @@ class Checkout extends React.Component {
           },
         })
 
-        // console.log(response)
+        console.log(response)
 
-        if (response.ok) console.log("Purchase Complete!")
+        if (response.ok) {
+          // this.setState({ complete: true })
+          console.log("Purchase Complete!")
+
+          dispatch({ type: "PURCHASE_SUCCESSFUL" })
+        }
       } catch (error) {
         console.log(error.message)
         return
@@ -71,52 +73,48 @@ class Checkout extends React.Component {
     }
   }
 
-  render() {
-    if (this.state.complete) return <h1>Purchase Complete</h1>
-
-    return (
-      <>
-        <Grid className="payment-details">
-          <div className="details">
-            <Title
-              type="h3"
-              className="payment-title"
-              text="Payment Information"
-            ></Title>
-            <P>Please enter your payment details below</P>
-            <label className="email-label" htmlFor="email">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              className="email-input"
-              placeholder="name@example.com"
-            />
-            <label className="creditCard-label" htmlFor="creditCard">
-              Credit Card
-            </label>
-            <CardElement
-              className="creditCard-input"
-              onChange={event => {
-                const displayError = document.getElementById("card-errors")
-                if (event.error) {
-                  displayError.textContent = event.error.message
-                } else {
-                  displayError.textContent = ""
-                }
-              }}
-            />
-            <div id="card-errors" role="alert" className="card-errors"></div>
-            <Button className="pay" onClick={this.submit}>
-              Pay with credit card
-            </Button>
-          </div>
-        </Grid>
-      </>
-    )
-  }
+  return (
+    <>
+      <Grid className="payment-details">
+        <div className="details">
+          <Title
+            type="h3"
+            className="payment-title"
+            text="Payment Information"
+          ></Title>
+          <P>Please enter your payment details below</P>
+          <label className="email-label" htmlFor="email">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            className="email-input"
+            placeholder="name@example.com"
+          />
+          <label className="creditCard-label" htmlFor="creditCard">
+            Credit Card
+          </label>
+          <CardElement
+            className="creditCard-input"
+            onChange={event => {
+              const displayError = document.getElementById("card-errors")
+              if (event.error) {
+                displayError.textContent = event.error.message
+              } else {
+                displayError.textContent = ""
+              }
+            }}
+          />
+          <div id="card-errors" role="alert" className="card-errors"></div>
+          <Button className="pay" onClick={submit}>
+            Pay with credit card
+          </Button>
+        </div>
+      </Grid>
+    </>
+  )
 }
 
 export default injectStripe(Checkout)

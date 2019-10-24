@@ -19,6 +19,8 @@ const NotFoundPage = () => (
           <P style={{ margin: 0 }}>
             The page you were looking for does not exist
           </P>
+        </Grid>
+        <Grid>
           <LinkUp
             className="error"
             type="internal"

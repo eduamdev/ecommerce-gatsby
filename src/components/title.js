@@ -154,9 +154,10 @@ const StyledH3 = styled.h3`
   font-size: 1.2em;
 
   &.featured {
-    font-size: 1.75em;
+    font-size: 1.5em;
     position: relative;
     margin-bottom: 2em;
+    letter-spacing: 0.2px;
 
     &:before {
       content: "";
