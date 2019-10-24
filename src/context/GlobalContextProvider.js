@@ -27,7 +27,13 @@ function reducer(state, action) {
         product: {},
         cart: [],
         isCartEmpty: true,
-        isPurchaseComplete: true
+        isPurchaseComplete: true,
+      }
+    }
+    case "RESET_PURCHASE": {
+      return {
+        ...state,
+        isPurchaseComplete: false,
       }
     }
     default:
