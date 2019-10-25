@@ -6,31 +6,31 @@ import PropTypes from "prop-types"
 const StyledParagraph = styled.p`
   font-size: 0.95em;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.65;
   border: none;
   outline: none;
   margin-bottom: 1.45rem;
 
   @media ${viewport[4]} {
     font-size: 0.9em;
-    line-height: 1.5;
+    line-height: 1.68;
   }
 
   @media ${viewport[7]} {
-    line-height: 1.4;
+    line-height: 1.7;
     letter-spacing: -0.3px;
   }
 
   @media ${viewport[9]} {
-    font-size: 0.82em;
+    font-size: 0.95em;
     letter-spacing: -0.2px;
-    line-height: 1.5;
+    line-height: 1.65;
   }
 
   @media ${viewport[12]} {
     font-size: 0.92em;
     letter-spacing: 0.3px;
-    line-height: 1.5;
+    line-height: 1.7;
     font-weight: 400;
   }
 
@@ -61,6 +61,8 @@ const StyledParagraph = styled.p`
     font-weight: 300;
     margin-bottom: 1em;
     text-align: left;
+    font-size: 0.875em;
+    letter-spacing: 0.5px;
   }
 
   &.card-label,

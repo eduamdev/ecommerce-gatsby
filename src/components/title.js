@@ -156,13 +156,13 @@ const StyledH3 = styled.h3`
   font-size: 1.2em;
 
   &.featured {
-    /* font-size: 1.5em; */
+    font-size: 1.45em;
     position: relative;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.25em;
     letter-spacing: -0.2px;
     /* word-spacing: 5px; */
 
-    &:before {
+    /* &:before {
       content: "";
       position: absolute;
       width: 30%;
@@ -171,7 +171,7 @@ const StyledH3 = styled.h3`
       left: 35%;
       border-bottom: 2px solid #2b5061;
       border-radius: 8px;
-    }
+    } */
   }
 
   &.logo-text {
@@ -190,6 +190,7 @@ const StyledH3 = styled.h3`
 
   &.product-details__title,
   &.product-reviews__title {
+    font-size: 1.4em;
     margin: 0;
   }
 
@@ -214,9 +215,13 @@ const StyledH4 = styled.h4`
   /* letter-spacing: -0.3px; */
 
   &.card-title {
-    font-size: 1.05em;
+    font-size: 1em;
     margin-bottom: 0.5em;
     padding-top: 0.5em;
+
+    @media ${viewport[12]} {
+      font-size: 1.1em;
+    }
   }
 
   &.title-review {

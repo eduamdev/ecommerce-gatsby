@@ -9,10 +9,9 @@ const Flex = styled.div`
   &.announcement-bar {
     align-items: center;
     justify-content: center;
-    color: #333;
-    fill: #333;
-    padding: 0.25em 0;
-    background: #eeecf1;
+    color: aliceblue;
+    padding: 0.5em 0;
+    background: #2b5061;
 
     & p {
       margin: 0;

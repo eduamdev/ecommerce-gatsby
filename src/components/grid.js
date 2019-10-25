@@ -231,15 +231,28 @@ const Grid = styled.div`
     }
 
     @media ${viewport[7]} {
+      width:80%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media ${viewport[9]} {
+      width: 95%;
+      margin: 0 auto;
+      max-width: unset;
       grid-template-columns: 1fr 1fr;
       grid-template-columns: minmax(min-content, 600px) 1fr minmax(min-content, 500px);
-      grid-template-areas: "payment . summary";
+      grid-template-areas: "summary . payment";
       grid-column-gap: 1em;
+    }
+
+    @media ${viewport[12]} {
+      width: 85%;
     }
   }
 
   &.order-summary {
-    margin-top: 1em;
+    margin-top: 1.75em;
     grid-template-columns: max-content 2fr 1fr 1fr;
     grid-column-gap: 1em;
     grid-template-areas: "img info price total";
@@ -258,13 +271,13 @@ const Grid = styled.div`
       align-self: baseline;
 
       & h4 {
-        margin-bottom: 0.75em;
+        margin-bottom: 0.25em;
         line-height: 1.15;
       }
 
       & span {
         font-size: 0.85em;
-        line-height: 1.5;
+        line-height: 1.6;
         display: block;
       }
     }
@@ -281,7 +294,7 @@ const Grid = styled.div`
       align-self: center;
       color: #ED1C24;
       font-weight: 700;
-      font-size: 0.85em;
+      font-size: 0.925em;
       text-align: right;
     }
   }
@@ -297,13 +310,13 @@ const Grid = styled.div`
     & .left {
       justify-self: start;
       margin-bottom: 0.35em;
-      font-size: 0.9em;
+      font-size: 0.925em;
     }
 
     & .right {
       justify-self: end;
       margin-bottom: 0.35em;
-      font-size: 0.9em;
+      font-size: 0.925em;
     }
 
     & .subtotal,
@@ -324,7 +337,7 @@ const Grid = styled.div`
       padding-top: 1em;
       border-top: 1px solid #ddd;
       color: #ED1C24;
-      font-weight: 900;
+      font-weight: 700;
 
       @media ${viewport[7]} {
         margin-top: 0.5em;
@@ -380,7 +393,7 @@ const Grid = styled.div`
       }
 
       & .card-errors {
-        color: tomato;
+        color: #ed1c24;
         font-weight: 500;
         font-size: 0.85em;
         letter-spacing: 0.2px;
@@ -432,7 +445,6 @@ const Grid = styled.div`
 
     & .product-details {
       grid-area: details;
-      border-top: 1px solid #ddd;
       padding-top: 2em;
 
       @media ${viewport[7]} {
@@ -442,6 +454,13 @@ const Grid = styled.div`
 
     & .product-reviews {
       grid-area: reviews;
+      width: 100%;
+
+      @media ${viewport[9]} {
+        max-width: 800px;
+        width: 70%;
+        justify-self: center;
+      }
     }
 
     & .product-info,

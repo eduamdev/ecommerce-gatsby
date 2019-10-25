@@ -6,6 +6,8 @@ import Banner from "../components/banner"
 import Articles from "../components/articles"
 import Rack from "../components/rack"
 import Featured from "../components/featured"
+import Flex from "../components/flex"
+import P from "../components/paragraph"
 
 const IndexPage = () => {
   const dispatch = useContext(GlobalDispatchContext)
@@ -15,13 +17,18 @@ const IndexPage = () => {
   }, [dispatch])
 
   return (
-    <Layout>
-      <SEO title="Home" />
-      <Banner />
-      <Articles />
-      <Rack />
-      <Featured />
-    </Layout>
+    <>
+      <Flex className="announcement-bar">
+        <P>Free International Shipping!</P>
+      </Flex>
+      <Layout>
+        <SEO title="Home" />
+        <Banner />
+        <Articles />
+        <Rack />
+        <Featured />
+      </Layout>
+    </>
   )
 }
 
