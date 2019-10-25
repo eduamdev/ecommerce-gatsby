@@ -9,33 +9,15 @@ const Flex = styled.div`
   &.announcement-bar {
     align-items: center;
     justify-content: center;
-    color: #fff;
-    fill: #fff;
-    padding: 0.35em 0;
-    background: #00416a; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #e4e5e6,
-      #00416a
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #e4e5e6,
-      #00416a
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    & span {
-      width: 18px;
-      margin-right: 10px;
-
-      & svg {
-        width: 100%;
-      }
-    }
+    color: #333;
+    fill: #333;
+    padding: 0.25em 0;
+    background: #eeecf1;
 
     & p {
       margin: 0;
       font-weight: 300;
+      font-size: 0.8em;
       letter-spacing: 0.5px;
     }
   }

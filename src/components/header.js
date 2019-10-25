@@ -6,7 +6,7 @@ import Wrapper from "./wrapper"
 import Nav from "./nav"
 import Grid from "./grid"
 import Flex from "./flex"
-import { Cart, Airplane } from "./svg"
+import { Cart } from "./svg"
 import LinkUp from "./link"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 import useImages from "../hooks/useImages"
@@ -30,7 +30,6 @@ const Header = ({ siteTitle }) => {
     <>
       <StyledHeader>
         <Flex className="announcement-bar">
-          <span>{Airplane}</span>
           <P>Free International Shipping!</P>
         </Flex>
         <Wrapper>
