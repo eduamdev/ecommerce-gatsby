@@ -1,15 +1,11 @@
 import React, { useContext } from "react"
-import {
-  GlobalDispatchContext,
-  GlobalStateContext,
-} from "../context/GlobalContextProvider"
+import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 import Grid from "./grid"
 import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"
 import Title from "./title"
 import P from "./paragraph"
 import uuid from "uuid"
-import Loading from "./loading"
 
 const Button = styled.button`
   &.pay {
@@ -33,7 +29,6 @@ const Button = styled.button`
 
 const Checkout = ({ total, stripe }) => {
   const dispatch = useContext(GlobalDispatchContext)
-  const state = useContext(GlobalStateContext)
 
   async function submit(ev) {
     ev.preventDefault()
@@ -118,9 +113,6 @@ const Checkout = ({ total, stripe }) => {
           <Button className="pay" onClick={submit}>
             Pay with credit card
           </Button>
-          <div className="loading">
-            <Loading isLoading={state.isLoading}></Loading>
-          </div>
         </div>
       </Grid>
     </>

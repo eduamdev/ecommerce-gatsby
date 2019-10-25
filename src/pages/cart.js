@@ -11,6 +11,7 @@ import Grid from "../components/grid"
 import CheckoutContainer from "../components/checkoutContainer"
 import { Checkmark } from "../components/svg"
 import styled from "styled-components"
+import { FoldingCube } from "../components/loading"
 
 const Icon = styled.span`
   width: 8em;
@@ -25,6 +26,24 @@ const Icon = styled.span`
 const Cart = () => {
   const state = useContext(GlobalStateContext)
   const { cart, isCartEmpty, isPurchaseComplete } = state
+
+  if (state.isLoading)
+    return (
+      <Layout>
+        <SEO title="Cart" />
+        <Section
+          style={{ padding: `2em 0`, background: "rgba(238, 238, 248, 0.3)" }}
+        >
+          <Wrapper>
+            <Grid>
+              <Title type="h2" text="Cart" placement="center"></Title>
+              <P>Processing your order</P>
+              <FoldingCube />
+            </Grid>
+          </Wrapper>
+        </Section>
+      </Layout>
+    )
 
   return (
     <Layout>
