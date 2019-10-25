@@ -60,9 +60,12 @@ const Checkout = ({ total, stripe }) => {
           },
         })
 
-        // console.log(response)
-        dispatch({ type: "STOP_LOADING" })
+        // Delay to see the loading screen a little longer
+        setTimeout(function() {
+          dispatch({ type: "STOP_LOADING" })
+        }, 3000)
 
+        // console.log(response)
         if (response.ok) {
           dispatch({ type: "PURCHASE_SUCCESSFUL" })
         } else {
