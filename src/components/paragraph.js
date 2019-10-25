@@ -105,7 +105,7 @@ const StyledParagraph = styled.p`
   &.featured {
     color: #ad343e;
     margin-top: 2.5em;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   &.quantity {

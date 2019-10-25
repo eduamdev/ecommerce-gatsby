@@ -6,11 +6,12 @@ import Wrapper from "./wrapper"
 import Nav from "./nav"
 import Grid from "./grid"
 import Flex from "./flex"
-import { Cart } from "./svg"
+import { Cart, Airplane } from "./svg"
 import LinkUp from "./link"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 import useImages from "../hooks/useImages"
 import Img from "gatsby-image"
+import P from "./paragraph"
 
 const StyledHeader = styled.header`
   /* height: 80px; */
@@ -28,6 +29,10 @@ const Header = ({ siteTitle }) => {
   return (
     <>
       <StyledHeader>
+        <Flex className="announcement-bar">
+          <span>{Airplane}</span>
+          <P>Free International Shipping!</P>
+        </Flex>
         <Wrapper>
           <Grid className="header">
             <LinkUp

@@ -18,8 +18,8 @@ const StyledWrapper = styled.div`
   }
 
   @media ${viewport[9]} {
-    max-width: 85%;
-    width: 85%;
+    max-width: 95%;
+    width: 95%;
   }
 
   @media ${viewport[12]} {

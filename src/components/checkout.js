@@ -11,7 +11,7 @@ const Button = styled.button`
   &.pay {
     display: inline-block;
     cursor: pointer;
-    background: rgb(187, 120, 120);
+    background: #3e2723;
     color: #fff;
     padding: 0.75em 1.2em;
     border-radius: 2px;
@@ -21,7 +21,8 @@ const Button = styled.button`
     border: none;
 
     &:hover {
-      background: rgb(146, 93, 93);
+      /* background: rgb(146, 93, 93); */
+      background: #1b0000;
     }
   }
 `

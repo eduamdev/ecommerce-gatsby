@@ -9,7 +9,7 @@ const Articles = () => {
   const { shoe1, shoe2, shoe3 } = useImages()
 
   return (
-    <Section>
+    <Section style={{ background: "rgba(238, 238, 248, 0.3)" }}>
       <Wrapper>
         <Grid className="articles">
           <article className="article">

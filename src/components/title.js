@@ -231,7 +231,7 @@ const StyledH4 = styled.h4`
   }
 
   &.footer {
-    font-weight: 700;
+    font-weight: 500;
   }
 `
 

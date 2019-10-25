@@ -35,7 +35,7 @@ const List = styled.ul`
     margin-bottom: 0.5em;
 
     & p {
-      font-weight: 500;
+      font-weight: 300;
     }
 
     @media ${viewport[9]} {
@@ -47,13 +47,7 @@ const List = styled.ul`
 const Footer = () => {
   return (
     <footer>
-      <div
-        style={{
-          backgroundColor: `rgb(245,245,245)`,
-          padding: `3em 0`,
-          borderBottom: `1px solid #ccc`,
-        }}
-      >
+      <Section className="footer-links">
         <Wrapper>
           <Grid className="footer">
             <div className="newsletter">
@@ -106,8 +100,8 @@ const Footer = () => {
             </div>
           </Grid>
         </Wrapper>
-      </div>
-      <Section style={{ padding: `2em 0` }} className="payment">
+      </Section>
+      <Section className="footer-payment">
         <Grid className="payment">
           <Flex className="payment-svg">
             <span className="">{Stripe}</span>

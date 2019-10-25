@@ -51,6 +51,7 @@ const Grid = styled.div`
 
       & .article-text {
         padding: 1.2em;
+        background: #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 
         & span {
@@ -203,6 +204,7 @@ const Grid = styled.div`
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
       border-top: 1px solid #eee;
       padding: 2em 1.25em;
+      background: #fff;
 
       @media ${viewport[7]} {
         align-self: start;
@@ -217,6 +219,7 @@ const Grid = styled.div`
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
       border-top: 1px solid #eee;
       padding: 2em 1.25em;
+      background: #fff;
 
       @media ${viewport[7]} {
         align-self: start;

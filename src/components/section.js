@@ -28,20 +28,41 @@ const StyledSection = styled.section`
     margin-bottom: 2em;
     padding-bottom: 5em;
     padding-top: 0;
+    background: rgba(238, 238, 248, 0.3);
 
     @media ${viewport[9]} {
       padding: 0 0 3em 0;
     }
   }
 
-  &.payment {
-    background: rgb(245, 245, 245);
-  }
-
   &.products,
   &.filter,
   &.banner {
     padding: 0;
+  }
+
+  &.footer-links {
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2c5364,
+      #203a43,
+      #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 3em 0;
+    color: aliceblue;
+    fill: aliceblue;
+  }
+
+  &.footer-payment {
+    fill: aliceblue;
+    background: #2b5061;
   }
 `
 

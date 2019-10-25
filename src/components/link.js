@@ -35,7 +35,7 @@ const GatsbyLink = styled(Link)`
     }
 
     &:hover {
-      color: rgb(187, 120, 120);
+      color: #db5461;
     }
   }
 
@@ -49,7 +49,7 @@ const GatsbyLink = styled(Link)`
       right: -6px;
       height: 8px;
       width: 8px;
-      background: #DB5461;
+      background: tomato;
       border-radius: 100%;
 
       @media ${viewport[7]} {
@@ -69,7 +69,7 @@ const GatsbyLink = styled(Link)`
   &.error {
     display: inline-block;
     /* border: 1px solid; */
-    background: rgb(187, 120, 120);
+    background: #3e2723;
     color: #fff;
     padding: 0.75em 1.2em;
     border-radius: 2px;
@@ -79,7 +79,8 @@ const GatsbyLink = styled(Link)`
     &:hover {
       /* background: transparent; */
       /* color: rgb(187, 120, 120); */
-      background: rgb(146, 93, 93);
+      /* background: rgb(146, 93, 93); */
+      background: #1b0000;
     }
   }
 
