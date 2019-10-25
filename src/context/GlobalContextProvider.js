@@ -8,6 +8,7 @@ const initialState = {
   cart: [],
   isCartEmpty: true,
   isPurchaseComplete: false,
+  isLoading: false,
 }
 
 function reducer(state, action) {
@@ -24,6 +25,7 @@ function reducer(state, action) {
     }
     case "PURCHASE_SUCCESSFUL": {
       return {
+        ...state,
         product: {},
         cart: [],
         isCartEmpty: true,
@@ -34,6 +36,18 @@ function reducer(state, action) {
       return {
         ...state,
         isPurchaseComplete: false,
+      }
+    }
+    case "TRIGGER_LOADING": {
+      return {
+        ...state,
+        isLoading: true,
+      }
+    }
+    case "STOP_LOADING": {
+      return {
+        ...state,
+        isLoading: false,
       }
     }
     default:

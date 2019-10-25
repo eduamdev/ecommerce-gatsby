@@ -16,7 +16,7 @@ const Flex = styled.div`
 
     & p {
       margin: 0;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 0.8em;
       letter-spacing: 0.5px;
     }

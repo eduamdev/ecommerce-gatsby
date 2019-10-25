@@ -1,5 +1,8 @@
 import React, { useContext } from "react"
-import { GlobalDispatchContext } from "../context/GlobalContextProvider"
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+} from "../context/GlobalContextProvider"
 import Grid from "./grid"
 import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"
@@ -88,7 +91,7 @@ const Spinner = styled.div`
 
 const Checkout = ({ total, stripe }) => {
   const dispatch = useContext(GlobalDispatchContext)
-  let loading = false
+  const state = useContext(GlobalStateContext)
 
   async function submit(ev) {
     ev.preventDefault()
@@ -106,7 +109,7 @@ const Checkout = ({ total, stripe }) => {
       displayError.textContent = ""
 
       try {
-        loading = true
+        dispatch({ type: "TRIGGER_LOADING" })
         let response = await fetch("/.netlify/functions/index", {
           method: "POST",
           body: JSON.stringify({
@@ -121,7 +124,7 @@ const Checkout = ({ total, stripe }) => {
         })
 
         // console.log(response)
-        loading = false
+        dispatch({ type: "STOP_LOADING" })
 
         if (response.ok) {
           dispatch({ type: "PURCHASE_SUCCESSFUL" })
@@ -174,7 +177,7 @@ const Checkout = ({ total, stripe }) => {
             Pay with credit card
           </Button>
           <div className="loading">
-            <Spinner className={loading ? "active" : ""}>
+            <Spinner className={state.isLoading ? "active" : ""}>
               <div className="bounce1"></div>
               <div className="bounce2"></div>
               <div className="bounce3"></div>
