@@ -279,7 +279,7 @@ const Grid = styled.div`
     & .order-summary__total {
       grid-area: total;
       align-self: center;
-      color: #AD343E;
+      color: #ED1C24;
       font-weight: 700;
       font-size: 0.85em;
       text-align: right;
@@ -308,7 +308,7 @@ const Grid = styled.div`
 
     & .subtotal,
     & .shipping {
-      color: #AD343E;
+      color: #ED1C24;
       font-weight: 700;
     }
 
@@ -323,7 +323,7 @@ const Grid = styled.div`
       margin-top: 0.35em;
       padding-top: 1em;
       border-top: 1px solid #ddd;
-      color: rgb(146, 93, 93);
+      color: #ED1C24;
       font-weight: 900;
 
       @media ${viewport[7]} {

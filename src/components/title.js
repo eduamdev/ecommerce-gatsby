@@ -169,7 +169,7 @@ const StyledH3 = styled.h3`
       height: 1px;
       bottom: -80%;
       left: 35%;
-      border-bottom: 2px solid #ad343e;
+      border-bottom: 2px solid #2b5061;
       border-radius: 8px;
     }
   }

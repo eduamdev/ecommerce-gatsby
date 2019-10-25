@@ -66,7 +66,7 @@ const StyledParagraph = styled.p`
   &.card-label,
   &.product-info__price {
     font-size: 0.9em;
-    color: #ad343e;
+    color: #ed1c24;
   }
 
   &.card-label {
@@ -103,7 +103,7 @@ const StyledParagraph = styled.p`
   }
 
   &.featured {
-    color: #ad343e;
+    color: #2b5061;
     margin-top: 2.5em;
     font-weight: 500;
   }

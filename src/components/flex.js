@@ -87,7 +87,7 @@ const Flex = styled.div`
     align-items: baseline;
 
     & span {
-      fill: #ad343e;
+      fill: #2b5061;
       width: 20px;
       margin-left: 10px;
     }

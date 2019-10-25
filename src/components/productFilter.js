@@ -40,7 +40,7 @@ const ProductFilter = ({ products, filterByPrice }) => {
             Price{" "}
             <span
               style={{
-                color: `#AD343E`,
+                color: `#ED1C24`,
                 fontWeight: 500,
                 fontSize: "1.25em",
                 marginLeft: "5px",

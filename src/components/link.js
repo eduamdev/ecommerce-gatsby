@@ -35,7 +35,7 @@ const GatsbyLink = styled(Link)`
     }
 
     &:hover {
-      color: #db5461;
+      color: #2b5061;
     }
   }
 
@@ -49,7 +49,7 @@ const GatsbyLink = styled(Link)`
       right: -6px;
       height: 8px;
       width: 8px;
-      background: tomato;
+      background: #ed1c24;
       border-radius: 100%;
 
       @media ${viewport[7]} {
