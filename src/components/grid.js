@@ -193,6 +193,7 @@ const Grid = styled.div`
 
   &.checkout {
     grid-template-columns: 1fr;
+    padding: 1.5em 0;
     grid-row-gap: 1.5em;
     grid-template-areas:
       "summary"
@@ -247,13 +248,13 @@ const Grid = styled.div`
     }
 
     @media ${viewport[12]} {
-      width: 85%;
+      width: 90%;
     }
   }
 
   &.order-summary {
     margin-top: 1.75em;
-    grid-template-columns: max-content 2fr 1fr 1fr;
+    grid-template-columns: max-content 2.5fr 1fr 1fr;
     grid-column-gap: 1em;
     grid-template-areas: "img info price total";
 
