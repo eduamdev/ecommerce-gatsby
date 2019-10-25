@@ -63,7 +63,7 @@ const Checkout = ({ total, stripe }) => {
         // Delay to see the loading screen a little longer
         setTimeout(function() {
           dispatch({ type: "STOP_LOADING" })
-        }, 3000)
+        }, 1500)
 
         // console.log(response)
         if (response.ok) {
