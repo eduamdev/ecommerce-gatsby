@@ -33,12 +33,16 @@ const Grid = styled.div`
   &.articles {
     align-items: stretch;
     grid-template-columns: 1fr;
-    grid-gap: 2em 1.75em;
+    grid-gap: 1.5em 1em;
     margin-bottom: 1em;
     border-radius: 4px;
 
     @media ${viewport[7]} {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media ${viewport[9]}{
+      grid-gap: 2em 1.75em;
     }
 
     & .article {
@@ -57,12 +61,12 @@ const Grid = styled.div`
         & span {
           font-size: 0.675em;
           text-transform: uppercase;
-          font-weight: 300;
+          font-weight: 500;
           letter-spacing: 2px;
         }
 
         & .article-title {
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.2px;
           line-height: 1.55;
           margin: 0.7em 0 0 0;
@@ -253,31 +257,42 @@ const Grid = styled.div`
   }
 
   &.order-summary {
-    margin-top: 1.75em;
-    grid-template-columns: max-content 2.5fr 1fr 1fr;
+    margin: 0;
+    margin-bottom: 1em;
+    grid-template-columns: max-content 1fr max-content max-content;
     grid-column-gap: 1em;
     grid-template-areas: "img info price total";
 
+    @media ${viewport[7]} {
+        margin-bottom: 0;
+      }
+
     & .order-summary__img {
       grid-area: img;
-      width: 60px;
+      width: 4em;
+
+      @media ${viewport[7]} {
+        width: 5em;
+      }
 
       @media ${viewport[12]} {
-        width: 80px;
+        width: 5.5em;
       }
     }
 
     & .order-summary__info {
       grid-area: info;
-      align-self: baseline;
+      align-self: center;
 
       & h4 {
         margin-bottom: 0.25em;
         line-height: 1.15;
+        font-weight: 600;
+        font-size:1.025em;
       }
 
       & span {
-        font-size: 0.85em;
+        font-size: 0.87em;
         line-height: 1.6;
         display: block;
       }
@@ -293,9 +308,9 @@ const Grid = styled.div`
     & .order-summary__total {
       grid-area: total;
       align-self: center;
-      color: #ED1C24;
-      font-weight: 700;
-      font-size: 0.925em;
+      /* color: #ED1C24; */
+      font-weight: 300;
+      font-size: 0.85em;
       text-align: right;
     }
   }
@@ -311,19 +326,22 @@ const Grid = styled.div`
     & .left {
       justify-self: start;
       margin-bottom: 0.35em;
-      font-size: 0.925em;
+      font-size: 0.85em;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     & .right {
       justify-self: end;
       margin-bottom: 0.35em;
-      font-size: 0.925em;
+      font-size: 0.85em;
     }
 
     & .subtotal,
     & .shipping {
-      color: #ED1C24;
-      font-weight: 700;
+      /* color: #ED1C24; */
+      font-weight: 400;
+      font-size: 0.85em;
     }
 
     & .shipping {
@@ -337,8 +355,8 @@ const Grid = styled.div`
       margin-top: 0.35em;
       padding-top: 1em;
       border-top: 1px solid #ddd;
-      color: #ED1C24;
-      font-weight: 700;
+      /* color: #ED1C24; */
+      font-weight: 600;
 
       @media ${viewport[7]} {
         margin-top: 0.5em;
@@ -427,6 +445,8 @@ const Grid = styled.div`
 
     @media ${viewport[12]} {
       grid-template-columns: 1fr 1.55fr;
+      max-width: 80%;
+      margin: 0 auto;
     }
 
     & .product-image {
@@ -436,6 +456,12 @@ const Grid = styled.div`
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 4px;
+      width: 70%;
+      margin: 0 auto;
+
+      @media ${viewport[7]} {
+        width: 100%;
+      }
     }
 
     & .product-info {

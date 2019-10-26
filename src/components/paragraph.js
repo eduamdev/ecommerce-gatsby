@@ -58,17 +58,17 @@ const StyledParagraph = styled.p`
   }
 
   &.card-description {
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 1em;
     text-align: left;
     font-size: 0.875em;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
   }
 
   &.card-label,
   &.product-info__price {
     font-size: 0.9em;
-    color: #ed1c24;
+    /* color: #ed1c24; */
   }
 
   &.card-label {
@@ -105,9 +105,9 @@ const StyledParagraph = styled.p`
   }
 
   &.featured {
-    color: #2b5061;
-    margin-top: 2.5em;
-    font-weight: 500;
+    color: #0277bd;
+    margin-top: 1em;
+    font-weight: 600;
   }
 
   &.quantity {

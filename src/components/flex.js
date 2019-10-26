@@ -11,7 +11,7 @@ const Flex = styled.div`
     justify-content: center;
     color: aliceblue;
     padding: 0.5em 0;
-    background: #2b5061;
+    background: #000;
 
     & p {
       margin: 0;
@@ -68,7 +68,7 @@ const Flex = styled.div`
     align-items: baseline;
 
     & span {
-      fill: #2b5061;
+      fill: #0277bd;
       width: 20px;
       margin-left: 10px;
     }

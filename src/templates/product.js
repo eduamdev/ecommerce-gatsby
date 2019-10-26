@@ -147,7 +147,7 @@ const Product = ({ pageContext }) => {
     <Layout>
       <SEO title="Product" />
       <Section style={{ background: "rgba(238, 238, 248, 0.3)" }}>
-        <form onSubmit={ev => ev.preventDefault()}>
+        <form style={{ margin: 0 }} onSubmit={ev => ev.preventDefault()}>
           <Wrapper className="product">
             <Grid className="product">
               <div className="product-image">

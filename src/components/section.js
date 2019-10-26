@@ -32,6 +32,7 @@ const StyledSection = styled.section`
 
     @media ${viewport[9]} {
       padding: 0 0 3em 0;
+      margin: 0;
     }
   }
 

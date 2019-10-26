@@ -48,7 +48,7 @@ const Container = styled.div`
 
   &.orderSummary-title{
     @media ${viewport[7]} {
-      margin-bottom: 3em;
+      /* margin-bottom: 3em; */
     }
   }
 `
@@ -132,18 +132,19 @@ const StyledH2 = styled.h2`
 
   &.product-name {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.275em;
+    font-weight: 600;
 
     @media ${viewport[4]} {
-      font-size: 1.4em;
+      font-size: 1.275em;
     }
 
     @media ${viewport[7]} {
-      font-size: 1.45em;
+      font-size: 1.3em;
     }
 
-    @media ${viewport[9]} {
-      font-size: 1.5em;
+    @media ${viewport[12]} {
+      font-size: 1.35em;
     }
   }
 `
@@ -186,12 +187,14 @@ const StyledH3 = styled.h3`
   &.payment-title,
   &.orderSummary-title {
     letter-spacing: 0;
+    font-weight: 600;
   }
 
   &.product-details__title,
   &.product-reviews__title {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin: 0;
+    font-weight: 600;
   }
 
   @media ${viewport[4]} {
@@ -210,8 +213,8 @@ const StyledH3 = styled.h3`
 
 const StyledH4 = styled.h4`
   display: inline;
-  font-weight: 700;
   padding: 0;
+  font-weight: 600;
   /* letter-spacing: -0.3px; */
 
   &.card-title {
@@ -226,7 +229,6 @@ const StyledH4 = styled.h4`
 
   &.title-review {
     margin: 1em 0;
-    font-weight: 700;
     color: #000;
   }
 

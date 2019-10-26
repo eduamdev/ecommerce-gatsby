@@ -86,7 +86,7 @@
         "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis pariatur tenetur sed quibusdam, atque, minima asperiores exercitationem quae id accusantium assumenda accusamus illum explicabo repellendus ex aut corporis quod numquam. Doloremque perspiciatis adipisci quod minus atque, nulla perferendis corrupti ad!"
       }
     ],
-    "featured": true,
+    "featured": false,
     "image": "desert_boot"
   },
   {
@@ -198,7 +198,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": true,
+    "featured": false,
     "image": "nano_6_covert"
   },
   {
@@ -293,7 +293,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
       }
     ],
-    "featured": true,
+    "featured": false,
     "image": "nano_2"
   },
   {
@@ -413,7 +413,7 @@
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aperiam? Rerum, quae!"
       }
     ],
-    "featured": false,
+    "featured": true,
     "image": "laureti_grace"
   },
   {
@@ -437,7 +437,7 @@
         "content": "I bought these boot in two colours as the comfort level is second to none. Beautifully soft suede leather, comfortable cushion sole and great grip."
       }
     ],
-    "featured": false,
+    "featured": true,
     "image": "clarkdale_arlo"
   },
   {
@@ -510,7 +510,7 @@
         "content": "Tried and worn this style for the past fifteen years."
       }
     ],
-    "featured": false,
+    "featured": true,
     "image": "craft_albert"
   },
   {
