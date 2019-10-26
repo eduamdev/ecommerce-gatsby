@@ -206,7 +206,7 @@ const Grid = styled.div`
     & .payment {
       grid-area: payment;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
       border-top: 1px solid #eee;
       padding: 2em 1.25em;
       background: #fff;
@@ -221,7 +221,7 @@ const Grid = styled.div`
     & .summary {
       grid-area: summary;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
       border-top: 1px solid #eee;
       padding: 2em 1.25em;
       background: #fff;
@@ -245,8 +245,7 @@ const Grid = styled.div`
       width: 95%;
       margin: 0 auto;
       max-width: unset;
-      grid-template-columns: 1fr 1fr;
-      grid-template-columns: minmax(min-content, 600px) 1fr minmax(min-content, 500px);
+      grid-template-columns: minmax(min-content, 550px) 1fr minmax(min-content, 550px);
       grid-template-areas: "summary . payment";
       grid-column-gap: 1em;
     }
@@ -496,7 +495,8 @@ const Grid = styled.div`
       background: #fff;
       padding: 2em;
       border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      border-top: 1px solid #eee;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
       /* border: 1px solid #ddd; */
       /* box-shadow: #ddd 3px 3px 13px 3px; */
     }
