@@ -42,6 +42,14 @@ const StyledSection = styled.section`
     padding: 0;
   }
 
+  &.cart {
+    background: rgba(238, 238, 248, 0.3);
+
+    @media ${viewport[9]} {
+      padding: 2em 0;
+    }
+  }
+
   &.footer-links {
     background: #0f2027; /* fallback for old browsers */
     background: -webkit-linear-gradient(

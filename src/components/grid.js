@@ -197,7 +197,7 @@ const Grid = styled.div`
 
   &.checkout {
     grid-template-columns: 1fr;
-    padding: 1.5em 0;
+    padding: 0.5em 0;
     grid-row-gap: 1.5em;
     grid-template-areas:
       "summary"

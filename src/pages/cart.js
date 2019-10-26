@@ -31,9 +31,7 @@ const Cart = () => {
     return (
       <Layout>
         <SEO title="Cart" />
-        <Section
-          style={{ padding: `2em 0`, background: "rgba(238, 238, 248, 0.3)" }}
-        >
+        <Section className="cart">
           <Wrapper>
             <Grid>
               <Title type="h2" text="Cart" placement="center"></Title>
