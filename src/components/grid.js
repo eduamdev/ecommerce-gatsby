@@ -315,11 +315,11 @@ const Grid = styled.div`
   }
 
   &.order-amount {
-    padding-top: 3em;
+    padding-top: 0.5em;
     grid-template-columns: 1fr 1fr;
 
     @media ${viewport[7]} {
-      padding-top: 1.5em;
+      padding-top: 0.75em;
     }
 
     & .left {
@@ -359,7 +359,6 @@ const Grid = styled.div`
 
       @media ${viewport[7]} {
         margin-top: 0.5em;
-        padding-top: 1.5em;
       }
     }
   }

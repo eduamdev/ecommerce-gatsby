@@ -64,7 +64,7 @@ const StyledSection = styled.section`
       #203a43,
       #0f2027
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 3em 0;
+    padding: 4em 0;
     color: aliceblue;
     fill: aliceblue;
   }

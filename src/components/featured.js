@@ -9,7 +9,6 @@ import P from "./paragraph"
 import items from "../content/products.json"
 import useImages from "../hooks/useImages"
 import { ArrowRight } from "./svg"
-import Heading from "./heading"
 
 const Featured = () => {
   let featuredProducts = items.filter(product => product.featured === true)

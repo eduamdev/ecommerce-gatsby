@@ -5,7 +5,6 @@ import Grid from "./grid"
 import Title from "./title"
 import P from "./paragraph"
 import styled from "styled-components"
-import { viewport } from "./breakpoints"
 import Flex from "./flex"
 import {
   Facebook,
@@ -33,13 +32,10 @@ const List = styled.ul`
 
   & li {
     margin-bottom: 0.5em;
+    font-size: 0.85em;
 
     & p {
       font-weight: 300;
-    }
-
-    @media ${viewport[9]} {
-      margin-bottom: 0.75em;
     }
   }
 `
@@ -115,7 +111,7 @@ const Footer = () => {
       <Section style={{ padding: `1.5em 0` }}>
         <Wrapper>
           <Grid>
-            <P style={{ margin: 0 }}>
+            <P style={{ margin: 0, fontWeight: 600 }}>
               Design & built by Eduardo Rodriguez,{" "}
               <a
                 href="https://twitter.com/edroamz"
