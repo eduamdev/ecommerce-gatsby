@@ -1,62 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:900i&display=swap");
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("../fonts/Inter-Light-BETA.woff2") format("woff2"),
-    url("../fonts/Inter-Light-BETA.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/Inter-Regular.woff") format("woff2"),
-    url("../fonts/Inter-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/Inter-Medium.woff2") format("woff2"),
-    url("../fonts/Inter-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"),
-    url("../fonts/Inter-SemiBold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"),
-    url("../fonts/Inter-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/Inter-Black.woff2") format("woff2"),
-    url("../fonts/Inter-Black.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap");
 
 html {
   background: #fff;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  font-family: "PT Serif", serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -375,6 +324,15 @@ h6 {
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
 }
 
 hgroup {
