@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import useImages from "../hooks/useImages"
 import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 import Layout from "../components/layout"
@@ -13,6 +13,7 @@ import P from "../components/paragraph"
 import { star, halfStar, outlineStar } from "../components/svg"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import "aos/dist/aos.css"
 
 const ProductList = styled.ul`
   margin-bottom: 1em;
@@ -143,6 +144,11 @@ const Product = ({ pageContext }) => {
     image,
   } = pageContext
 
+  useEffect(() => {
+    const AOS = require("aos")
+    AOS.init()
+  }, [])
+
   return (
     <Layout>
       <SEO title="Product" />
@@ -156,7 +162,7 @@ const Product = ({ pageContext }) => {
                   alt={name}
                 ></Img>
               </div>
-              <div className="product-info">
+              <div className="product-info" data-aos="fade-up">
                 <Title
                   className="product-name"
                   type="h2"
@@ -211,7 +217,7 @@ const Product = ({ pageContext }) => {
                   Add to cart
                 </Button>
               </div>
-              <div className="product-details">
+              <div className="product-details" data-aos="fade-up">
                 <Title
                   className="product-details__title"
                   type="h3"
@@ -228,7 +234,7 @@ const Product = ({ pageContext }) => {
                     })}
                 </ProductList>
               </div>
-              <div className="product-reviews">
+              <div className="product-reviews" data-aos="fade-up">
                 <Title
                   className="product-reviews__title"
                   type="h3"

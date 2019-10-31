@@ -1,16 +1,22 @@
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import Grid from "./grid"
 import LinkUp from "./link"
 import Title from "./title"
 import P from "./paragraph"
 import Img from "gatsby-image"
+import "aos/dist/aos.css"
 
 const Card = ({ item, imageGraphQL }) => {
   const { name, description, slug, price } = item
 
+  useEffect(() => {
+    const AOS = require("aos")
+    AOS.init()
+  }, [])
+
   return (
-    <article style={{ height: `100%` }}>
+    <article style={{ height: `100%` }} data-aos="fade-up">
       <Grid className="card">
         <LinkUp
           className="card-image"

@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Img from "gatsby-image"
 import Section from "./section"
 import Wrapper from "./wrapper"
 import useImages from "../hooks/useImages"
 import styled from "styled-components"
 import { viewport } from "./breakpoints"
+import "aos/dist/aos.css"
 
 const Block = styled.div`
   display: block;
@@ -63,6 +64,11 @@ const Block = styled.div`
 const Rack = () => {
   const { rack } = useImages()
 
+  useEffect(() => {
+    const AOS = require("aos")
+    AOS.init()
+  }, [])
+
   return (
     <Section className="rack">
       <Wrapper>
@@ -72,7 +78,7 @@ const Rack = () => {
             fluid={rack.childImageSharp.fluid}
             alt="about shoemaking"
           ></Img>
-          <div className="rack-card">
+          <div className="rack-card" data-aos="fade-in">
             <h4 className="rack-card__title">Lorem, ipsum dolor.</h4>
             <p className="rack-card__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
