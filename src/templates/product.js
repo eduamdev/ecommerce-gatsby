@@ -162,7 +162,7 @@ const Product = ({ pageContext }) => {
                   alt={name}
                 ></Img>
               </div>
-              <div className="product-info" data-aos="fade-up">
+              <div className="product-info" data-aos="fade-in">
                 <Title
                   className="product-name"
                   type="h2"
@@ -208,7 +208,7 @@ const Product = ({ pageContext }) => {
                         description,
                         quantity: count,
                         price,
-                        total: count * price,
+                        total: count * ((price * 10) / 10),
                         image,
                       },
                     })
@@ -217,7 +217,7 @@ const Product = ({ pageContext }) => {
                   Add to cart
                 </Button>
               </div>
-              <div className="product-details" data-aos="fade-up">
+              <div className="product-details" data-aos="fade-in">
                 <Title
                   className="product-details__title"
                   type="h3"

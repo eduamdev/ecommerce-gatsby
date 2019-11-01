@@ -16,7 +16,7 @@ const Card = ({ item, imageGraphQL }) => {
   }, [])
 
   return (
-    <article style={{ height: `100%` }} data-aos="fade-up">
+    <article style={{ height: `100%` }} data-aos="fade-in">
       <Grid className="card">
         <LinkUp
           className="card-image"
