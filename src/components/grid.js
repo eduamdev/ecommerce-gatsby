@@ -474,12 +474,6 @@ const Grid = styled.div`
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 4px;
-      width: 70%;
-      margin: 0 auto;
-
-      @media ${viewport[7]} {
-        width: 100%;
-      }
     }
 
     & .product-info {
