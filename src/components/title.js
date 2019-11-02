@@ -197,6 +197,12 @@ const StyledH3 = styled.h3`
     font-weight: 600;
   }
 
+  &.shoppingSuccessful{
+    color: #338a3e;
+    font-weight: 500;
+    font-size: 1.3em;
+  }
+
   @media ${viewport[4]} {
     font-size: 1.2em;
   }

@@ -272,6 +272,7 @@ const Grid = styled.div`
 
       @media ${viewport[7]} {
         width: 5em;
+        border: 1px solid #ddd;
       }
 
       @media ${viewport[12]} {
@@ -300,8 +301,9 @@ const Grid = styled.div`
     & .order-summary__price {
       grid-area: price;
       align-self: center;
-      font-size: 0.85em;
+      font-size: 0.8em;
       text-align: right;
+      opacity: 0.65;
     }
 
     & .order-summary__total {
@@ -309,8 +311,9 @@ const Grid = styled.div`
       align-self: center;
       /* color: #ED1C24; */
       font-weight: 300;
-      font-size: 0.85em;
+      font-size: 0.8em;
       text-align: right;
+      opacity: 0.65;
     }
   }
 
@@ -319,28 +322,29 @@ const Grid = styled.div`
     grid-template-columns: 1fr 1fr;
 
     @media ${viewport[7]} {
-      padding-top: 0.75em;
+      padding-top: 1.2em;
     }
 
     & .left {
       justify-self: start;
-      margin-bottom: 0.35em;
-      font-size: 0.85em;
+      margin-bottom: 0;
+      font-size: 0.825em;
       font-weight: 600;
-      letter-spacing: 0.5px;
+      letter-spacing: -0.5px;
     }
 
     & .right {
       justify-self: end;
-      margin-bottom: 0.35em;
-      font-size: 0.85em;
+      margin-bottom: 0;
+      font-size: 0.8em;
+      opacity: 0.65;
     }
 
     & .subtotal,
     & .shipping {
       /* color: #ED1C24; */
       font-weight: 400;
-      font-size: 0.85em;
+      font-size: 0.8em;
     }
 
     & .shipping {
@@ -356,6 +360,7 @@ const Grid = styled.div`
       border-top: 1px solid #ddd;
       /* color: #ED1C24; */
       font-weight: 600;
+      opacity: 1;
 
       @media ${viewport[7]} {
         margin-top: 0.5em;

@@ -13,7 +13,7 @@ import {
   Paypal,
   Amex,
   MasterCard,
-  Stripe,
+  Stripe
 } from "./svg"
 
 const StyledInput = styled.input`

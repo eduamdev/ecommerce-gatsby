@@ -60,7 +60,8 @@ const GatsbyLink = styled(Link)`
     }
 
     & svg {
-      width: 1.4em;
+      width: 1.6em;
+      height: 1.6em;
       vertical-align: middle;
     }
   }
@@ -75,6 +76,8 @@ const GatsbyLink = styled(Link)`
     border-radius: 2px;
     margin-top: 1.75em;
     margin-bottom: 1.75em;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
 
     &:hover {
       /* background: transparent; */

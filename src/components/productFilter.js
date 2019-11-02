@@ -19,7 +19,9 @@ const FilterSvg = styled.span`
 `
 
 const Slider = styled.input`
-  margin-top: 1em;
+  margin-top: 0.25em;
+  padding: 0.2em 0;
+  cursor: pointer;
 `
 
 const ProductFilter = ({ products, filterByPrice }) => {

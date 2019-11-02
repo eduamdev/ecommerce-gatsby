@@ -9,17 +9,20 @@ import Title from "../components/title"
 import P from "../components/paragraph"
 import Grid from "../components/grid"
 import CheckoutContainer from "../components/checkoutContainer"
-import { Checkmark } from "../components/svg"
+import { ShoppingSuccess } from "../components/svg"
 import styled from "styled-components"
 import { FoldingCube } from "../components/loading"
 
 const Icon = styled.span`
-  width: 8em;
+  width: 8.5em;
   margin: 0.75em auto 1.75em;
+  padding: 0.5em;
+  border-radius: 50%;
+  fill: #003300;
 
   & svg {
-    background: #d4efd7;
-    border-radius: 100%;
+    width: 100%;
+    height: 100%;
   }
 `
 
@@ -54,8 +57,8 @@ const Cart = () => {
             isPurchaseComplete ? (
               <>
                 <Grid className="purchaseSuccess">
-                  <Icon>{Checkmark}</Icon>
-                  <Title type="h3" text="Success!" placement="center"></Title>
+                  <Icon>{ShoppingSuccess}</Icon>
+                  <Title type="h3" className="shoppingSuccessful" text="Success!" placement="center"></Title>
                   <P style={{ margin: 0, textAlign: "center" }}>
                     Thank you for your purchase. You'll be receiving your item
                     in 2-5 business days.
