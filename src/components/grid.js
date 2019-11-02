@@ -105,6 +105,24 @@ const Grid = styled.div`
     &:hover {
       transform: translate(1px, -2%);
     }
+
+    & .card-label {
+      font-weight: 500;
+      /* letter-spacing: -0.2px; */
+      margin-bottom: 0;
+      text-align: right;
+      position: absolute;
+      right: 7%;
+      bottom: 3.5%;
+
+      @media ${viewport[7]} {
+        font-size: 1em;
+      }
+
+      @media ${viewport[12]} {
+        font-size: 1.1em;
+      }
+    }
   }
 
   &.footer {
@@ -290,11 +308,8 @@ const Grid = styled.div`
         font-size:1.025em;
       }
 
-      & span {
-        font-size: 0.87em;
-        line-height: 1.6;
-        display: block;
-        letter-spacing: 0.275px;
+      & p {
+        margin: 0;
       }
     }
 

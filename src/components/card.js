@@ -32,7 +32,7 @@ const Card = ({ item, imageGraphQL }) => {
             placement="left"
           ></Title>
           <P className="card-description">{description}</P>
-          <P className="card-label">${price}</P>
+          <span className="card-label">${price}</span>
         </LinkUp>
       </Grid>
     </article>

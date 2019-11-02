@@ -111,40 +111,34 @@ const StyledH1 = styled.h1`
 
 const StyledH2 = styled.h2`
   /* display: inline; */
-  font-size: 1.55em;
+  /* font-size: 1.55em; */
+  font-size: 28px;
+  line-height: 30px;
   font-weight: 700;
   margin-bottom: 1em;
   padding: 0;
-  letter-spacing: -0.5px;
-
-  @media ${viewport[4]} {
-    font-size: 1.75em;
-  }
-
-  @media ${viewport[7]} {
-    font-size: 2em;
-    letter-spacing: -0.4px;
-  }
+  letter-spacing: -0.054em;
 
   @media ${viewport[9]} {
-    font-size: 2.5em;
+    font-size: 32px;
+    line-height: 32px;
   }
 
   &.product-name {
     margin: 0;
-    font-size: 1.275em;
+    /* font-size: 1.275em; */
     font-weight: 600;
 
     @media ${viewport[4]} {
-      font-size: 1.275em;
+      /* font-size: 1.275em; */
     }
 
     @media ${viewport[7]} {
-      font-size: 1.3em;
+      /* font-size: 1.3em; */
     }
 
     @media ${viewport[12]} {
-      font-size: 1.35em;
+      /* font-size: 1.35em; */
     }
   }
 `
@@ -153,11 +147,20 @@ const StyledH3 = styled.h3`
   display: inline;
   font-weight: 700;
   padding: 0;
-  letter-spacing: -0.5px;
-  font-size: 1.2em;
+  /* letter-spacing: -0.5px; */
+  /* font-size: 1.2em; */
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.042em;
+
+  @media ${viewport[9]} {
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.05em;
+  }
 
   &.featured {
-    font-size: 1.45em;
+    /* font-size: 1.45em; */
     position: relative;
     margin-bottom: 1.25em;
     letter-spacing: -0.2px;
@@ -177,7 +180,7 @@ const StyledH3 = styled.h3`
 
   &.logo-text {
     margin-bottom: 0;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     font-family: "Playfair Display", serif;
     font-style: italic;
     letter-spacing: -0.5px;
@@ -192,7 +195,7 @@ const StyledH3 = styled.h3`
 
   &.product-details__title,
   &.product-reviews__title {
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
     margin: 0;
     font-weight: 600;
   }
@@ -204,16 +207,16 @@ const StyledH3 = styled.h3`
   }
 
   @media ${viewport[4]} {
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
   }
 
   @media ${viewport[7]} {
     /* font-size: 1.3em; */
-    letter-spacing: -0.4px;
+    /* letter-spacing: -0.4px; */
   }
 
   @media ${viewport[9]} {
-    font-size: 1.25em;
+    /* font-size: 1.25em; */
   }
 `
 

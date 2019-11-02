@@ -13,7 +13,7 @@ import {
   Paypal,
   Amex,
   MasterCard,
-  Stripe
+  Stripe,
 } from "./svg"
 
 const StyledInput = styled.input`
@@ -111,7 +111,7 @@ const Footer = () => {
       <Section style={{ padding: `1.5em 0` }}>
         <Wrapper>
           <Grid>
-            <P style={{ margin: 0, fontWeight: 600 }}>
+            <P className="footer">
               Design & built by Eduardo Rodriguez,{" "}
               <a
                 href="https://twitter.com/edroamz"

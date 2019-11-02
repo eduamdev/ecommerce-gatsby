@@ -27,7 +27,7 @@ const OrderSummary = ({ cart, images, total }) => {
                 ></Img>
                 <div className="order-summary__info">
                   <h4>{item.name}</h4>
-                  <span>{item.description}</span>
+                  <P>{item.description}</P>
                 </div>
                 <div className="order-summary__price">
                   <span>
@@ -43,13 +43,13 @@ const OrderSummary = ({ cart, images, total }) => {
         })}
       <Grid className="order-amount">
         <h4 className="left">Subtotal</h4>
-        <P className="subtotal right">${total}</P>
+        <span className="subtotal right">${total}</span>
         <h4 className="left">Shipping</h4>
-        <P className="shipping right">Free</P>
+        <span className="shipping right">Free</span>
         <h4 className="total left">Total</h4>
-        <P className="total right" style={{ textAlign: `right` }}>
+        <span className="total right" style={{ textAlign: `right` }}>
           ${total}
-        </P>
+        </span>
       </Grid>
     </>
   )
