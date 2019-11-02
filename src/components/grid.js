@@ -272,7 +272,6 @@ const Grid = styled.div`
 
       @media ${viewport[7]} {
         width: 5em;
-        border: 1px solid #ddd;
       }
 
       @media ${viewport[12]} {
@@ -330,7 +329,7 @@ const Grid = styled.div`
       justify-self: start;
       margin-bottom: 0;
       font-size: 0.825em;
-      font-weight: 600;
+      font-weight: 400;
       letter-spacing: -0.2px;
     }
 
@@ -360,7 +359,7 @@ const Grid = styled.div`
       padding-top: 1em;
       border-top: 1px solid #ddd;
       /* color: #ED1C24; */
-      font-weight: 600;
+      font-weight: 700;
       opacity: 1;
 
       @media ${viewport[7]} {

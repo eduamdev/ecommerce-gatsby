@@ -197,7 +197,7 @@ const StyledH3 = styled.h3`
     font-weight: 600;
   }
 
-  &.shoppingSuccessful{
+  &.shoppingSuccessful {
     color: #338a3e;
     font-weight: 500;
     font-size: 1.3em;
@@ -244,7 +244,7 @@ const StyledH4 = styled.h4`
   }
 
   &.footer {
-    font-weight: 500;
+    font-weight: 600;
   }
 `
 
