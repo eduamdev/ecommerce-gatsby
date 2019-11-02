@@ -348,7 +348,7 @@ const Grid = styled.div`
     }
 
     & .shipping {
-      font-size: 0.85em;
+      font-size: 0.8em;
     }
 
     & .total {
