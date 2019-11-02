@@ -295,6 +295,7 @@ const Grid = styled.div`
         font-size: 0.87em;
         line-height: 1.6;
         display: block;
+        letter-spacing: 0.5px;
       }
     }
 

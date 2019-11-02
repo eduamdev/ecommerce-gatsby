@@ -10,6 +10,7 @@ const StyledParagraph = styled.p`
   border: none;
   outline: none;
   margin-bottom: 1.45rem;
+  letter-spacing: 0.25px;
 
   @media ${viewport[4]} {
     font-size: 0.9em;
@@ -18,18 +19,18 @@ const StyledParagraph = styled.p`
 
   @media ${viewport[7]} {
     line-height: 1.7;
-    letter-spacing: -0.3px;
+    letter-spacing: 0.1px;
   }
 
   @media ${viewport[9]} {
     font-size: 0.95em;
-    letter-spacing: -0.2px;
+    letter-spacing: 0.2px;
     line-height: 1.65;
   }
 
   @media ${viewport[12]} {
     font-size: 0.92em;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
     line-height: 1.7;
     font-weight: 400;
   }
