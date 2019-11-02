@@ -56,21 +56,6 @@ const StyledParagraph = styled.p`
     /* color: #ed1c24; */
   }
 
-  &.product-info__price {
-    font-weight: 500;
-    margin: 0.5em 0;
-    font-size: 1.25em;
-    /* letter-spacing: 0.5px; */
-
-    @media ${viewport[7]} {
-      /* font-size: 1.3em; */
-    }
-
-    @media ${viewport[12]} {
-      /* font-size: 1.35em; */
-    }
-  }
-
   &.featured {
     color: #0277bd;
     margin-top: 1.75em;

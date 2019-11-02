@@ -175,7 +175,7 @@ const Product = ({ pageContext }) => {
                   {getStars(`${stars}`)}
                 </Flex>
                 <P>{description}</P>
-                <P className="product-info__price">${price}</P>
+                <span className="product-info__price">${price}</span>
                 <P className="quantity">
                   <Button
                     className="update-num"
