@@ -16,6 +16,7 @@ const Block = styled.div`
   }
 
   & .rack-image {
+    filter: contrast(1.2);
   }
 
   & .rack-card {
