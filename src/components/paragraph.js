@@ -30,7 +30,7 @@ const StyledParagraph = styled.p`
 
   @media ${viewport[12]} {
     font-size: 0.92em;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.275px;
     line-height: 1.7;
     font-weight: 400;
   }
