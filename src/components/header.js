@@ -11,6 +11,7 @@ import LinkUp from "./link"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 import useImages from "../hooks/useImages"
 import Img from "gatsby-image"
+import Svg from "../images/logo.svg"
 
 const StyledHeader = styled.header`
   /* height: 80px; */
@@ -37,11 +38,7 @@ const Header = ({ siteTitle }) => {
               ariaLabel="Shoecase"
             >
               <Flex className="logo">
-                <Img
-                  className="logo-img"
-                  fixed={logo.childImageSharp.fixed}
-                  alt="Shoecase"
-                ></Img>
+                <img src={Svg} alt="Shoecase" style={{ maxWidth: "70px" }} />
                 <Title type="h3" text={siteTitle} className="logo-text"></Title>
               </Flex>
             </LinkUp>
