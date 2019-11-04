@@ -106,6 +106,11 @@ const Grid = styled.div`
       transform: translate(1px, -2%);
     }
 
+    & .card-title{
+      margin-bottom: 0.5em;
+      padding-top: 0.5em;
+    }
+
     & .card-label {
       font-weight: 500;
       /* letter-spacing: -0.2px; */
@@ -290,28 +295,21 @@ const Grid = styled.div`
       @media ${viewport[7]} {
         width: 4.5em;
       }
-
-      @media ${viewport[12]} {
-        width: 5em;
-      }
     }
 
     & .order-summary__info {
       grid-area: info;
-      align-self: start;
+      align-self: center;
 
       @media ${viewport[7]} {
         align-self: center;
       }
 
-      & h4 {
-        margin-bottom: 0.25em;
-        line-height: 1.15;
-        font-weight: 600;
-        font-size:1.025em;
+      & h3{
+        font-weight: 700;
       }
 
-      & p {
+      & p{
         margin: 0;
       }
     }
@@ -323,6 +321,7 @@ const Grid = styled.div`
       text-align: right;
       opacity: 0.65;
       justify-self: start;
+      color: #000;
     }
 
     & .order-summary__total {
@@ -352,7 +351,7 @@ const Grid = styled.div`
     & .left {
       justify-self: start;
       margin-bottom: 0;
-      font-size: 0.825em;
+      /* font-size: 0.825em; */
       font-weight: 400;
       letter-spacing: -0.2px;
     }
@@ -360,8 +359,7 @@ const Grid = styled.div`
     & .right {
       justify-self: end;
       margin-bottom: 0;
-      font-size: 0.8em;
-      opacity: 0.65;
+      /* font-size: 0.8em; */
     }
 
     & .subtotal,
@@ -378,7 +376,7 @@ const Grid = styled.div`
     & .total {
       justify-self: stretch;
       align-self: start;
-      font-size: 1.25em;
+      /* font-size: 1.25em; */
       margin-top: 0.35em;
       padding-top: 1em;
       border-top: 1px solid #ddd;
@@ -423,7 +421,7 @@ const Grid = styled.div`
         border: 1px solid #ddd;
         border-radius: 4px;
         line-height: 0;
-        font-size: 17px;
+        /* font-size: 17px; */
       }
 
       & .email-label,
@@ -504,6 +502,13 @@ const Grid = styled.div`
           /* font-size: 1.35em; */
         }
       }
+    }
+
+    & .quantity{
+      grid-template-columns: max-content 1fr;
+      margin-top: 1em;
+      grid-column-gap: 1em;
+      align-items: stretch;
     }
 
     & .product-details {

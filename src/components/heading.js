@@ -12,7 +12,7 @@ function getHeadingFontSize(rank, minFontSize, ratio = 1) {
       return minFontSize
 
     case 2:
-      return minFontSize * (ratio / 1.4)
+      return minFontSize * (ratio / 1.5)
 
     case 3:
       return minFontSize * (ratio / 1.7)
@@ -55,16 +55,21 @@ const StyledHeading = styled.div`
 
   @media ${viewport[12]} {
     font-size: ${({ rank }) =>
-      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.85, 0.6)}em;
+      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.8, 0.6)}em;
   }
 `
 
-const Heading = ({ rank = 2, className, children }) => {
+const Heading = ({ rank = 2, className, style, children }) => {
   if (rank <= 0) return <></>
   rank = rank > 6 ? 6 : rank
 
   return (
-    <StyledHeading as={`h${rank}`} className={className} rank={rank}>
+    <StyledHeading
+      as={`h${rank}`}
+      className={className}
+      style={style}
+      rank={rank}
+    >
       {children}
     </StyledHeading>
   )
@@ -74,6 +79,7 @@ Heading.propTypes = {
   rank: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  style: PropTypes.object,
 }
 
 export default Heading

@@ -40,16 +40,6 @@ const Container = styled.div`
 
   &.header {
     display: unset;
-  }  
-
-  &.payment-title, &.orderSummary-title{
-    margin-bottom: 2.5em;
-  }
-
-  &.orderSummary-title{
-    @media ${viewport[7]} {
-      /* margin-bottom: 3em; */
-    }
   }
 `
 
@@ -206,16 +196,6 @@ const StyledH4 = styled.h4`
   padding: 0;
   font-weight: 600;
   /* letter-spacing: -0.3px; */
-
-  &.card-title {
-    font-size: 1em;
-    margin-bottom: 0.5em;
-    padding-top: 0.5em;
-
-    @media ${viewport[12]} {
-      font-size: 1.1em;
-    }
-  }
 
   &.title-review {
     margin: 1em 0;

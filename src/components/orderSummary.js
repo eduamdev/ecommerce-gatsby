@@ -2,17 +2,15 @@ import React from "react"
 import Img from "gatsby-image"
 import P from "./paragraph"
 import PropTypes from "prop-types"
-import Title from "./title"
+import Heading from "./heading"
 import Grid from "./grid"
 
 const OrderSummary = ({ cart, images, total }) => {
   return (
     <>
-      <Title
-        type="h3"
-        className="orderSummary-title"
-        text="Order Summary"
-      ></Title>
+      <Heading rank={2} style={{ marginBottom: "2em", fontWeight: 600 }}>
+        Order Summary
+      </Heading>
       {cart &&
         cart.map((item, index) => {
           const image = images[item.image]
@@ -26,30 +24,44 @@ const OrderSummary = ({ cart, images, total }) => {
                   alt={item.name}
                 ></Img>
                 <div className="order-summary__info">
-                  <h4>{item.name}</h4>
+                  <Heading rank={4}>{item.name}</Heading>
                   <P>{item.description}</P>
                 </div>
                 <div className="order-summary__price">
-                  <span>
-                    {item.quantity} x ${item.price}
-                  </span>
+                  <P style={{ margin: 0 }}>
+                    <span>
+                      {item.quantity} x ${item.price}
+                    </span>
+                  </P>
                 </div>
                 <div className="order-summary__total">
-                  <span>${item.total}</span>
+                  <P style={{ margin: 0 }}>
+                    <span>${item.total}</span>
+                  </P>
                 </div>
               </Grid>
             </article>
           )
         })}
       <Grid className="order-amount">
-        <h4 className="left">Subtotal</h4>
+        <Heading rank={5} className="left">
+          Subtotal
+        </Heading>
         <span className="subtotal right">${total}</span>
-        <h4 className="left">Shipping</h4>
+        <Heading rank={5} className="left">
+          Shipping
+        </Heading>
         <span className="shipping right">Free</span>
-        <h4 className="total left">Total</h4>
-        <span className="total right" style={{ textAlign: `right` }}>
+        <Heading rank={2} className="total left">
+          Total
+        </Heading>
+        <Heading
+          rank={2}
+          className="total right"
+          style={{ textAlign: `right` }}
+        >
           ${total}
-        </span>
+        </Heading>
       </Grid>
     </>
   )

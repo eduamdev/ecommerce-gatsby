@@ -9,6 +9,7 @@ import Section from "../components/section"
 import Wrapper from "../components/wrapper"
 import Featured from "../components/featured"
 import Title from "../components/title"
+import Heading from "../components/heading"
 import P from "../components/paragraph"
 import { star, halfStar, outlineStar } from "../components/svg"
 import styled from "styled-components"
@@ -34,6 +35,10 @@ const ReviewList = styled.ul`
     padding: 2em 1em 2em 0;
     margin: 0;
 
+    & .title-review {
+      margin: 1em 0 0.25em;
+    }
+
     &:first-child {
       padding-top: 1em;
     }
@@ -47,14 +52,16 @@ const ReviewList = styled.ul`
 const Input = styled.input`
   outline: none;
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0 0 0 0.75em;
   width: 2.5rem;
-  height: 2.5rem;
+  /* height: 2.5rem; */
   border: none;
   line-height: 1.3;
   appearance: none;
   margin: 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 `
 
 const Button = styled.button`
@@ -67,14 +74,24 @@ const Button = styled.button`
     font-size: 1.5em;
     padding: 0;
     border: 0;
-    background: #eee;
+    background: #fff;
+    border: 2px solid #000;
+    /* font-weight: 700; */
     width: 2.5rem;
-    height: 2.5rem;
+    /* height: 2.5rem; */
     cursor: pointer;
 
     &:hover {
       background: #e5e5e5;
     }
+  }
+
+  &.plus {
+    border-left: none;
+  }
+
+  &.minus {
+    border-right: none;
   }
 
   &.addToCart {
@@ -85,7 +102,7 @@ const Button = styled.button`
     border-radius: 2px;
     /* width: 9rem; */
     text-align: center;
-    margin-bottom: 1em;
+    font-size: 16px;
 
     &:hover {
       /* background: rgb(146, 93, 93); */
@@ -163,11 +180,9 @@ const Product = ({ pageContext }) => {
                 ></Img>
               </div>
               <div className="product-info" data-aos="fade-in">
-                <Title
-                  className="product-name"
-                  type="h2"
-                  text={`${name}`}
-                ></Title>
+                <Heading rank={2} className="product-name">
+                  {name}
+                </Heading>
                 <Flex
                   className="product-star-rating"
                   style={{ margin: "1em 0" }}
@@ -176,53 +191,59 @@ const Product = ({ pageContext }) => {
                 </Flex>
                 <P>{description}</P>
                 <span className="product-info__price">${price}</span>
-                <P className="quantity">
+                <Grid className="quantity">
+                  <Flex>
+                    <Button
+                      className="update-num minus"
+                      onClick={() => {
+                        count > 1 && updateCount(count - 1)
+                      }}
+                    >
+                      -
+                    </Button>
+                    <Input type="number" value={count} readOnly />
+                    <Button
+                      className="update-num plus"
+                      onClick={() => {
+                        updateCount(count + 1)
+                      }}
+                    >
+                      +
+                    </Button>
+                  </Flex>
                   <Button
-                    className="update-num"
+                    type="button"
+                    className="addToCart"
                     onClick={() => {
-                      count > 1 && updateCount(count - 1)
+                      dispatch({
+                        type: "ADD_PRODUCT_TO_CART",
+                        product: {
+                          id,
+                          slug,
+                          name,
+                          description,
+                          quantity: count,
+                          price,
+                          total: count * ((price * 10) / 10),
+                          image,
+                        },
+                      })
                     }}
                   >
-                    -
+                    Add to cart
                   </Button>
-                  <Input type="number" value={count} readOnly />
-                  <Button
-                    className="update-num"
-                    onClick={() => {
-                      updateCount(count + 1)
-                    }}
-                  >
-                    +
-                  </Button>
-                </P>
-                <Button
-                  type="button"
-                  className="addToCart"
-                  onClick={() => {
-                    dispatch({
-                      type: "ADD_PRODUCT_TO_CART",
-                      product: {
-                        id,
-                        slug,
-                        name,
-                        description,
-                        quantity: count,
-                        price,
-                        total: count * ((price * 10) / 10),
-                        image,
-                      },
-                    })
-                  }}
-                >
-                  Add to cart
-                </Button>
+                </Grid>
               </div>
               <div className="product-details" data-aos="fade-in">
-                <Title
+                {/* <Title
                   className="product-details__title"
                   type="h3"
                   text="Details"
-                ></Title>
+                ></Title> */}
+
+                <Heading rank={2} className="product-details__title">
+                  Details
+                </Heading>
                 <ProductList>
                   {details.length &&
                     details.map((item, index) => {
@@ -235,11 +256,15 @@ const Product = ({ pageContext }) => {
                 </ProductList>
               </div>
               <div className="product-reviews" data-aos="fade-up">
-                <Title
+                {/* <Title
                   className="product-reviews__title"
                   type="h3"
                   text="Reviews"
-                ></Title>
+                ></Title> */}
+
+                <Heading rank={2} className="product-details__title">
+                  Reviews
+                </Heading>
                 <ReviewList>
                   {reviews.map((review, index) => {
                     return (
@@ -247,11 +272,14 @@ const Product = ({ pageContext }) => {
                         <Flex className="product-star-rating">
                           {getStars(`${review.stars}`)}
                         </Flex>
-                        <Title
+                        {/* <Title
                           type="h4"
                           className="title-review"
                           text={`${review.title}`}
-                        ></Title>
+                        ></Title> */}
+                        <Heading rank={3} className="title-review">
+                          {review.title}
+                        </Heading>
                         <P>{review.content}</P>
                       </li>
                     )

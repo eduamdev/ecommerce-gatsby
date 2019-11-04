@@ -3,7 +3,7 @@ import { GlobalDispatchContext } from "../context/GlobalContextProvider"
 import Grid from "./grid"
 import { CardElement, injectStripe } from "react-stripe-elements"
 import styled from "styled-components"
-import Title from "./title"
+import Heading from "./heading"
 import P from "./paragraph"
 import uuid from "uuid"
 
@@ -82,11 +82,9 @@ const Checkout = ({ total, stripe }) => {
     <>
       <Grid className="payment-details">
         <div className="details">
-          <Title
-            type="h3"
-            className="payment-title"
-            text="Payment Information"
-          ></Title>
+          <Heading rank={2} style={{ marginBottom: "2em", fontWeight: 600 }}>
+            Payment Information
+          </Heading>
           <P>Please enter your payment details below</P>
           <label className="email-label" htmlFor="email">
             Email

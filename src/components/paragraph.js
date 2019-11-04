@@ -20,8 +20,12 @@ const StyledParagraph = styled.p`
   }
 
   @media ${viewport[9]} {
-    font-size: 17px;
     line-height: 24px;
+  }
+
+  @media ${viewport[12]} {
+    font-size: 0.95em;
+    line-height: 1.5;
   }
 
   &.banner-disclaimer {
