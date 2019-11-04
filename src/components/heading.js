@@ -4,66 +4,76 @@ import PropTypes from "prop-types"
 import { viewport } from "./breakpoints"
 
 // Default
-const MAX_FONT_SIZE_EM = 3.5
-const DEF_FONT_WEIGHT = "bold"
-const DEF_TEXT_ALIGN = "left"
-const DEF_COLOR = "hsla(0, 0%, 0%, 0.8)"
+const MIN_FONT_SIZE_EM = 1.55
+
+function getHeadingFontSize(rank, minFontSize, ratio = 1) {
+  switch (rank) {
+    case 1:
+      return minFontSize
+
+    case 2:
+      return minFontSize * (ratio / 1.4)
+
+    case 3:
+      return minFontSize * (ratio / 1.75)
+
+    case 4:
+      return minFontSize * (ratio / 2)
+
+    case 5:
+      return minFontSize * (ratio / 2.15)
+
+    case 6:
+      return minFontSize * (ratio / 2.3)
+
+    default:
+      return minFontSize
+  }
+}
 
 const StyledHeading = styled.div`
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
-  color: ${({ Color }) => (Color ? Color : DEF_COLOR)};
-  line-height: ${({ Rank }) => (Rank >= 3 ? "1.5" : "1.25")};
-  text-align: ${({ TextAlign }) => (TextAlign ? TextAlign : DEF_TEXT_ALIGN)};
-  font-weight: ${({ FontWeight }) =>
-    FontWeight ? FontWeight : DEF_FONT_WEIGHT};
-  font-size: ${({ Rank }) =>
-    MAX_FONT_SIZE_EM / Rank}em; /* <- Dinamic font size */
+  color: inherit;
+  text-align: left;
+  font-weight: bold;
+  line-height: ${({ rank }) => (rank > 3 ? "1.25" : "1.1")};
+  font-size: ${({ rank }) =>
+    getHeadingFontSize(rank, MIN_FONT_SIZE_EM, 0.95)}em;
 
   /* Styles based on viewport size */
-  @media ${viewport[9]} {
-    font-size: ${({ Rank }) => (MAX_FONT_SIZE_EM * 1.05) / Rank}em;
+  @media ${viewport[7]} {
+    font-size: ${({ rank }) =>
+      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.2, 0.85)}em;
   }
 
-  /* Custom classes here */
-  &.italic {
-    font-style: italic;
+  @media ${viewport[9]} {
+    font-size: ${({ rank }) =>
+      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.4, 0.7)}em;
+  }
+
+  @media ${viewport[12]} {
+    font-size: ${({ rank }) =>
+      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.85, 0.6)}em;
   }
 `
 
-const Heading = ({
-  Rank = 2,
-  Type = "headline",
-  FontWeight,
-  TextAlign,
-  Color,
-  children,
-}) => {
-  if (Rank <= 0) return <></>
-  Rank = Rank > 6 ? 6 : Rank
+const Heading = ({ rank = 2, className, children }) => {
+  if (rank <= 0) return <></>
+  rank = rank > 6 ? 6 : rank
 
   return (
-    <StyledHeading
-      as={`h${Rank}`}
-      className={`heading-${Type}`}
-      Rank={Rank}
-      FontWeight={FontWeight}
-      TextAlign={TextAlign}
-      Color={Color}
-    >
+    <StyledHeading as={`h${rank}`} className={className} rank={rank}>
       {children}
     </StyledHeading>
   )
 }
 
 Heading.propTypes = {
-  Rank: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  rank: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   children: PropTypes.node.isRequired,
-  Type: PropTypes.oneOf(["headline", "title", "subtitle"]),
-  FontWeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  TextAlign: PropTypes.oneOf(["left", "right", "center", "justify"]),
-  Color: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export default Heading

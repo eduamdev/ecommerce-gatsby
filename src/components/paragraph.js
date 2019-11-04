@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 const StyledParagraph = styled.p`
   font-family: "PT Serif", serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 22px;
   letter-spacing: normal;
   word-spacing: normal;
@@ -15,8 +15,13 @@ const StyledParagraph = styled.p`
   margin-bottom: 1.45rem;
 
   @media ${viewport[9]} {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
+  }
+
+  @media ${viewport[9]} {
+    font-size: 17px;
+    line-height: 24px;
   }
 
   &.banner-disclaimer {
@@ -25,7 +30,7 @@ const StyledParagraph = styled.p`
     bottom: 5%;
     max-width: 80%;
     text-align: left;
-    font-size: 0.85em;
+    /* font-size: 0.85em; */
     /* line-height: 1.9; */
     margin: 0;
 
@@ -54,18 +59,6 @@ const StyledParagraph = styled.p`
   &.product-info__price {
     /* font-size: 0.9em; */
     /* color: #ed1c24; */
-  }
-
-  &.featured {
-    color: #0277bd;
-    margin-top: 1.75em;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    font-size: 0.9em;
-  }
-
-  &.footer {
-    font-family: "Poppins", sans-serif;
   }
 
   &.quantity {

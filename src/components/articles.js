@@ -5,6 +5,7 @@ import Section from "./section"
 import Img from "gatsby-image"
 import useImages from "../hooks/useImages"
 import "aos/dist/aos.css"
+import Heading from "./heading"
 
 const Articles = () => {
   const { shoe1, shoe2, shoe3 } = useImages()
@@ -26,10 +27,10 @@ const Articles = () => {
             ></Img>
             <div className="article-text">
               <span>Lorem.</span>
-              <h6 className="article-title">
+              <Heading rank={4} className="article-title">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Mollitia, earum.
-              </h6>
+              </Heading>
             </div>
           </article>
 
@@ -41,10 +42,10 @@ const Articles = () => {
             ></Img>
             <div className="article-text">
               <span>Lorem, ipsum.</span>
-              <h6 className="article-title">
+              <Heading rank={4} className="article-title">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Mollitia, earum.
-              </h6>
+              </Heading>
             </div>
           </article>
           <article className="article" data-aos="fade-up" data-aos-delay="50">
@@ -55,10 +56,10 @@ const Articles = () => {
             ></Img>
             <div className="article-text">
               <span>Lorem, ipsum dolor.</span>
-              <h6 className="article-title">
+              <Heading rank={4} className="article-title">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Mollitia, earum.
-              </h6>
+              </Heading>
             </div>
           </article>
         </Grid>

@@ -6,6 +6,8 @@ import useImages from "../hooks/useImages"
 import styled from "styled-components"
 import { viewport } from "./breakpoints"
 import "aos/dist/aos.css"
+import Heading from "./heading"
+import P from "./paragraph"
 
 const Block = styled.div`
   display: block;
@@ -43,20 +45,15 @@ const Block = styled.div`
     }
 
     & .rack-card__title {
-      font-size: 1em;
-      margin-bottom: 0.8em;
-
-      @media ${viewport[7]} {
-        font-size: 1.15em;
-      }
+      margin-bottom: 0.5em;
     }
 
     & .rack-card__text {
       margin: 0;
-      font-size: 0.85em;
+      /* font-size: 0.85em; */
 
       @media ${viewport[7]} {
-        font-size: 0.95em;
+        /* font-size: 0.95em; */
       }
     }
   }
@@ -80,10 +77,13 @@ const Rack = () => {
             alt="about shoemaking"
           ></Img>
           <div className="rack-card" data-aos="fade-in">
-            <h4 className="rack-card__title">Lorem, ipsum dolor.</h4>
-            <p className="rack-card__text">
+            {/* <h4 className="rack-card__title">Lorem, ipsum dolor.</h4> */}
+            <Heading rank={3} className="rack-card__title">
+              Lorem, ipsum dolor.
+            </Heading>
+            <P className="rack-card__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            </P>
           </div>
         </Block>
       </Wrapper>

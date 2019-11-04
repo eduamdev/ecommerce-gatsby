@@ -159,25 +159,6 @@ const StyledH3 = styled.h3`
     letter-spacing: -0.05em;
   }
 
-  &.featured {
-    /* font-size: 1.45em; */
-    position: relative;
-    margin-bottom: 1.25em;
-    letter-spacing: -0.2px;
-    /* word-spacing: 5px; */
-
-    /* &:before {
-      content: "";
-      position: absolute;
-      width: 30%;
-      height: 1px;
-      bottom: -80%;
-      left: 35%;
-      border-bottom: 2px solid #2b5061;
-      border-radius: 8px;
-    } */
-  }
-
   &.logo-text {
     margin-bottom: 0;
     /* font-size: 1.3em; */

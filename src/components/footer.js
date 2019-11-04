@@ -2,40 +2,66 @@ import React from "react"
 import Section from "./section"
 import Wrapper from "./wrapper"
 import Grid from "./grid"
-import Title from "./title"
+import Heading from "./heading"
 import P from "./paragraph"
 import styled from "styled-components"
 import Flex from "./flex"
-import {
-  Facebook,
-  Instagram,
-  Visa,
-  Paypal,
-  Amex,
-  MasterCard,
-  Stripe,
-} from "./svg"
+import { Facebook, Instagram } from "./svg"
+import { viewport } from "./breakpoints"
 
-const StyledInput = styled.input`
-  width: 100%;
-  padding: 0.75em 1em;
-  border: none;
-  outline: none;
-  letter-spacing: 1px;
-  font-size: 0.9em;
-  border-radius: 2px;
-`
+const StyledSection = styled(Section)`
+  &.footer-links {
+    background: #eee;
+    padding: 4em 0;
 
-const List = styled.ul`
-  margin: 0;
-  list-style: none;
+    & .footer-links__wrapper {
+      & .footer-links__wrapper__grid {
+        @media ${viewport[7]} {
+          padding: 2em;
+        }
+        & .footer-links__wrapper__grid__heading {
+          margin-bottom: 1em;
+          font-weight: 500;
+        }
 
-  & li {
-    margin-bottom: 0.5em;
-    font-size: 0.85em;
+        & .footer-links__wrapper__grid__input {
+          width: 100%;
+          padding: 0.75em 1em;
+          border: none;
+          outline: none;
+          letter-spacing: 1px;
+          border-radius: 2px;
+          font-size: 0.85em;
+        }
 
-    & p {
-      font-weight: 300;
+        & .footer-links__wrapper__grid__list {
+          margin: 0;
+          list-style: none;
+
+          & li {
+            margin-bottom: 0.5em;
+
+            & p {
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.footer-author {
+    border-top: 1px solid #ddd;
+
+    @media ${viewport[7]} {
+      padding: 3em;
+    }
+    & .footer-author__text {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      font-size: 0.85em;
     }
   }
 `
@@ -43,20 +69,30 @@ const List = styled.ul`
 const Footer = () => {
   return (
     <footer>
-      <Section className="footer-links">
-        <Wrapper>
-          <Grid className="footer">
+      <StyledSection className="footer-links">
+        <Wrapper className="footer-links__wrapper">
+          <Grid className="footer-links__wrapper__grid footer">
             <div className="newsletter">
-              <Title
-                className="footer"
-                type="h4"
-                text="Sign Up to Our Newsletter"
-              ></Title>
-              <StyledInput type="text" placeholder="ENTER YOUR EMAIL" />
+              <Heading
+                rank={3}
+                className="footer-links__wrapper__grid__heading"
+              >
+                Sign Up to Our Newsletter
+              </Heading>
+              <input
+                className="footer-links__wrapper__grid__input"
+                type="text"
+                placeholder="ENTER YOUR EMAIL"
+              />
             </div>
             <div className="store">
-              <Title className="footer" type="h4" text="Store"></Title>
-              <List>
+              <Heading
+                rank={3}
+                className="footer-links__wrapper__grid__heading"
+              >
+                Store
+              </Heading>
+              <ul className="footer-links__wrapper__grid__list">
                 <li>
                   <P>Contact Us</P>
                 </li>
@@ -66,11 +102,16 @@ const Footer = () => {
                 <li>
                   <P>About Us</P>
                 </li>
-              </List>
+              </ul>
             </div>
             <div className="orders">
-              <Title className="footer" type="h4" text="Orders"></Title>
-              <List>
+              <Heading
+                rank={3}
+                className="footer-links__wrapper__grid__heading"
+              >
+                Orders
+              </Heading>
+              <ul className="footer-links__wrapper__grid__list">
                 <li>
                   <P>Delivery & Returns</P>
                 </li>
@@ -83,10 +124,15 @@ const Footer = () => {
                 <li>
                   <P>FAQ</P>
                 </li>
-              </List>
+              </ul>
             </div>
             <div className="social">
-              <Title className="footer" type="h4" text="Social"></Title>
+              <Heading
+                rank={3}
+                className="footer-links__wrapper__grid__heading"
+              >
+                Social
+              </Heading>
               <Flex>
                 <span style={{ width: `24px`, marginRight: `0.5em` }}>
                   {Facebook}
@@ -96,44 +142,64 @@ const Footer = () => {
             </div>
           </Grid>
         </Wrapper>
-      </Section>
-      <Section className="footer-payment">
-        <Grid className="payment">
-          <Flex className="payment-svg">
-            <span className="">{Stripe}</span>
-            <span className="">{Visa}</span>
-            <span className="">{MasterCard}</span>
-            <span className="">{Paypal}</span>
-            <span className="">{Amex}</span>
-          </Flex>
-        </Grid>
-      </Section>
-      <Section style={{ padding: `1.5em 0` }}>
+      </StyledSection>
+      <StyledSection className="footer-author">
         <Wrapper>
-          <Grid>
-            <P className="footer">
-              Design & built by Eduardo Rodriguez,{" "}
+          <P className="footer-author__text">
+            Design & built by Eduardo Rodriguez,{" "}
+            <a
+              href="https://twitter.com/edroamz"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+              aria-label="twitter account"
+            >
+              twitter
+            </a>{" "}
+            &{" "}
+            <a
+              href="https://github.com/edroamz"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+              aria-label="github account"
+            >
+              github
+            </a>
+          </P>
+
+          <P style={{ textAlign: "center", letterSpacing: 1.025, margin: 0 }}>
+            <small>
+              This site is built with{" "}
               <a
-                href="https://twitter.com/edroamz"
+                href="https://gatsbyjs.org/"
                 target="_blank"
                 rel="noreferrer noopener nofollow"
-                aria-label="twitter account"
+                aria-label="gatsbyjs"
               >
-                twitter
+                Gatsby
+              </a>
+              ,{" "}
+              <a
+                href="https://stripe.com/"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label="stripe"
+              >
+                Stripe
               </a>{" "}
               &{" "}
               <a
-                href="https://github.com/edroamz"
+                href="https://www.netlify.com/"
                 target="_blank"
                 rel="noreferrer noopener nofollow"
-                aria-label="github account"
+                aria-label="netlify"
               >
-                github
-              </a>
-            </P>
-          </Grid>
+                Netlify
+              </a>{" "}
+              functions.
+            </small>
+          </P>
         </Wrapper>
-      </Section>
+      </StyledSection>
     </footer>
   )
 }

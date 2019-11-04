@@ -50,28 +50,13 @@ const StyledSection = styled.section`
     }
   }
 
-  &.footer-links {
-    background: #0f2027; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #2c5364,
-      #203a43,
-      #0f2027
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #2c5364,
-      #203a43,
-      #0f2027
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 4em 0;
-    color: aliceblue;
-    fill: aliceblue;
-  }
-
   &.footer-payment {
-    fill: aliceblue;
-    background: #2b5061;
+    /* fill: aliceblue; */
+    /* background: #2b5061; */
+    fill: #aaa;
+    border-bottom: 1px solid #ccc;
+    padding: 1em 0;
+    display: none;
   }
 `
 

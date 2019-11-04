@@ -70,7 +70,7 @@ const Grid = styled.div`
           letter-spacing: 0.2px;
           line-height: 1.55;
           margin: 0.7em 0 0 0;
-          font-size: 0.9em;
+          /* font-size: 0.9em; */
           color: #000;
         }
       }
@@ -132,7 +132,7 @@ const Grid = styled.div`
       "newsletter newsletter"
       "store orders"
       "social .";
-    grid-row-gap: 3em;
+    grid-row-gap: 2em;
     grid-column-gap: 1em;
 
     @media ${viewport[7]} {
@@ -143,7 +143,9 @@ const Grid = styled.div`
     }
 
     @media ${viewport[9]} {
-      grid-column-gap: 3em;
+      max-width: 1000px;
+      margin: 0 auto;
+      grid-column-gap: 2em;
       grid-template-columns: 1.7fr 1fr 1fr 0.7fr;
       grid-template-areas: "newsletter store orders social";
     }
@@ -174,11 +176,11 @@ const Grid = styled.div`
       height: 42px;
 
       @media ${viewport[7]} {
-        height: 48px;
+        height: 45px;
       }
 
       @media ${viewport[12]} {
-        height: 52px;
+        height: 48px;
       }
 
       & span {
@@ -187,19 +189,14 @@ const Grid = styled.div`
         }
 
         & svg {
-          width: 42px;
-          height: 42px;
+          height: 100%;
           padding: 0.05em;
 
           @media ${viewport[7]} {
-            width: 48px;
-            height: 48px;
             padding: 0.1em;
           }
 
           @media ${viewport[12]} {
-            width: 52px;
-            height: 52px;
             padding: 0.15em;
           }
         }
@@ -276,30 +273,36 @@ const Grid = styled.div`
   &.order-summary {
     margin: 0;
     margin-bottom: 1em;
-    grid-template-columns: max-content 1fr max-content max-content;
     grid-column-gap: 1em;
-    grid-template-areas: "img info price total";
+    grid-template-columns: max-content 1fr;
+    grid-template-areas: "img info" ". price";
 
     @media ${viewport[7]} {
+      grid-template-columns: max-content 1fr max-content max-content;
+    grid-template-areas: "img info price total";
         margin-bottom: 0;
       }
 
     & .order-summary__img {
       grid-area: img;
-      width: 4em;
+      width: 3em;
 
       @media ${viewport[7]} {
-        width: 5em;
+        width: 4.5em;
       }
 
       @media ${viewport[12]} {
-        width: 5.5em;
+        width: 5em;
       }
     }
 
     & .order-summary__info {
       grid-area: info;
-      align-self: center;
+      align-self: start;
+
+      @media ${viewport[7]} {
+        align-self: center;
+      }
 
       & h4 {
         margin-bottom: 0.25em;
@@ -319,6 +322,7 @@ const Grid = styled.div`
       font-size: 0.8em;
       text-align: right;
       opacity: 0.65;
+      justify-self: start;
     }
 
     & .order-summary__total {
@@ -329,6 +333,11 @@ const Grid = styled.div`
       font-size: 0.8em;
       text-align: right;
       opacity: 0.65;
+      display: none;
+
+      @media ${viewport[7]} {
+        display: block;
+      } 
     }
   }
 
