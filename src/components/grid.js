@@ -118,13 +118,9 @@ const Grid = styled.div`
       text-align: right;
       position: absolute;
       right: 7%;
-      bottom: 3.5%;
+      top: 5%;
 
       @media ${viewport[7]} {
-        font-size: 1em;
-      }
-
-      @media ${viewport[12]} {
         font-size: 1.1em;
       }
     }

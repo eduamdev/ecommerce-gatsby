@@ -45,6 +45,7 @@ const ProductFilter = ({ products, filterByPrice }) => {
                 fontWeight: 600,
                 fontSize: "1.25em",
                 marginLeft: "5px",
+                fontFamily: `"Poppins", sans-serif`,
               }}
             >
               ${price}

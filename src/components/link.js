@@ -89,12 +89,12 @@ const GatsbyLink = styled(Link)`
 
   &.card-image {
     height: 100%;
-    padding: 0 0.75em 2.5em 0.75em;
+    padding: 0.75em 1em;
     /* width: 100%;
     position: absolute; */
 
     @media ${viewport[12]} {
-      padding: 0 1em 2.5em 1em;
+      padding: 1em 1.5em;
     }
   }
 `
