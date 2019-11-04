@@ -5,8 +5,8 @@ import PropTypes from "prop-types"
 
 const StyledParagraph = styled.p`
   font-family: "PT Serif", serif;
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: normal;
   word-spacing: normal;
   margin: 0;
@@ -30,7 +30,7 @@ const StyledParagraph = styled.p`
     bottom: 5%;
     max-width: 80%;
     text-align: left;
-    /* font-size: 0.85em; */
+    font-size: 0.85em;
     /* line-height: 1.9; */
     margin: 0;
 

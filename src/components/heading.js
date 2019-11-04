@@ -15,10 +15,10 @@ function getHeadingFontSize(rank, minFontSize, ratio = 1) {
       return minFontSize * (ratio / 1.4)
 
     case 3:
-      return minFontSize * (ratio / 1.75)
+      return minFontSize * (ratio / 1.7)
 
     case 4:
-      return minFontSize * (ratio / 2)
+      return minFontSize * (ratio / 1.9)
 
     case 5:
       return minFontSize * (ratio / 2.15)

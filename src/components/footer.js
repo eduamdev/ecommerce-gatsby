@@ -52,9 +52,10 @@ const StyledSection = styled(Section)`
 
   &.footer-author {
     border-top: 1px solid #ddd;
+    padding: 4em 0;
 
     @media ${viewport[7]} {
-      padding: 3em;
+      padding: 3em 0;
     }
     & .footer-author__text {
       font-family: "Poppins", sans-serif;
@@ -166,7 +167,7 @@ const Footer = () => {
             </a>
           </P>
 
-          <P style={{ textAlign: "center", letterSpacing: 1.025, margin: 0 }}>
+          <P style={{ textAlign: "center", margin: 0 }}>
             <small>
               This site is built with{" "}
               <a
