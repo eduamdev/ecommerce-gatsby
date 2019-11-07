@@ -50,11 +50,6 @@ const Block = styled.div`
 
     & .rack-card__text {
       margin: 0;
-      /* font-size: 0.85em; */
-
-      @media ${viewport[7]} {
-        /* font-size: 0.95em; */
-      }
     }
   }
 `
@@ -77,7 +72,6 @@ const Rack = () => {
             alt="about shoemaking"
           ></Img>
           <div className="rack-card" data-aos="fade-in">
-            {/* <h4 className="rack-card__title">Lorem, ipsum dolor.</h4> */}
             <Heading rank={3} className="rack-card__title">
               Lorem, ipsum dolor.
             </Heading>

@@ -16,7 +16,7 @@ const Articles = () => {
   }, [])
 
   return (
-    <Section style={{ background: "rgba(238, 238, 248, 0.3)" }}>
+    <Section>
       <Wrapper>
         <Grid className="articles">
           <article className="article" data-aos="fade-up" data-aos-delay="50">
@@ -55,7 +55,7 @@ const Articles = () => {
               alt="Shoe 3"
             ></Img>
             <div className="article-text">
-              <span>Lorem, ipsum dolor.</span>
+              <span>Lorem, ipsum.</span>
               <Heading rank={4} className="article-title">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Mollitia, earum.

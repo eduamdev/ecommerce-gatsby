@@ -37,7 +37,7 @@ const StyledHeading = styled.div`
   text-rendering: optimizeLegibility;
   color: inherit;
   text-align: left;
-  font-weight: bold;
+  font-weight: 800;
   line-height: ${({ rank }) => (rank > 3 ? "1.25" : "1.1")};
   font-size: ${({ rank }) =>
     getHeadingFontSize(rank, MIN_FONT_SIZE_EM, 0.95)}em;

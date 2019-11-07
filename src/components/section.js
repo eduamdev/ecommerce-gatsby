@@ -5,11 +5,11 @@ import PropTypes from "prop-types"
 
 const StyledSection = styled.section`
   margin: 0;
-  padding: 1.5em 0;
+  padding: 2em 0;
   background: #fff;
 
   @media ${viewport[7]} {
-    padding: 2em 0;
+    padding: 3em 0;
   }
 
   &.banner {
@@ -28,7 +28,6 @@ const StyledSection = styled.section`
     margin-bottom: 2em;
     padding-bottom: 5em;
     padding-top: 0;
-    background: rgba(238, 238, 248, 0.3);
 
     @media ${viewport[9]} {
       padding: 0 0 3em 0;
@@ -43,11 +42,7 @@ const StyledSection = styled.section`
   }
 
   &.cart {
-    background: rgba(238, 238, 248, 0.3);
-
-    @media ${viewport[9]} {
-      padding: 2em 0;
-    }
+    padding: 2em 0;
   }
 
   &.footer-payment {

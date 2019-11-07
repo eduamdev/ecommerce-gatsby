@@ -71,18 +71,20 @@ const StyledH1 = styled.h1`
     letter-spacing: -1.75px;
     margin: 0;
 
+    @media ${viewport[4]} {
+      letter-spacing: normal;
+    }
+
     @media ${viewport[7]} {
       left: 1.3em;
     }
 
     @media ${viewport[9]} {
       left: 2em;
-      letter-spacing: -1px;
     }
 
     @media ${viewport[12]} {
       left: 3em;
-      letter-spacing: -0.5px;
     }
 
     & .banner-span {
@@ -149,45 +151,23 @@ const StyledH3 = styled.h3`
     letter-spacing: -0.05em;
   }
 
-  &.logo-text {
-    margin-bottom: 0;
-    /* font-size: 1.3em; */
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    letter-spacing: -0.5px;
-    color: #000;
-  }
-
   &.payment-title,
   &.orderSummary-title {
     letter-spacing: 0;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   &.product-details__title,
   &.product-reviews__title {
     /* font-size: 1.3em; */
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   &.shoppingSuccessful {
     color: #338a3e;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.3em;
-  }
-
-  @media ${viewport[4]} {
-    /* font-size: 1.2em; */
-  }
-
-  @media ${viewport[7]} {
-    /* font-size: 1.3em; */
-    /* letter-spacing: -0.4px; */
-  }
-
-  @media ${viewport[9]} {
-    /* font-size: 1.25em; */
   }
 `
 
@@ -195,7 +175,6 @@ const StyledH4 = styled.h4`
   display: inline;
   padding: 0;
   font-weight: 600;
-  /* letter-spacing: -0.3px; */
 
   &.title-review {
     margin: 1em 0;

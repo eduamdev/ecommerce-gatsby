@@ -8,7 +8,6 @@ import Flex from "../components/flex"
 import Section from "../components/section"
 import Wrapper from "../components/wrapper"
 import Featured from "../components/featured"
-import Title from "../components/title"
 import Heading from "../components/heading"
 import P from "../components/paragraph"
 import { star, halfStar, outlineStar } from "../components/svg"
@@ -60,8 +59,8 @@ const Input = styled.input`
   line-height: 1.3;
   appearance: none;
   margin: 0;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 `
 
 const Button = styled.button`
@@ -75,7 +74,7 @@ const Button = styled.button`
     padding: 0;
     border: 0;
     background: #fff;
-    border: 2px solid #000;
+    border: 1px solid #000;
     /* font-weight: 700; */
     width: 2.5rem;
     /* height: 2.5rem; */
@@ -169,7 +168,7 @@ const Product = ({ pageContext }) => {
   return (
     <Layout>
       <SEO title="Product" />
-      <Section style={{ background: "rgba(238, 238, 248, 0.3)" }}>
+      <Section>
         <form style={{ margin: 0 }} onSubmit={ev => ev.preventDefault()}>
           <Wrapper className="product">
             <Grid className="product">

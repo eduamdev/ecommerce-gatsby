@@ -14,24 +14,18 @@ const GatsbyLink = styled(Link)`
 
   &.logo {
     padding: 0.5em;
+    padding-left: 0;
   }
 
   &.nav {
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    font-size: 0.95em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.725em;
     padding: 0.75em;
-
-    @media ${viewport[4]} {
-      font-size: 0.9em;
-    }
-
-    @media ${viewport[7]} {
-      font-size: 0.8;
-    }
+    text-transform: uppercase;
 
     @media ${viewport[9]} {
-      font-size: 0.92em;
+      font-size: 0.75em;
     }
 
     &:hover {
@@ -41,6 +35,11 @@ const GatsbyLink = styled(Link)`
 
   &.header-cart {
     position: relative;
+    width: 20px;
+
+    @media ${viewport[9]} {
+      width: 22px;
+    }
 
     &.badge:after {
       content: "";
@@ -54,14 +53,12 @@ const GatsbyLink = styled(Link)`
 
       @media ${viewport[7]} {
         top: -4px;
-        height: 9px;
-        width: 9px;
       }
     }
 
     & svg {
-      width: 1.6em;
-      height: 1.6em;
+      width: 100%;
+      height: 100%;
       vertical-align: middle;
     }
   }
@@ -116,6 +113,7 @@ const LinkUp = ({
   url,
   target,
   ariaLabel,
+  title,
   children,
 }) => {
   if (type.toLowerCase() === "internal") {
@@ -125,6 +123,7 @@ const LinkUp = ({
         style={style}
         to={url}
         aria-label={ariaLabel}
+        title={title}
       >
         {children}
       </GatsbyLink>
@@ -137,6 +136,7 @@ const LinkUp = ({
         href={url}
         target={target}
         aria-label={ariaLabel}
+        title={title}
         rel="noreferrer noopener nofollow"
       >
         {children}
@@ -155,6 +155,7 @@ LinkUp.propTypes = {
   target: PropTypes.string,
   children: PropTypes.node.isRequired,
   ariaLabel: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 LinkUp.defaultProps = {

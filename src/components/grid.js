@@ -79,7 +79,7 @@ const Grid = styled.div`
 
   &.featured {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 0.75em;
+    /* grid-gap: 0.75em; */
 
     @media ${viewport[7]} {
       grid-template-columns: 1fr 1fr 1fr;
@@ -87,7 +87,7 @@ const Grid = styled.div`
 
     @media ${viewport[9]} {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 1em;
+      /* grid-gap: 1em; */
     }
   }
 
@@ -95,34 +95,30 @@ const Grid = styled.div`
     height: 100%;
     justify-content: stretch;
     background: #fff;
-    border-top: 1px solid #ddd;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
     text-align: center;
-    transition: all 0.15s;
-    border-radius: 4px;
-    position: relative;
+    transition: all 0.35s;
+    border: 2px solid #f6f5f3;
+    padding: 6px;
 
     &:hover {
-      transform: translate(1px, -2%);
+      border-width: 8px;
+      padding: 0;
     }
 
     & .card-title{
+      margin-bottom: 0.25em;
+      margin-top: 0.25em;
+    }
+
+    & .card-description{
       margin-bottom: 0.5em;
-      padding-top: 0.5em;
     }
 
     & .card-label {
       font-weight: 500;
-      /* letter-spacing: -0.2px; */
       margin-bottom: 0;
-      text-align: right;
-      position: absolute;
-      right: 7%;
-      top: 5%;
-
-      @media ${viewport[7]} {
-        font-size: 1.1em;
-      }
+      text-align: left;
+      display: block;
     }
   }
 
@@ -280,7 +276,7 @@ const Grid = styled.div`
 
     @media ${viewport[7]} {
       grid-template-columns: max-content 1fr max-content max-content;
-    grid-template-areas: "img info price total";
+      grid-template-areas: "img info price total";
         margin-bottom: 0;
       }
 
@@ -301,11 +297,12 @@ const Grid = styled.div`
         align-self: center;
       }
 
-      & h3{
+      & h4{
         font-weight: 700;
       }
 
       & p{
+        font-weight: 300;
         margin: 0;
       }
     }
@@ -315,19 +312,14 @@ const Grid = styled.div`
       align-self: center;
       font-size: 0.8em;
       text-align: right;
-      opacity: 0.65;
       justify-self: start;
-      color: #000;
     }
 
     & .order-summary__total {
       grid-area: total;
       align-self: center;
-      /* color: #ED1C24; */
-      font-weight: 300;
       font-size: 0.8em;
       text-align: right;
-      opacity: 0.65;
       display: none;
 
       @media ${viewport[7]} {
@@ -347,9 +339,7 @@ const Grid = styled.div`
     & .left {
       justify-self: start;
       margin-bottom: 0;
-      /* font-size: 0.825em; */
       font-weight: 400;
-      letter-spacing: -0.2px;
     }
 
     & .right {
@@ -372,12 +362,10 @@ const Grid = styled.div`
     & .total {
       justify-self: stretch;
       align-self: start;
-      /* font-size: 1.25em; */
       margin-top: 0.35em;
       padding-top: 1em;
       border-top: 1px solid #ddd;
-      /* color: #ED1C24; */
-      font-weight: 700;
+      font-weight: 900;
       opacity: 1;
 
       @media ${viewport[7]} {
@@ -592,17 +580,17 @@ const Grid = styled.div`
       & .productList {
         display: grid;
         align-items: stretch;
-        grid-gap: 0.75em;
+        /* grid-gap: 0.75em; */
         grid-template-columns: 1fr 1fr;
 
         @media ${viewport[7]} {
           grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 1em 0.5em;
+          /* grid-gap: 1em 0.5em; */
         }
 
         @media ${viewport[9]} {
           grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-gap: 1.5em;
+          /* grid-gap: 1.5em; */
         }
       }
     }

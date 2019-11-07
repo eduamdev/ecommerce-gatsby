@@ -9,8 +9,6 @@ import Flex from "./flex"
 import { Cart } from "./svg"
 import LinkUp from "./link"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
-import useImages from "../hooks/useImages"
-import Img from "gatsby-image"
 import Svg from "../images/logo.svg"
 
 const StyledHeader = styled.header`
@@ -20,11 +18,11 @@ const StyledHeader = styled.header`
   background-color: #fff;
   /* border-top: 2px solid #bb7878; */
   border-bottom: 1px solid #ddd;
+  min-height: 60px;
 `
 
 const Header = ({ siteTitle }) => {
   const state = useContext(GlobalStateContext)
-  const { logo } = useImages()
 
   return (
     <>
@@ -38,7 +36,7 @@ const Header = ({ siteTitle }) => {
               ariaLabel="Shoecase"
             >
               <Flex className="logo">
-                <img src={Svg} alt="Shoecase" style={{ maxWidth: "70px" }} />
+                <img className="logo-img" src={Svg} alt="Shoecase" />
                 <Title type="h3" text={siteTitle} className="logo-text"></Title>
               </Flex>
             </LinkUp>
@@ -50,6 +48,7 @@ const Header = ({ siteTitle }) => {
               type="internal"
               url="/cart"
               ariaLabel="cart"
+              title="Cart"
             >
               {Cart}
             </LinkUp>

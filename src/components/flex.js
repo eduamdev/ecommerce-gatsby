@@ -29,18 +29,26 @@ const Flex = styled.div`
       width: 48px;
       height: 48px;
       margin-right: 10px;
+      display: none;
 
       @media ${viewport[7]} {
-        width: 54px;
-        height: 54px;
+        width: 50px;
+        height: 50px;
+        display: block;
       }
     }
 
     & .logo-text {
-      display: none;
+      margin-bottom: 0;
+      letter-spacing: 0.25px;
+      color: #000;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding-left: 0.25em;
+      font-weight: 900;
 
-      @media ${viewport[7]} {
-        display: inherit;
+      @media ${viewport[9]} {
+        font-size: 18px;
       }
     }
   }

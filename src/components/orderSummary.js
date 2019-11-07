@@ -44,11 +44,11 @@ const OrderSummary = ({ cart, images, total }) => {
           )
         })}
       <Grid className="order-amount">
-        <Heading rank={5} className="left">
+        <Heading rank={4} className="left">
           Subtotal
         </Heading>
         <span className="subtotal right">${total}</span>
-        <Heading rank={5} className="left">
+        <Heading rank={4} className="left">
           Shipping
         </Heading>
         <span className="shipping right">Free</span>

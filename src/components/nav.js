@@ -12,10 +12,10 @@ const List = styled.ul`
     margin: 0;
 
     &:not(:last-child) {
-      margin-right: 0.25em;
+      margin-right: 1.25em;
 
       @media ${viewport[7]} {
-        margin-right: 0.75em;
+        margin-right: 1.5em;
       }
     }
   }

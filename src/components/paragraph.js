@@ -4,12 +4,11 @@ import { viewport } from "./breakpoints"
 import PropTypes from "prop-types"
 
 const StyledParagraph = styled.p`
-  font-family: "PT Serif", serif;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: normal;
   word-spacing: normal;
   margin: 0;
+  letter-spacing: 0.3px;
   border: none;
   outline: none;
   margin-bottom: 1.45rem;
@@ -21,10 +20,11 @@ const StyledParagraph = styled.p`
 
   @media ${viewport[9]} {
     line-height: 24px;
+    letter-spacing: normal;
   }
 
   @media ${viewport[12]} {
-    font-size: 0.95em;
+    font-size: 16.5px;
     line-height: 1.5;
   }
 

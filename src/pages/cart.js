@@ -49,16 +49,19 @@ const Cart = () => {
   return (
     <Layout>
       <SEO title="Cart" />
-      <Section
-        style={{ padding: `2em 0`, background: "rgba(238, 238, 248, 0.3)" }}
-      >
+      <Section>
         <Wrapper>
           {isCartEmpty ? (
             isPurchaseComplete ? (
               <>
                 <Grid className="purchaseSuccess">
                   <Icon>{ShoppingSuccess}</Icon>
-                  <Title type="h3" className="shoppingSuccessful" text="Success!" placement="center"></Title>
+                  <Title
+                    type="h3"
+                    className="shoppingSuccessful"
+                    text="Success!"
+                    placement="center"
+                  ></Title>
                   <P style={{ margin: 0, textAlign: "center" }}>
                     Thank you for your purchase. You'll be receiving your item
                     in 2-5 business days.

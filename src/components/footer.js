@@ -11,7 +11,7 @@ import { viewport } from "./breakpoints"
 
 const StyledSection = styled(Section)`
   &.footer-links {
-    background: #eee;
+    border-top: 1px solid #ddd;
     padding: 4em 0;
 
     & .footer-links__wrapper {
@@ -21,7 +21,7 @@ const StyledSection = styled(Section)`
         }
         & .footer-links__wrapper__grid__heading {
           margin-bottom: 1em;
-          font-weight: 500;
+          font-weight: 700;
         }
 
         & .footer-links__wrapper__grid__input {
@@ -32,6 +32,7 @@ const StyledSection = styled(Section)`
           letter-spacing: 1px;
           border-radius: 2px;
           font-size: 0.85em;
+          background-color: #f6f5f3;
         }
 
         & .footer-links__wrapper__grid__list {
@@ -51,18 +52,19 @@ const StyledSection = styled(Section)`
   }
 
   &.footer-author {
-    border-top: 1px solid #ddd;
     padding: 4em 0;
+    background: #000;
+    color: #ddd;
 
-    @media ${viewport[7]} {
-      padding: 3em 0;
-    }
     & .footer-author__text {
-      font-family: "Poppins", sans-serif;
       text-align: center;
       letter-spacing: 0.5px;
       font-weight: 400;
       font-size: 0.825em;
+    }
+
+    & a {
+      color: #dadaf9;
     }
   }
 `
