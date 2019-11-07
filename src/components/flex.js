@@ -44,7 +44,6 @@ const Flex = styled.div`
       color: #000;
       font-size: 16px;
       text-transform: uppercase;
-      padding-left: 0.25em;
       font-weight: 900;
 
       @media ${viewport[9]} {
